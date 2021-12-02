@@ -1,0 +1,32 @@
+.leftcontent {
+    padding-right: 40px; 
+    width: 60%;
+    max-width: 750px;
+
+    dl {
+        dt {
+            font-family: Poppins;
+            font-size: 55px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 83px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        dd {
+            font-family: Poppins;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 33px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+    }
+}
+
+.clearfix {
+    clear : both;
+}

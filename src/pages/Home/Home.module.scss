@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Poppins;
+}
+
+body {
+    background-color: #01060A
+}
+
+.container {
+    width: 1090px;
+    max-width: 1090px; 
+    margin: 0 auto;  
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: white;
+    margin: 0;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./../../assets/home/bg-homeheader.png');
+}
+
+.slide {
+    margin-top: 10px;
+}
+
+.prev {
+    font-size: 16px;
+    color: white;
+}
+
+.slideitem {
+    text-align: center;
+    img {
+        object-fit: cover
+    }
+}
+
+.service {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    
+}

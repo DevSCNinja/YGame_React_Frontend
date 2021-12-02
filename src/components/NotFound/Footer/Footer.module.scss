@@ -1,0 +1,43 @@
+footer {
+    padding-bottom: 132px;
+}
+
+.container {
+    max-width: 1451px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1600px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+
+.footerbar {
+    margin-top: 47px;
+
+    ul {
+        list-style: none;
+
+        li {
+            float: left;
+            margin: 0 9px;
+        }
+
+        li:first-child {
+            margin-right: -2.5px !important;
+            font-family: Poppins;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 45px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+}
+
+.clearfix {
+    clear: both;
+}

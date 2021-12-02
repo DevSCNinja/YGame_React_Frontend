@@ -1,1 +1,2 @@
-# ygame-frontend
+# ygame
+React Frontend

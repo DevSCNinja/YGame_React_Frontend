@@ -1,0 +1,114 @@
+header {
+    width: 100%;
+    padding-top: 23px;
+}
+
+.topmenu {
+    height: 100px;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: #01191E;
+    border-radius: 8px;
+
+    padding: 0 0 0 56px;
+}
+
+.logo{
+    margin-left: 36px;
+    margin-right: 20px;
+    img {
+        width: 152px;
+        height: auto;
+    }
+}
+
+.menu{
+    img {
+        width: 36px;
+        height: auto;
+    } 
+}
+
+.userinfo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+.username {
+    margin-left: 8px;
+}
+
+.usercart {
+    display: flex;
+    margin-left: 30px;
+    span {
+        width: 16px;
+        height: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        right: 4px;
+        bottom: 4px;
+        background-color: #F15A24;
+        border-radius: 50%;
+        color: black;
+        font-size: 12px;
+        font-weight: bolder;
+    }
+}
+
+.iconinputcontainer {
+    position: relative;
+    width: 496px;
+}
+
+.iconinput {
+    width: 100%;
+    height: 46px;
+    line-height: normal;
+    outline: none;
+    border: none;
+    color: #8D8D8D;
+    border-radius: 8px;
+    text-indent: 18px;
+}
+
+.iconcontainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    top: 0px;
+    right: 0px;
+    width: 46px;
+    height: 46px;
+    color: #373737;
+    background-color: #F15A24;
+    cursor: pointer;
+    justify-content: center;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.iconsearch {
+    width: 21px;
+    height: 21px;
+    background-image: url('./../../../assets/home/icons/search.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
