@@ -1,0 +1,139 @@
+.footerpanel {
+    width: 100%;
+    background: #01191E;
+    border-top: solid #F15A24 5px;
+    margin-top: 40px;
+}
+
+.container {
+    width: 1090px;
+    max-width: 1090px; 
+    margin: 0 auto;  
+    padding: 0 40px;
+}
+
+.pay {
+    padding: 12px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid #0D3840 2px;
+}
+
+.paycard {
+    display: flex;
+    align-items: center;
+    p{
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        img {
+            margin-left: 10px;
+        }
+    }
+}
+
+.paycountry {
+    position: relative;
+    a {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        justify-content: space-between;
+        background: #0D3840;
+        border-radius: 8px;
+        border: none;
+        padding: 5px;
+
+        img {
+            margin-right: 12px;
+        }
+
+        i {
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            margin-bottom: 4px;
+            margin-left: 12px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    }
+}
+
+.support {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px;
+    border-bottom: solid #0D3840 2px;
+}
+
+.supporttext {
+    width: 23%;
+    max-width: 25%;
+    text-align: left;
+    h5 {
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 17px;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 40px;
+            height: auto;
+        }
+
+        img:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid #0D3840 2px;
+    padding: 50px 0px;
+    border-bottom: solid #0D3840 2px;
+}
+
+.contactus {
+    p {
+        font-size: 17px;
+    }
+}
+
+.logo {
+    img {
+        width: 411px;
+        height: auto;
+    }
+}
+
+.copyright {
+    padding: 20px 0px;
+    text-align: center;
+    color: #0D3840;
+    span {
+        color: #F15A24;
+    }
+}
