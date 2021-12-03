@@ -27,24 +27,24 @@ class Page4 extends React.Component {
                                     <div class="col-md-6">
                                         <div className={styles.form_group}>
                                             <label for="email">Primeiro Nome</label>
-                                            <input type="text" id="email" value="" />
+                                            <input type="text" id="email" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div className={styles.form_group}>
                                             <label for="email">Segundo Nome</label>
-                                            <input type="text" id="email" value="" />
+                                            <input type="text" id="email" />
                                         </div>
                                     </div>
                                 </div>
                                 <div className={styles.form_group}>
                                     <label for="email">Email</label>
-                                    <input type="text" id="email" value="" />
+                                    <input type="text" id="email" />
                                 </div>
                                 <div className={styles.form_group}>
                                     <label for="pass">Senha</label>
                                     <div className={styles.input_wrap}>
-                                        <input type="text" id="pass" value="" />
+                                        <input type="password" id="pass" />
                                         <span></span>
                                     </div>
                                     <ul>
@@ -58,7 +58,7 @@ class Page4 extends React.Component {
                                 <div className={styles.form_group}>
                                     <label for="pass">Confirmar Senha</label>
                                     <div className={styles.input_wrap}>
-                                        <input type="text" id="pass" value="" />
+                                        <input type="password" id="pass_confirm" />
                                         <span></span>
                                     </div>
                                     <div className={styles.remember}>

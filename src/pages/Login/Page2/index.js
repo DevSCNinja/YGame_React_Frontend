@@ -26,13 +26,13 @@ class Page2 extends React.Component {
 
                             <div className={styles.form_group}>
                                 <label for="email">Email</label>
-                                <input type="text" id="email" value="" />
+                                <input type="text" id="email"/>
                             </div>
                             <div className={styles.form_group}>
                                 <label for="pass">Senha</label>
                                 <span>Esqueceu a senha?</span>
                                 <div className={styles.input_wrap}>
-                                  <input type="text" id="pass" value="" />
+                                  <input type="password" id="pass"/>
                                   <span></span>
                                 </div>
                             </div>
