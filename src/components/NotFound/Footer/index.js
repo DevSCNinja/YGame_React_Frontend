@@ -14,13 +14,13 @@ export const Footer = (props) => {
                         <ul>
                             <li>Siga a gente!</li>
                             <li>
-                                <a href="#"><img src={getImg('img/instagram.png')} alt="instagram"/></a>
+                                <a href="#"><i className="fa fa-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="#"><img src={getImg('img/twitter.png')} alt="twitter"/></a>
+                                <a href="#"><i className="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"><img src={getImg('img/facebook.png')} alt="facebook"/></a>
+                                <a href="#"><i className="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
