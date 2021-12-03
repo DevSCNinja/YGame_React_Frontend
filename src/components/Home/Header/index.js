@@ -1,5 +1,6 @@
 import React from "react";
 
+import Signin from "../Signin";
 import { getImg } from "../../../utils/Helper";
 import Styles from './Header.module.scss';
 
@@ -7,12 +8,19 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            showSignin: false
+        };
+    }
+
+    toogleSignin = () => {
+        this.setState({showSignin: !this.state.showSignin});
     }
 
     render() {
         return (
             <header className={Styles.header}>
+                
                 <div className={Styles.topmenu}>
                     <div className={Styles.menu}>
                         <a href="#"><img src={getImg('home/icons/menu.png')} alt="Menu"/></a>
@@ -27,7 +35,10 @@ class Header extends React.Component {
                         </div>
                     </div>
                     <div className={Styles.userinfo}>
-                        <a href="#" className={userimage}><img src={getImg('home/icons/user-default.png')} alt="User" /></a>
+                        <a href="#" className={Styles.userimage} onClick={this.toogleSignin}>
+                            <img src={getImg('home/icons/user-default.png')} alt="User" />
+                        </a>
+                        
                         <div className={Styles.username}>
                             <p>Minha Conta</p>
                         </div>
@@ -35,6 +46,7 @@ class Header extends React.Component {
                             <a href="#"><img src={getImg('home/icons/cart.png')} alt="User" /></a>
                             <span className={Styles.productcount}>1</span>
                         </div>
+                        {this.state.showSignin && <Signin />}
                     </div>
                 </div>
             </header>
