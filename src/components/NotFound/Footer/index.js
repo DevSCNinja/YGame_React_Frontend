@@ -14,7 +14,7 @@ export const Footer = (props) => {
                         <ul>
                             <li>Siga a gente!</li>
                             <li>
-                                <a href="#"><i className="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             </li>
                             <li>
                                 <a href="#"><i className="fa fa-twitter"></i></a>
