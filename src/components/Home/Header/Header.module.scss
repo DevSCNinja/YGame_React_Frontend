@@ -32,6 +32,7 @@ header {
 .menu{
     display: flex;
     align-items: center;
+    position: relative;
     img {
         width: 36px;
         height: auto;
@@ -134,4 +135,12 @@ header {
     background-image: url('./../../../assets/home/icons/search.png');
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.menucontent {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 56px;
+    left: -45px;
 }

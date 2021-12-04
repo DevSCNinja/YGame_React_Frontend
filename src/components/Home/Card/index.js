@@ -28,7 +28,7 @@ class Card extends React.Component {
                     </p>
                     <div className={Styles.cardicon}>
                         {this.props.items.map((item) => 
-                            <a href="#">
+                            <a  key={item.icon}>
                                 <img src={getImg(item.icon)} alt=""/>
                             </a>
                         )}

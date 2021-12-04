@@ -22,7 +22,7 @@ code {
   width: unset !important;
   padding: 0 !important;
   position: absolute !important;
-  top: 50% !important;
+  top: 42% !important;
   left: 0;
 }
 
@@ -31,7 +31,7 @@ code {
   width: unset !important;
   padding: 0 !important;
   position: absolute !important;
-  top: 50% !important; 
+  top: 42% !important; 
   right: 0;
 }
 
@@ -46,10 +46,25 @@ code {
   height: 6px;
 }
 
-  .alice-carousel__dots-item:not(.__custom) {
-    background-color: #C4C4C4 !important }
-    .alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
-      background-color: #F15A24 !important; }
+.alice-carousel__dots-item:not(.__custom) {
+  background-color: #C4C4C4 !important 
+}
+.alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
+  background-color: #F15A24 !important; 
+}
+
+
+.ReactFlagsSelect-module_selectBtn__19wW7:after {
+  top: 18px;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  display: inline-block !important;
+  padding: 3px !important;
+  margin-bottom: 4px !important;
+  margin-left: 12px !important;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 
 /**/
 .row {
