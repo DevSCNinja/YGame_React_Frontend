@@ -3,7 +3,6 @@ import React from "react";
 import { Logo } from "../../../components/Login/Logo";
 import { Footer } from "../../../components/Login/Footer";
 import { Button } from "../../../components/Login/Button";
-import Loginmodal from "../../../components/Login/Loginmodal";
 
 import styles from '../Login.module.scss';
 
@@ -79,7 +78,6 @@ class Page6 extends React.Component {
                     </div>
                     <Footer />       
                 </div>
-                <Loginmodal show={this.state.show} handleClose={this.hideModal} />
             </div>
         )
     }

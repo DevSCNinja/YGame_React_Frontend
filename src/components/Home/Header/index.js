@@ -25,10 +25,52 @@ class Header extends React.Component {
     }
     toogleMenu = () => {
         this.setState({
-            showMenu: !this.state.showMenu
+            showMenu1: !this.state.showMenu1
         })
     }
     
+    showeventMenu2 = (isParent) => {
+        if(isParent) {
+            this.setState({
+                showMenu2: true,
+                showMenu3: false
+            })
+        }
+        else {
+            this.setState({
+                showMenu2: false,
+                showMenu3: false
+            })           
+        }
+    }
+    showeventMenu3 = (isParent) => {
+        if(!isParent) {
+            this.setState({
+                showMenu3: false
+            }) 
+        }
+        else {
+            this.setState({
+                showMenu3: true
+            }) 
+        }
+    }
+
+    hideMenu1 = () => {
+        this.setState({
+            showMenu1: false
+        })
+    }
+    hideMenu2 = () => {
+        this.setState({
+            showMenu2: false
+        })
+    }
+    hideMenu3 = () => {
+        this.setState({
+            showMenu3: false
+        })
+    }
 
     render() {
 
@@ -40,7 +82,7 @@ class Header extends React.Component {
                         <a onClick={this.toogleMenu}><img src={getImg('home/icons/menu.png')} alt="Menu"/></a>
                         <div className={Styles.menucontent}>
                             {
-                                this.state.showMenu && 
+                                this.state.showMenu1 && 
                                 <Menu1 
                                     menuclass="first" 
                                     items={[
@@ -51,21 +93,23 @@ class Header extends React.Component {
                                         {isActive: false, isParent: true, text: 'Multiplataformas'},
                                         {isActive: false, isParent: true, text: 'Serviços e Assinaturas'}
                                     ]}
+                                    onMouseOver={this.showeventMenu2.bind()}
                                 />
                             }
                             {
-                                this.state.showMenu && 
+                                this.state.showMenu2 && 
                                 <Menu2 
                                     menuclass="second" 
                                     items={[
-                                        {isActive: true, isParent: true, text: 'Playstation'},
+                                        {isActive: true, isParent: false, text: 'Playstation'},
                                         {isActive: false, isParent: true, text: 'Nintendo'},
                                         {isActive: false, isParent: true, text: 'Microsoft'}
                                     ]}
+                                    onMouseOver={this.showeventMenu3}
                                 />
                             }
                             {
-                                this.state.showMenu && 
+                                this.state.showMenu3 && 
                                 <Menu3 
                                     menuclass="third" 
                                     items={[
