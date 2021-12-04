@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Home from './pages/Home';
+import Page1 from './pages/Page1';
 
 import NotFound1 from './pages/NotFound1';
 import NotFound2 from './pages/NotFound2';
@@ -17,11 +18,13 @@ import LoginPage4 from './pages/Login/Page4';
 import LoginPage5 from './pages/Login/Page5';
 import LoginPage6 from './pages/Login/Page6';
 
+
 function App() {
   return (
     <Router>
       <Switch>
         <Route component={Home} path="/home" />
+        <Route component={Page1} path="/page5" />
 
         <Route component={NotFound2} path="/page1" />
         <Route component={NotFound3} path="/page2" />

@@ -1,0 +1,39 @@
+.signin {
+    width: 280px;
+    min-width: 280px;
+    background: #0D3840;
+    border-radius: 8px;
+    padding: 25px;
+    display: block;
+    position: absolute;
+    top: 58px;
+    right: 0;
+    button {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    z-index: 999;
+}
+
+.signin::after {
+    right: auto;
+    position: absolute;
+    top: -14px;
+    left: 52px;
+    display: inline-block!important;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #fff;
+    border-left: 10px solid transparent;
+    content: '';
+    border-bottom-color: #0D3840;
+}
+
+.userinfo {
+    display: flex;
+    align-items: center;
+
+    p{
+        margin-left: 8px;
+    }
+}
