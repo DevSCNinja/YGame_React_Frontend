@@ -173,6 +173,14 @@
         padding-bottom: 12px;
     }
 
+    a span {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        opacity: 0.5;
+        font-size: 20px;
+    }
+
     z-index: 999;
 }
 
@@ -187,6 +195,10 @@
     border-left: 10px solid transparent;
     content: '';
     border-bottom-color: #0D3840;
+}
+
+.cancel {
+    
 }
 
 .flagselect {
