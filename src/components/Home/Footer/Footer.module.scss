@@ -1,3 +1,5 @@
+@import '../../../assets/style/base';
+
 .footerpanel {
     width: 100%;
     background: #01191E;
@@ -96,14 +98,7 @@
         display: flex;
         align-items: center;
 
-        img {
-            width: 40px;
-            height: auto;
-        }
-
-        img:hover {
-            opacity: 0.8;
-        }
+        @include icon_list_style()
     }
 }
 
@@ -203,4 +198,4 @@
     }
 }
 
-.flagselectbutton {}
+// .flagselectbutton {}
