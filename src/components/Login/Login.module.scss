@@ -93,6 +93,14 @@ button.submit {
 
 }
 
+.display_block {
+    display: block;
+}
+
+.display_none {
+    display: none;
+}
+
 @media(max-width: 1600ppx) {
     .modal_outer {
         width: 20%;

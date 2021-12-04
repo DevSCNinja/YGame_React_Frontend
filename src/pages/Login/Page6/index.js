@@ -3,11 +3,28 @@ import React from "react";
 import { Logo } from "../../../components/Login/Logo";
 import { Footer } from "../../../components/Login/Footer";
 import { Button } from "../../../components/Login/Button";
-import { LoginModal } from "../../../components/Login/LoginModal";
+import Loginmodal from "../../../components/Login/Loginmodal";
 
 import styles from '../Login.module.scss';
 
 class Page6 extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            show: true
+        };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+    }
+
+    showModal = () => {
+        this.setState({ show: true });
+    };
+
+    hideModal = () => {
+        this.setState({ show: false });
+    };
+
     render() {
         return (
             <div className={styles.login_page6}>
@@ -62,7 +79,7 @@ class Page6 extends React.Component {
                     </div>
                     <Footer />       
                 </div>
-                <LoginModal />
+                <Loginmodal show={this.state.show} handleClose={this.hideModal} />
             </div>
         )
     }
