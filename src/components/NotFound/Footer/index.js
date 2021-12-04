@@ -14,13 +14,13 @@ export const Footer = (props) => {
                         <ul>
                             <li>Siga a gente!</li>
                             <li>
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a className={styles.icon_instagram} href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
+                                <a className={styles.icon_twitter} href="#"><i className="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i className="fa fa-facebook"></i></a>
+                                <a className={styles.icon_facebook} href="#"><i className="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>

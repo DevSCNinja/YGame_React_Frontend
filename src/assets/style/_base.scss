@@ -1,0 +1,68 @@
+
+@mixin icon_list_style() {
+    a:hover {
+        opacity: 1;
+
+        i {
+            color: #fff;
+        }
+    }
+
+    .icon_facebook:hover {
+        i {
+            background-color: #3B5998;
+        }
+    }
+
+    .icon_twitter:hover {
+        i {
+            background-color: #1DA1F2;
+        }
+    }
+
+    .icon_instagram:hover {
+        i {
+            background-color: #C13584;
+        }
+    }
+
+    .icon_youtube:hover {
+        i {
+            background-color: #FF0000;
+        }
+    }
+
+    .icon_linkdin:hover {
+        i {
+            background-color: #0077B5;
+        }
+    }
+
+    .icon_pinterest:hover {
+        i {
+            background-color: #BD081C;
+        }
+    }
+
+    .icon_facebook:hover {
+        i {
+            background-color: #3B5998;
+        }
+    }
+
+
+    i {
+        font-size: 25px;
+
+        & {
+            margin: 4px;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 40px;
+            color: #000;
+        }
+    }
+}

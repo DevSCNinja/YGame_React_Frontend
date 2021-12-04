@@ -1,3 +1,5 @@
+@import '../../../assets/style/base';
+
 footer {
     padding-bottom: 132px;
 }
@@ -24,27 +26,7 @@ footer {
             float: left;
             margin: 0 9px;
 
-            i {
-                font-size: 30px;
-               
-                vertical-align: middle;
-                
-                & {
-                    width: 40px;
-                    height: 40px;
-                    background: #fff;
-                    color: #000;
-                    border-radius: 30px;
-                    text-align: center;
-                    line-height: 40px;
-                }
-
-                &:hover {
-                    background: #000;
-                    color: #fff;
-                }
-            
-            }
+             @include icon_list_style()
         }
 
         li:first-child {

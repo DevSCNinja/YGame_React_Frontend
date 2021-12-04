@@ -93,14 +93,14 @@ class Footer extends React.Component {
                         <div className={Styles.supporttext}>
                             <h5>Mídias Sociais</h5>
                             <div>
-                                <a ><img src={getImg('home/socials/Facebook.png')}/></a>
-                                <a ><img src={getImg('home/socials/Twitter.png')}/></a>
-                                <a ><img src={getImg('home/socials/Instagram.png')}/></a>
+                                <a className={Styles.icon_facebook}><i className="fa fa-facebook"></i></a>
+                                <a className={Styles.icon_twitter}><i className="fa fa-twitter"></i></a>
+                                <a className={Styles.icon_instagram}><i className="fa fa-instagram"></i></a>
                             </div>
                             <div>
-                                <a ><img src={getImg('home/socials/YouTube.png')}/></a>
-                                <a ><img src={getImg('home/socials/Linkedin.png')}/></a>
-                                <a ><img src={getImg('home/socials/Pinterest.png')}/></a>
+                                <a className={Styles.icon_youtube}><i className="fa fa-youtube"></i></a>
+                                <a className={Styles.icon_pinterest}><i className="fa fa-pinterest"></i></a>
+                                <a className={Styles.icon_pinterest}><i className="fa fa-pinterest"></i></a>
                             </div>
                         </div>
                     </div>
