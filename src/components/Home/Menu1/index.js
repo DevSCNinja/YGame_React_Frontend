@@ -5,6 +5,7 @@ import Button from "./../Button";
 
 import { getImg } from "../../../utils/Helper";
 import Styles from './Menu.scss';
+import { func } from "prop-types";
 
 class Menu1 extends React.Component {
     constructor(props) {
