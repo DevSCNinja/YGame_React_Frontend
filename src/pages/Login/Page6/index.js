@@ -44,33 +44,33 @@ class Page6 extends React.Component {
                             <div class={styles.interest_check_wrap}>
                                 <div class={styles.row}>
                                     <span>Playstation <i className="fa fa-times"></i></span>
-                                    <span className={styles.active}>Nintendo</span>
-                                    <span>Xbox</span>
-                                    <span>Steam</span>
-                                    <span className={styles.active}>Riot Games</span>
+                                    <span className={styles.active}>Nintendo <i className="fa fa-check"></i></span>
+                                    <span>Xbox <i className="fa fa-times"></i></span>
+                                    <span>Steam <i className="fa fa-times"></i></span>
+                                    <span className={styles.active}>Riot Games  <i className="fa fa-check"></i></span>
                                 </div>
                                 <div class={styles.row}>
-                                    <span className={styles.active}>Roblox</span>
-                                    <span>Free Fire</span>
-                                    <span>League of Legends</span>
+                                    <span className={styles.active}>Roblox <i className="fa fa-check"></i></span>
+                                    <span>Free Fire <i className="fa fa-times"></i></span>
+                                    <span>League of Legends <i className="fa fa-times"></i></span>
                                 </div>
                                 <div class={styles.row}>
-                                    <span>Valorant</span>
-                                    <span className={styles.active}>Legends of Runeterra</span>
-                                    <span>Minecraft</span>
+                                    <span>Valorant <i className="fa fa-times"></i></span>
+                                    <span className={styles.active}>Legends of Runeterra <i className="fa fa-check"></i></span>
+                                    <span>Minecraft <i className="fa fa-times"></i></span>
                                 </div>
                                 <div class={styles.row}>
-                                    <span className={styles.active}>Spotify</span>
-                                    <span>Deezer</span>
-                                    <span>Ifood</span>
-                                    <span>Uber</span>
-                                    <span className={styles.active}>Tinder</span>
+                                    <span className={styles.active}>Spotify <i className="fa fa-check"></i></span>
+                                    <span>Deezer <i className="fa fa-times"></i></span>
+                                    <span>Ifood <i className="fa fa-times"></i></span>
+                                    <span>Uber <i className="fa fa-times"></i></span>
+                                    <span className={styles.active}>Tinder <i className="fa fa-check"></i></span>
                                 </div>
                                 <div class={styles.row}>
-                                    <span>iTunes</span>
-                                    <span>Google Play</span>
-                                    <span>IfooNetflixd</span>
-                                    <span className={styles.active}>DAZN</span>
+                                    <span>iTunes <i className="fa fa-times"></i></span>
+                                    <span>Google Play <i className="fa fa-times"></i></span>
+                                    <span>IfooNetflixd <i className="fa fa-times"></i></span>
+                                    <span className={styles.active}>DAZN <i className="fa fa-check"></i></span>
                                 </div>
                             </div>
                             <p>Não quero compartilhar meus gostos, pular esta parte</p>

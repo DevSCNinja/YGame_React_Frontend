@@ -23,6 +23,7 @@ class Signin extends React.Component {
                 <Button buttontext="Fazer Login" background="#F15A24"/>
                 <Button buttontext="Cadastrar-se" background="#01191E"/>
             </div>
+            
         )
     }
 }

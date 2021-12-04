@@ -1,7 +1,10 @@
 import React from "react";
+import ReactFlagsSelect from "react-flags-select";
+
+import Button from "./../Button";
+import Selectflag from "./../Selectflag";
 
 import { getImg } from "../../../utils/Helper";
-import Nationalcurrency from "../Nationalcurrency";
 import Styles from './Footer.module.scss';
 
 class Footer extends React.Component {
@@ -15,7 +18,7 @@ class Footer extends React.Component {
 
     toogleNaCurPanel = () => {
         this.setState({
-            showNaCurPanel: this.state.showNaCurPanel
+            showNaCurPanel: !this.state.showNaCurPanel
         });
     }
 
@@ -37,49 +40,66 @@ class Footer extends React.Component {
                             </div>
                         </div>
                         <div className={Styles.paycountry}>
-                            <a href="#">
+                            <a onClick={this.toogleNaCurPanel}>
                                 <img src={getImg('home/flags/brasil.png')} alt=""/>
                                 <p>Brasil (Português) / BRL (R$) </p>
                                 <i></i>
                             </a>
                             {
                                 this.state.showNaCurPanel && 
-                                <Nationalcurrency />
+                                <div className={Styles.panel}>
+                                    <h5>Selecione suas preferências</h5>
+                                    <h6>Troque sua região ou moeda</h6>
+                                    <p>Região</p>
+                                        <ReactFlagsSelect 
+                                            className={Styles.flagselect}
+                                            countries={["BR"]}
+                                            customLabels={{"BR": "Brasil (Português)"}} 
+                                            selected="BR"
+                                            selectButtonClassName={Styles.flagselectbutton}
+                                            selectedSize={16}
+                                            optionsSize={16}
+                                        />
+                                    <p>Moeda</p>
+                                    <Selectflag options={[{text: "Real Brasileiro (R$)"}]}/>
+                                    
+                                    <Button buttontext="Realizar Troca" background="#F15A24"/>
+                                </div>
                             }
                         </div>
                     </div>
                     <div className={Styles.support}>
                         <div className={Styles.supporttext}>
                             <h5>YIYI Games</h5>
-                            <p><a href="#">Sobre Nós</a></p>
-                            <p><a href="#">Contato</a></p>
-                            <p><a href="#">Blog e Notícias</a></p>
-                            <p><a href="#">Carreira e Empregos</a></p>
+                            <p><a >Sobre Nós</a></p>
+                            <p><a >Contato</a></p>
+                            <p><a >Blog e Notícias</a></p>
+                            <p><a >Carreira e Empregos</a></p>
                         </div>
                         <div className={Styles.supporttext}>
                             <h5>Ajuda</h5>
-                            <p><a href="#">Suporte de vendas</a></p>
-                            <p><a href="#">Termos e Condições</a></p>
-                            <p><a href="#">Privacidade e Cookies</a></p>
-                            <p><a href="#">Trocas e Reembolso</a></p>
+                            <p><a >Suporte de vendas</a></p>
+                            <p><a >Termos e Condições</a></p>
+                            <p><a >Privacidade e Cookies</a></p>
+                            <p><a >Trocas e Reembolso</a></p>
                         </div>
                         <div className={Styles.supporttext}>
                             <h5>Negócios</h5>
-                            <p><a href="#">Central de Negócios</a></p>
-                            <p><a href="#">Empresas Parceiras</a></p>
-                            <p><a href="#">Empresas Parceiras</a></p>
+                            <p><a >Central de Negócios</a></p>
+                            <p><a >Empresas Parceiras</a></p>
+                            <p><a >Empresas Parceiras</a></p>
                         </div>
                         <div className={Styles.supporttext}>
                             <h5>Mídias Sociais</h5>
                             <div>
-                                <a href="#"><img src={getImg('home/socials/Facebook.png')}/></a>
-                                <a href="#"><img src={getImg('home/socials/Twitter.png')}/></a>
-                                <a href="#"><img src={getImg('home/socials/Instagram.png')}/></a>
+                                <a ><img src={getImg('home/socials/Facebook.png')}/></a>
+                                <a ><img src={getImg('home/socials/Twitter.png')}/></a>
+                                <a ><img src={getImg('home/socials/Instagram.png')}/></a>
                             </div>
                             <div>
-                                <a href="#"><img src={getImg('home/socials/YouTube.png')}/></a>
-                                <a href="#"><img src={getImg('home/socials/Linkedin.png')}/></a>
-                                <a href="#"><img src={getImg('home/socials/Pinterest.png')}/></a>
+                                <a ><img src={getImg('home/socials/YouTube.png')}/></a>
+                                <a ><img src={getImg('home/socials/Linkedin.png')}/></a>
+                                <a ><img src={getImg('home/socials/Pinterest.png')}/></a>
                             </div>
                         </div>
                     </div>

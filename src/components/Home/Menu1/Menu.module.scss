@@ -1,0 +1,171 @@
+
+.first {
+    position: relative;
+    background: #0D3840;
+    width: 280px;
+    min-width: 280px;
+    background: #0D3840;
+    border-radius: 8px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    filter: drop-shadow(4px 0px 5px #01191E);
+    ul {
+        list-style-type: none;
+
+        li {
+            position: relative;
+            padding: 8px 0px 8px 24px;
+            margin: 4px 0px;
+            z-index: 999;
+            a { 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                i{
+                    float: right;
+                    border: solid #F15A24;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    margin-top: 2px;
+                    margin-left: 12px;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(-45deg);
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+
+    z-index: 999;
+}
+
+.first::after {
+    right: auto;
+    position: absolute;
+    top: -14px;
+    left: 52px;
+    display: inline-block!important;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #fff;
+    border-left: 10px solid transparent;
+    content: '';
+    border-bottom-color: #0D3840;
+}
+
+.second {
+    position: relative;
+    background: #0D3840;
+    width: 280px;
+    min-width: 280px;
+    background: #0D3840;
+    border-radius: 8px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    left: -14px;
+    filter: drop-shadow(4px 0px 5px #01191E);
+    ul {
+        list-style-type: none;
+
+        li {
+            position: relative;
+            padding: 8px 0px 8px 38px;
+            margin: 4px 0px;
+            z-index: 999;
+            a { 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                i{
+                    float: right;
+                    border: solid #F15A24;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    margin-top: 2px;
+                    margin-left: 12px;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(-45deg);
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+
+    z-index: 998;
+}
+
+.third {
+    position: relative;
+    background: #0D3840;
+    width: 280px;
+    min-width: 280px;
+    background: #0D3840;
+    border-radius: 8px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    left: -28px;
+    ul {
+        list-style-type: none;
+
+        li {
+            position: relative;
+            padding: 8px 0px 8px 38px;
+            margin: 4px 0px;
+            z-index: 999;
+            a { 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                i{
+                    float: right;
+                    border: solid #F15A24;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    margin-top: 2px;
+                    margin-left: 12px;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(-45deg);
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+
+    z-index: 997;
+}
+
+.active {
+    background: #01191E;
+    a {
+        color: #F15A24;
+    }
+}
+
+.active:before,
+.active:after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    bottom: 0;
+    background:radial-gradient(circle at top left, #fff0 72%, #01191E 75%);
+}
+
+.active:after {
+    right: 0;
+    top:100%;
+    background:radial-gradient(circle at bottom left, #fff0 70%, #01191E 75%);
+}
+
+.active:before {
+    bottom:100%;
+    right: 0;
+}
+
+.thirdactive {
+    a {
+        color: #F15A24;
+    }
+}
