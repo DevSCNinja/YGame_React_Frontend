@@ -1,6 +1,6 @@
 import React from "react";
 import $ from 'jquery'; 
-import InputNumber from 'rc-input-number';
+// import InputNumber from 'rc-input-number';
 
 import Button from "./../../Button";
 

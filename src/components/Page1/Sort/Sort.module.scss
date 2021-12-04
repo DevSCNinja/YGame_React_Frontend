@@ -1,0 +1,43 @@
+.panel {
+    // width: 213px;
+
+    select {
+        width: 100%;
+        border: none;
+        padding: 12px;
+        background: #01191E;
+        border-radius: 4px;
+        font-size: 24px;
+    }
+}
+
+.control {
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    // height: 36px;
+    // line-height: 36px;
+    background: transparent;
+}
+
+.menu {
+    margin-top: 8px;
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    
+}
+
+.arrow {
+    top: 18px;
+    border: solid white !important;
+    border-width: 0 2px 2px 0 !important;
+    display: inline-block !important;
+    padding: 5px !important;
+    margin-bottom: 4px !important;
+    margin-left: 12px !important;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
