@@ -1,0 +1,25 @@
+.item {
+    width: 100%;
+    background: #01191E;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 14px;
+    padding: 10px;
+    .productimage {
+        img {
+            width: 152px;
+            height: 100%;
+            border-radius: 14px;
+        }
+    }
+
+    .productinfo {
+        width: 152px;
+        padding: 8px 10px 0 10px;
+        div {
+            width: 1%;
+        }
+    }
+
+
+}

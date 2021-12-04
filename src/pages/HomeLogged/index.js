@@ -1,19 +1,17 @@
 import React from "react";
 import AliceCarousel from 'react-alice-carousel';
 
-import Header from "../../components/Home/Header";
+import HeaderLogged from "../../components/Home/HeaderLogged";
 import Footer from "../../components/Home/Footer";
 import Button from "../../components/Home/Button";
 import Cardtitle from "../../components/Home/Cardtitle";
 import Card from "../../components/Home/Card";
 import Product from "../../components/Home/Product";
 
-import Cart from "../../components/Home/Cart";
-
 import { getImg } from "../../utils/Helper";
 
 import "react-alice-carousel/lib/alice-carousel.css";
-import Styles from './Home.module.scss';
+import Styles from './../Home/Home.module.scss';
 
 class Home extends React.Component {
     constructor(props) {
@@ -24,9 +22,8 @@ class Home extends React.Component {
     render() {
         return (
             <div className={Styles.home}>
-                <Cart />
                 <div className={Styles.container}>
-                    <Header />
+                    <HeaderLogged />
                     
                     <div className={Styles.cardcontent}>
                         <div className={`${Styles.slide}`}>
@@ -150,6 +147,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
+
                 <Footer />
             </div>
         )

@@ -1,0 +1,59 @@
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #0D3840;
+    height: 100vh;
+    z-index: 999;
+    padding: 60px 50px 120px 50px;
+
+    h5 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+}
+
+.products {
+    margin: 16px 0px;
+    padding: 16px 0px;
+    border-top: solid #01191E 1px;
+    border-bottom: solid #01191E 1px;
+}
+
+.productscontent {
+    max-height: 50vh;
+    padding-right: 6px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #d4aa70 #e4e4e4;
+    scrollbar-width: thin;
+}
+
+.productscontent::-webkit-scrollbar {
+    width: 10px;
+}
+
+.productscontent::-webkit-scrollbar-track {
+    background-color: unset;
+    border-radius: 100px;
+}
+
+.productscontent::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #01191E;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttoncontent {
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+    button {
+        width: 100%;
+    }
+}

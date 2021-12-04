@@ -76,3 +76,39 @@ code {
   margin: 0 10px;
   width: 50%;
 }
+
+.active {
+  background: #01191E;
+}
+
+.active a {
+  color: #F15A24;
+}
+
+.active:before,
+.active:after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  bottom: 0;
+  background:radial-gradient(circle at top left, #fff0 72%, #01191E 75%);
+}
+
+.active:after {
+  right: 0;
+  top:100%;
+  background:radial-gradient(circle at bottom left, #fff0 70%, #01191E 75%);
+}
+.active:before {
+  bottom:100%;
+  right: 0;
+}
+
+.thirdactive {
+  color: #F15A24;
+}
+
+.thirdactive a {
+  color: #F15A24;
+}

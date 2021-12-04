@@ -4,7 +4,8 @@ import $ from 'jquery';
 import Button from "./../Button";
 
 import { getImg } from "../../../utils/Helper";
-import Styles from './Menu.module.scss';
+import Styles from './Menu.scss';
+import { func } from "prop-types";
 
 class Menu1 extends React.Component {
     constructor(props) {
@@ -16,6 +17,11 @@ class Menu1 extends React.Component {
     }
 
     componentDidMount() {
+        const newLocal = '.menu1-item';
+        $(document).on('mouseover', newLocal, function() {
+            $(".menu1-item.active").removeClass('active');
+            $(this).addClass('active');
+        });
     }
 
     render() {
@@ -23,10 +29,10 @@ class Menu1 extends React.Component {
         let activeClass = Styles.active
 
         return (
-            <div className={menuClass}>
+            <div className="first">
                 <ul>
                     {this.props.items.map((item) => 
-                        item.isActive ? <li className={activeClass} key={item.text}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li> : <li key={item.text}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li>
+                        item.isParent ? <li className="menu1-item" key={item.text} onMouseOver={this.props.onMouseOver.bind(this, item.isParent)}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li> : <li className="menu1-item" key={item.text} onMouseOver={this.props.onMouseOver.bind(this, item.isParent)}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li>
                     )}
                 </ul>
             </div>   

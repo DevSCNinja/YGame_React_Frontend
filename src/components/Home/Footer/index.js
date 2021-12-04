@@ -48,6 +48,7 @@ class Footer extends React.Component {
                             {
                                 this.state.showNaCurPanel && 
                                 <div className={Styles.panel}>
+                                    <a onClick={this.toogleNaCurPanel}><span class="fa fa-times" aria-hidden="true"></span></a>
                                     <h5>Selecione suas preferências</h5>
                                     <h6>Troque sua região ou moeda</h6>
                                     <p>Região</p>

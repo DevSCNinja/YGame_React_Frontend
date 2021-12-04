@@ -4,7 +4,7 @@ import $ from 'jquery';
 import Button from "./../Button";
 
 import { getImg } from "../../../utils/Helper";
-import Styles from './Menu.module.scss';
+import Styles from './Menu.scss';
 
 class Menu3 extends React.Component {
     constructor(props) {
@@ -16,17 +16,20 @@ class Menu3 extends React.Component {
     }
 
     componentDidMount() {
+        const newLocal = '.menu3-item';
+        $(document).on('mouseover', newLocal, function() {
+            $(".menu3-item.thirdactive").removeClass('thirdactive');
+            $(this).addClass('thirdactive');
+        });
     }
 
     render() {
-        let menuClass = Styles.third;
-        let activeClass = Styles.thirdactive;
 
         return (
-            <div className={menuClass}>
+            <div className="third">
                 <ul>
                     {this.props.items.map((item) => 
-                        item.isActive ? <li className={activeClass} key={item.text}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li> : <li key={item.text}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li>
+                        item.isActive ? <li className="menu3-item" key={item.text}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li> : <li className="menu3-item" key={item.text}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li>
                     )}
                 </ul>
             </div>   
