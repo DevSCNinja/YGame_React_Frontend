@@ -69,3 +69,22 @@ $dark-green: #0D3840;
         }
     }
 }
+
+
+.table_container {
+    width: 100%;;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.col-md-6 {
+    margin: 0 10px;
+    width: 50%;
+}

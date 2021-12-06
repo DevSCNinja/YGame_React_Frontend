@@ -1,0 +1,120 @@
+@import '../../../assets/style/base';
+
+.category_menu_wrap {
+    position: relative;
+    margin: 45px 0px 50px 0px;
+
+    .caption {
+        margin-bottom: 41px;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .avatar_wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        button.btn_sair {
+            align-self: end;
+            margin-bottom: 20px;
+            margin-right: 40px;
+            width: 238px;
+            height: 30px;
+            background-color: $orange-color;
+            border: none;
+            text-align : center;
+            border-radius: 5px;
+            font-family: Poppins;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 0em;
+    
+        }
+    }
+
+    .userinfo_wrap {
+        display: flex;
+        padding-left: 229px;
+        padding-top: 39px;
+        height: 181px;
+        background-color: #01191E;
+        border-radius: 25px;
+
+        .userinfo_item {
+            margin-left: 69px;
+            width: 238px;
+
+            dl {
+                dt {
+                    color: $orange-color;
+                }
+
+                dd {
+                    font-family: Poppins;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 33px;
+                    letter-spacing: 0em;
+                    text-align: left;
+
+                }
+            }
+        }
+    }
+
+    .avatar_img {
+        text-align: left;
+        margin-left: 68px;
+        margin-bottom: -91px;
+    }
+
+    .category_list {
+        display: flex;
+        justify-content: center;
+        margin-top: -50px;
+
+        .category_item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            padding: 17px;
+            width: 238px;
+            background-color: $dark-green;
+            border-radius: 10px;
+            text-align: center;
+            height: 100px;
+            cursor: pointer;
+
+            &:hover {
+                height: 140px;
+                background-color: $orange-color;
+            }
+
+            div {
+                font-family: Poppins;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 27px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+        }
+
+        .category_item:nth-child(4) {
+            height: 140px;
+            background-color: $orange-color;
+        }
+    }
+}

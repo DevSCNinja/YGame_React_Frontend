@@ -15,9 +15,12 @@ class Sort extends React.Component {
 
     render() {
         return (
-            <div className={Styles.panel}>
-                <Dropdown options={['Data de Compra']} onChange={this._onSelect} value={'Data de Compra'} placeholder="Select an option" className={Styles.dropdown} controlClassName={Styles.control} menuClassName={Styles.menu} arrowClassName={Styles.arrow}/>
-            </div>
+            <div className={Styles.sortable_list}>
+                <span>Ordernar por:</span>
+                    <div className={Styles.panel}>
+                    <Dropdown options={['Data de Compra']} onChange={this._onSelect} value={'Data de Compra'} placeholder="Select an option" className={Styles.dropdown} controlClassName={Styles.control} menuClassName={Styles.menu} arrowClassName={Styles.arrow}/>
+                </div>
+            </div>   
         )
     }
 }

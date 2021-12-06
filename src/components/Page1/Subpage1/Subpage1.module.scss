@@ -1,0 +1,26 @@
+@import '../../../assets/style/base';
+
+.product_item_wrap { 
+    .product_list {
+        display: flex;
+        justify-content: center;
+
+        .product_item {
+            margin: 10px;
+            padding: 10px;
+            max-width:  324px;
+            min-width: 30%;
+            height: auto;
+            background-color: $dark-green;
+            justify-content: center;
+            text-align: center;
+            border-radius: 20px;
+
+            img {
+                height: 194px;
+                margin: 0 auto;
+                margin-bottom: 3.5px;
+            }
+        }
+    }
+}

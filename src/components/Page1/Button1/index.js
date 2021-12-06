@@ -1,9 +1,9 @@
 import React from "react";
 
 import { getImg } from "../../../utils/Helper";
-import Styles from './Button.module.scss';
+import Styles from './Button1.module.scss';
 
-class Button extends React.Component {
+class Button1 extends React.Component {
     constructor(props) {
         super(props);
 
@@ -12,11 +12,11 @@ class Button extends React.Component {
 
     render() {
         return (
-            <button className={Styles.buttonstyle} style={{backgroundColor: this.props.background}} >
+            <button className={Styles.btn_style} style={{backgroundColor: this.props.background, width: this.props.width + 'px'}} >
                 {this.props.buttontext}
             </button>
         )
     }
 }
 
-export default Button
+export default Button1
