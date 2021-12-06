@@ -1,3 +1,22 @@
+.sortable_list {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 40.98px;
+
+    span {
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        color:#0D3840;   
+    }
+}
+
+
 .panel {
     // width: 213px;
 

@@ -1,0 +1,57 @@
+@import '../../../assets/style/base';
+
+.wish_list_wrap {            
+    .wish_list {
+        // display: flex;
+        // justify-content: center;
+
+        .wish_item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background-color: #01191E;
+            border-radius: 20px;
+            text-align: left;
+
+            img {
+                margin-right: 20px;
+                align-self: start;
+                height: 98px;
+            }
+
+            .item_title {
+                max-width: 395px;
+                min-width: 395px;
+                margin-right: 35px;
+                align-self: center;
+                font-family: Poppins;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 33px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .icon_group {
+                align-self: center;
+                img {
+                    margin-right: 4.22px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            .btn_group {
+                margin-left: auto;
+                display: flex;
+                align-self: center;
+                
+                button {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

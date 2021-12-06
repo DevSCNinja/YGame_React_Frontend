@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Home from './pages/Home';
+import HomeLogged from './pages/HomeLogged';
 import Page1 from './pages/Page1';
 
 import NotFound1 from './pages/NotFound1';
@@ -24,6 +25,7 @@ function App() {
     <Router>
       <Switch>
         <Route component={Home} path="/home" />
+        <Route component={HomeLogged} path="/home_logged" />
         <Route component={Page1} path="/page5" />
 
         <Route component={NotFound2} path="/page1" />
