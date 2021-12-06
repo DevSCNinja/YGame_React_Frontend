@@ -6,8 +6,15 @@ import Styles from './Categorymenu.module.scss';
 class Categorymenu extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {};
+        
+        this.state = {
+            links: [
+                { icon: 1, text: "Minhas Chaves",  className: Styles.category_item },
+                { icon: 2, text: "Lista de Desejos",  className: Styles.category_item },
+                { icon: 3, text: "Meus Pedidos",  className: Styles.category_item },
+                { icon: 4, text: "Meus Dados",  className: Styles.category_item },
+            ],
+        };
     }
 
     render() {
@@ -18,7 +25,13 @@ class Categorymenu extends React.Component {
                 </div>
                 
                 <div className={Styles.avatar_wrap}>
-                    <img class={Styles.avatar_img} src={getImg('page1/avatar.png')} alt=""/>
+                    <div className={Styles.avatar_img_wrap} onClick={this.props.handleShow}>
+                        <img class={Styles.avatar_img} src={getImg('page1/avatar.png')} alt=""/>
+                        <div className={Styles.overlay}>
+                            <img src={getImg('page1/icon5.png')} alt="camera icon" />
+                            Alterar Imagem
+                        </div>
+                    </div>
                     <button type="button" className={Styles.btn_sair}>Sair</button>
                 </div>
                 <div className={Styles.userinfo_wrap}>
@@ -41,24 +54,14 @@ class Categorymenu extends React.Component {
                         </dl>
                     </div>
                 </div>
-                
                 <div className={Styles.category_list}>
-                    <div className={Styles.category_item}>
-                        <img src={getImg('page1/icon1.png')} alt=""/>
-                        <div>Minhas Chaves</div>
-                    </div>
-                    <div className={Styles.category_item}>
-                        <img src={getImg('page1/icon2.png')} alt=""/>
-                        <div>Lista de Desejos</div>
-                    </div>
-                    <div className={Styles.category_item}>
-                        <img src={getImg('page1/icon3.png')} alt=""/>
-                        <div>Meus Pedidos</div>
-                    </div>
-                    <div className={Styles.category_item}>
-                        <img src={getImg('page1/icon4.png')} alt=""/>
-                        <div>Meus Dados</div>
-                    </div>
+                    { this.state.links.map((item, idx) =>  (                      
+                        <div className={Styles.category_item + " " + (idx == this.props.activeLink ? Styles.category_active : '')} onClick={() => this.props.handleClick(idx) }>
+                            <img src={getImg('page1/icon' + item.icon + '.png')} alt=""/>
+                            <div>{item.text}</div>
+                        </div>
+    
+                    ))}
                 </div>
             </div>
         )
