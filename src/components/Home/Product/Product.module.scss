@@ -7,6 +7,7 @@
 }
 
 .productimage {
+    height: 152px;
     position: relative;
     // background-position: center;
     background-repeat: no-repeat;
@@ -34,7 +35,7 @@
 }
 
 .producttext {
-    padding: 12px 6px 16px 6px;
+    padding: 8px 6px 12px 6px;
 }
 
 .pricebtn {
@@ -49,11 +50,11 @@
 
 .producttitle {
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .producticon {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     padding: 0 16px;
     a {
         margin-right: 4px;
