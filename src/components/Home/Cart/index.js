@@ -24,7 +24,10 @@ class Cart extends React.Component {
                 </h5>
                 <div className={Styles.products}>
                     <div className={Styles.productscontent}>
-                    <Item productname="Minecraft - Código Digital" productcount="1" productprice="R$ 99,99" productimage="home/products/03.png"/>
+                        <Item productname="Minecraft - Código Digital" productcount="1" productprice="R$ 99,99" productimage="home/products/03.png"/>
+                        <Item productname="Spotify W - Assinatura 3..." productcount="1" productprice="R$ 250,00" productimage="home/products/01.png"/>
+                        <Item productname="800 Robux - Roblox" productcount="1" productprice="R$ 80,00" productimage="home/products/13.png"/>
+                        <Item productname="Minecraft - Código Digital" productcount="1" productprice="R$ 99,99" productimage="home/products/03.png"/>
                     </div>
                 </div>
                 <div className={Styles.total}>

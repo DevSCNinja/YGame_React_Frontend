@@ -24,7 +24,6 @@ class Home extends React.Component {
     render() {
         return (
             <div className={Styles.home}>
-                {/* <Cart /> */}
                 <div className={Styles.container}>
                     <Header />
                     

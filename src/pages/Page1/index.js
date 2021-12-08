@@ -50,7 +50,7 @@ class Page1 extends React.Component {
                 <div className={Styles.container}>
                     <Header />
                     <Categorymenu handleShow={this.showModal} activeLink={this.state.activeLink} handleClick={this.handleClick}/>
-                    { this.state.activeLink == 0 &&  <Subpage1 /> }
+                    { this.state.activeLink == 0 &&  <Subpage1/> }
                     { this.state.activeLink == 1 &&  <Subpage2 /> }
                     { this.state.activeLink == 2 &&  <Subpage3 /> }
                     { this.state.activeLink == 3 &&  <Subpage4 /> }

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { getImg } from "../../../utils/Helper";
 import Styles from './Subpage1.module.scss';
 import Button from '../Button';
 import Sort from '../Sort';
+
+import Activationmodal  from '../Activationmodal';
 
 class Subpage1 extends React.Component {
     constructor(props) {
@@ -13,11 +15,12 @@ class Subpage1 extends React.Component {
     }
 
     render() {
+
         return (
             <div className={Styles.product_item_wrap}>
                 <Sort options={[{text: "Real Brasileiro (R$)"}]}/>
                 <div className={Styles.product_list}>
-                    <div className={Styles.product_item}>
+                    <div className={Styles.product_item} onClick={this.props.handleShow}>
                         <img src={getImg('page1/1.png')} alt=""/>
                         <Button buttontext="Resgatar" background="#01191E"/>
                     </div>
@@ -29,8 +32,6 @@ class Subpage1 extends React.Component {
                         <img src={getImg('page1/3.png')} alt=""/>
                         <Button buttontext="Resgatar" background="#DB2B2F"/>
                     </div>
-                </div>
-                <div className={Styles.product_list}>
                     <div className={Styles.product_item}>
                         <img src={getImg('page1/4.png')} alt=""/>
                         <Button buttontext="Resgatar" background="#DB2B2F"/>
@@ -43,8 +44,6 @@ class Subpage1 extends React.Component {
                         <img src={getImg('page1/6.png')} alt=""/>
                         <Button buttontext="Resgatar" background="#DB2B2F"/>
                     </div>
-                </div>
-                <div className={Styles.product_list}>
                     <div className={Styles.product_item}>
                         <img src={getImg('page1/7.png')} alt=""/>
                         <Button buttontext="Resgatar" background="#DB2B2F"/>
@@ -58,9 +57,13 @@ class Subpage1 extends React.Component {
                         <Button buttontext="Resgatar" background="#DB2B2F"/>
                     </div>
                 </div>
+                <Activationmodal />    
             </div>
         )
     }
 }
 
 export default Subpage1
+
+
+

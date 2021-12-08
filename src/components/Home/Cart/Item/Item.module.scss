@@ -1,10 +1,16 @@
 .item {
+    margin-bottom: 16px;
     width: 100%;
     background: #01191E;
     display: flex;
     justify-content: space-between;
     border-radius: 14px;
     padding: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     .productimage {
         img {
             width: 152px;
@@ -19,7 +25,46 @@
         div {
             width: 1%;
         }
+
+        input {
+            margin-top: 10px;
+            margin-bottom: 6px;
+            padding-left: 5px;
+            width: 40px;
+            height: 27px;
+            background-color: #0D3840;
+            border: none;
+            border-radius: 5px;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+
+        button {
+            width: 100%;
+            background: none;
+            border: none;
+            border-radius: 5px;
+        }
+    
+        .price {
+            margin-bottom: 7px;
+            background-color: #0D3840;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+    
+        }
     }
 
-
+    
 }

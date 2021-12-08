@@ -6,6 +6,7 @@ import Footer from "../../components/Home/Footer";
 import Button from "../../components/Home/Button";
 import Cardtitle from "../../components/Home/Cardtitle";
 import Card from "../../components/Home/Card";
+import Cart from "../../components/Home/Cart";
 import Product from "../../components/Home/Product";
 
 import { getImg } from "../../utils/Helper";
@@ -22,9 +23,9 @@ class Home extends React.Component {
     render() {
         return (
             <div className={Styles.home}>
+                <Cart />
                 <div className={Styles.container}>
                     <HeaderLogged />
-                    
                     <div className={Styles.cardcontent}>
                         <div className={`${Styles.slide}`}>
                             {/* <AliceCarousel autoPlay autoPlayInterval="3000"> */}
