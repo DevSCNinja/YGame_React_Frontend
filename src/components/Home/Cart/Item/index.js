@@ -25,11 +25,11 @@ class Item extends React.Component {
                 </div>
                 <div className={Styles.productinfo}>
                     <p>{this.props.productname}</p>
-                    
+                    <input type="number" seletecd id="" min="0" />
+                    <button className={Styles.price} style={{background: "#01060A"}}>{this.props.productprice}</button> 
+                    <button style={{background: "#DB2B2F"}}><i class="fa fa-trash"></i></button> 
                 </div>
-
-
-            </div>   
+            </div>
         )
     }
 }

@@ -35,7 +35,7 @@ const Subpage4 = () => {
         .MuiInputBase-root {
             background: #01191E;
             border-radius: 10px;
-           
+        
         }
 
         .MuiInputBase-root  input{
@@ -64,7 +64,7 @@ const Subpage4 = () => {
         .row {
             margin-bottom: 20px;
         }
-           
+        
     }`
     
     return (

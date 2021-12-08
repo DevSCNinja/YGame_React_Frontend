@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Home from './pages/Home';
 import HomeLogged from './pages/HomeLogged';
 import Page1 from './pages/Page1';
+import Page2 from './pages/Page2';
 
 import NotFound1 from './pages/NotFound1';
 import NotFound2 from './pages/NotFound2';
@@ -27,6 +28,7 @@ function App() {
         <Route component={Home} path="/home" />
         <Route component={HomeLogged} path="/home_logged" />
         <Route component={Page1} path="/page5" />
+        <Route component={Page2} path="/page6" />
 
         <Route component={NotFound2} path="/page1" />
         <Route component={NotFound3} path="/page2" />
