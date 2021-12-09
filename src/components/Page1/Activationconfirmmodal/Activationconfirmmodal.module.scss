@@ -1,0 +1,79 @@
+.confirm_modal_wrap {
+    position: relative;
+    text-align: center;
+    z-index: 1000;
+    background-color: #01191E;
+    padding: 35px;
+    width: 680px;
+    border-radius: 10px;
+
+    dl {
+        dt {
+            font-family: Poppins;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+
+        dd {
+            font-family: Poppins;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+    }
+
+    .btn_group {
+        margin-top: 25px;
+        button {
+            margin-bottom: 25px;
+            padding: 7px 20px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-family: Poppins;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 33px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+
+        .submit {
+            background: #F15A24;
+        }
+
+        .cancel {
+            background: #DB2B2F;
+        }
+    }
+
+    .footer_part {
+        margin: 0 auto;
+        max-width: 433px;
+
+        font-family: Poppins;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #0D3840;
+
+        a {
+            color: #F15A24;
+        }
+    }
+}
+

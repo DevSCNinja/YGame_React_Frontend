@@ -25,7 +25,7 @@ class Page1 extends React.Component {
         super(props);
         this.state = {
             show: false,
-            activeLink: 0
+            activeLink: 0,
         };
 
         this.showModal = this.showModal.bind(this);

@@ -10,10 +10,20 @@ import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 import { getImg } from '../../../utils/Helper.js';
  
-
+import Activationconfirmmodal from '../Activationconfirmmodal';
 import ModalStyle from './Activationmodal.module.scss';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -71,31 +81,30 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export default function Activationmodal() {
-  const [open, setOpen] = React.useState(false);
+export default function Activationmodal(props) {
+  const [confirmOpen, setConfirmOpen] = React.useState(false);
+  const [purchaseNum, setPurchaseNum] = React.useState('G35A2-Y25T4-R357V-CV157');
 
   const handleClickOpen = () => {
-    setOpen(true);
+    setConfirmOpen(true);
   };
   const handleClose = () => {
-    setOpen(false);
+    setConfirmOpen(false);
   };
+
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open dialog
-      </Button>
       <BootstrapDialog
-        onClose={handleClose}
+        onClose={props.activationModalClose}
         aria-labelledby="customized-dialog-title"
-        open={open}
+        open={props.actModalOpen}
       >
         <DialogContent dividers className={ModalStyle.activation_modal_wrap}>
             
         </DialogContent>
         <div className={ModalStyle.activation_overlay}>
-          <button className={ModalStyle.button_close} onClick={handleClose}>
+          <button className={ModalStyle.button_close} onClick={props.activationModalClose}>
             <img src={getImg('page1/close.png')} alt="" />
           </button>
           <div className={ModalStyle.modal_title}>800 Robux - 1Roblox</div>
@@ -122,12 +131,17 @@ export default function Activationmodal() {
             </div>
             <div class={ModalStyle.activation_wrap}>
               <p>Código de Ativação</p>
-              <button>
-                  Revelar Código de Ativação
-                  <img src={getImg('page1/subpage2/icon7.png')} alt="" />
-              </button>
+              {props.modalName == "activated" && <Input className={ModalStyle.purchase_form}
+              fullWidth sx={{ m: 1 }} 
+              style={{background: "#01060A", color: "#fff"}}
+              id="standard-adornment-amount"
+              defaultValue={purchaseNum}
+              endAdornment={<InputAdornment position="end" ><img src={getImg('page1/Copiar.png')} alt=""/></InputAdornment>}
+          />}
+              {props.modalName == "activation" && <button onClick={handleClickOpen}> Revelar Código de Ativação <img src={getImg('page1/subpage2/icon7.png')} alt="" /></button>}
             </div>
         </div>
+        <Activationconfirmmodal confirmOpen={confirmOpen} handleClose={handleClose}/>
       </BootstrapDialog>
     </div>
   );
