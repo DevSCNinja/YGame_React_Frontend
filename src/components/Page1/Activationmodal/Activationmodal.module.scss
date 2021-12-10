@@ -125,5 +125,26 @@
             }
             
         }
+
+        .purchase_form {
+            padding: 16px 27px;
+            border-radius: 15px;
+        }
+
+        input {
+            margin-top: 10px;
+            padding-right: 27px;
+            border: none;
+            border-radius: 15px;
+
+            font-family: Poppins;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: center;
+
+         }
     }
 }

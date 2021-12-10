@@ -4,24 +4,16 @@
 
 @media (max-width: 1600px) {
    .avatarmodal_wrap {
-      margin-top: 50px !important;
+
    }
 }
 
-.modal {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width:100%;
-   height: 100%;
-   background: rgba(1, 6, 10, 0.8);
 
    .avatarmodal_wrap {
       position: relative;
       align-self: center;
       margin: 0 auto;
       padding: 20px;
-      margin-top: 203px;
       max-width: 536px;
 
       background-color: #0D3840;
@@ -42,6 +34,8 @@
       }
 
       dl {
+         margin-left: 25px;
+         
          dt {
             font-family: Poppins;
             font-size: 23px;
@@ -67,15 +61,17 @@
          display: flex;
          justify-content: flex-end;
          height: 460px;
+         padding: 20px 0;
          
          .crop_container {
-            margin-bottom: 20px;
+               margin-bottom: 20px;
                width: 430px;
                height: 430px;
                position: absolute;
                top: 93px;
-               left: 30px;
+               left: 20px;
                border-radius: 430px;
+
 
             img {
                margin: 0 auto;
@@ -83,7 +79,17 @@
             } 
          }
          .controls {
-            padding-bottom: 30px;
+            padding: 20px 5px;
+            border-radius: 60px;
+            background: #01191E;
+            // position: absolute;
+            // bottom: 0;
+            // left: 50%;
+            // width: 50%;
+            // transform: translateX(-50%);
+            // height: 80px;
+            // display: flex;
+            // align-items: center;
          }
       }
 
@@ -97,6 +103,7 @@
          letter-spacing: 0em;
          text-align: center;
       }
+      
    }
-}
+
 

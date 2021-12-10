@@ -2,15 +2,16 @@ import React, { useState } from "react";
 
 import Header from "../../components/Home/Header";
 import Footer from "../../components/Home/Footer";
-
-// import Cardtitle from "../../components/Home/Cardtitle";
-// import Card from "../../components/Home/Card";
-// import Product from "../../components/Home/Product";
 import { getImg } from "../../utils/Helper";
 import Styles from './Page2.module.scss';
 
 function Page2() {
     const [count ,setCount] = useState(0);
+    const [pageno, setPageNo] = useState(0) ;
+
+    const selectPage = (no) => {
+        setPageNo(no)
+    }
 
     return (
         <div className={Styles.product_page}>
@@ -49,16 +50,29 @@ function Page2() {
                     <div className={Styles.explain_wrap}>
                         <dl>
                             <dt>
-                                <span>Detalhes</span>
-                                <span>Como Resgatar</span>
+                                <span className={pageno == 0 ? Styles.active : ''} onClick={() => selectPage(0)}>Detalhes</span>
+                                <span className={pageno == 1 ?  Styles.active : ''} onClick={() => selectPage(1)}>Como Resgatar</span>
                             </dt>
                             <dd>
-                                <p>Os cartões-presente da PlayStation Store são uma alternativa simples e rápida para
-                                recarregar sua conta PSN com crédito sem um cartão de crédito!
-                                </p>
-                                <p>Sempre o presente perfeito – O crédito PSN pode ser comprado e doado sem uma contaPSN.</p>
-                                <p>Compre e resgate em alguns minutos – após concluir a compra você receberá um e-mailcom seu código!</p>
-                                <p>Use o crédito PSN para compre ofertas exclusivas na PSN Store!</p>
+                                {pageno == 0 && <div>
+                                    <p>Os cartões-presente da PlayStation Store são uma alternativa simples e rápida para
+                                    recarregar sua conta PSN com crédito sem um cartão de crédito!
+                                    </p>
+                                    <p>Sempre o presente perfeito – O crédito PSN pode ser comprado e doado sem uma contaPSN.</p>
+                                    <p>Compre e resgate em alguns minutos – após concluir a compra você receberá um e-mailcom seu código!</p>
+                                    <p>Use o crédito PSN para compre ofertas exclusivas na PSN Store!</p>
+                                </div>} 
+                                {pageno == 1 && <div>
+                                    <p>Para usar seu código PlayStation Network, siga as instruções abaixo:</p>
+                                    <div className={Styles.explain_detail_wrap}>
+                                        <p>- Vá para <a href="http://www.SonyEntertainmentNetwork.com">http://www.SonyEntertainmentNetwork.com</a></p>
+                                        <p>- Clique em “Gerir conta” e faça login com suas informações de login e senha</p>
+                                        <p>- Clique em “Usar o cartão pré-pago”</p>
+                                        <p>- Introduza o código impresso no vale ou no cartão PlayStation Network e clique em “Continuar”</p>
+                                        <p>- Se o código estiver correto, verá uma descrição do produto ou serviço associado ao código</p>
+                                        <p>- Clique em “Utilizar” para adicionar o produto ou fundos a sua conta</p>
+                                    </div>
+                                </div>} 
                             </dd>
                         </dl>
                     </div>
