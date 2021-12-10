@@ -1,3 +1,8 @@
+input:-internal-autofill-selected {
+    background-color: red !important;
+}
+
+
 .logo {
     display: block;
     margin: 0 auto;
@@ -23,6 +28,7 @@
 }
 
 button.submit {
+    margin: 0 auto;
     margin-top: 25px;
     width: 364px;
     height: 46px;

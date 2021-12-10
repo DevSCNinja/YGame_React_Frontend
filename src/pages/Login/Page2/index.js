@@ -6,9 +6,63 @@ import { Button } from "../../../components/Login/Button";
 import styles from '../Login.module.scss';
 import { getImg } from "../../../utils/Helper";
 
-class Page2 extends React.Component {
-    render() {
-        return (
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import styled from "styled-components";
+
+export default function Page2() {
+    const [values, setValues] = React.useState({
+        password: '',
+        showPassword: false,
+    });
+    
+    const handleChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+    };
+
+    const handleClickShowPassword = () => {
+        setValues({
+            ...values,
+            showPassword: !values.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword = (event) => {
+         event.preventDefault();
+    };
+
+    const LoginStyle = styled.div`
+        .css-r47a1p-MuiFormControl-root {
+            margin: 0;
+            width: 100%;
+            background-color: #0D3840;
+            border-radius: 5px;
+        }
+
+        .css-1gctnaj-MuiInputBase-input-MuiFilledInput-input  {
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .css-i4bv87-MuiSvgIcon-root {
+           path {
+                color: #111 !important;
+           }
+        }
+    }`;
+    
+    
+    return (
+        <LoginStyle>
             <div className={styles.loginwrap}>
                 <Logo />
                 <div className={styles.logincontent}>
@@ -16,7 +70,7 @@ class Page2 extends React.Component {
                         <form name="login_form" id="login_form" method="POST" action="">
                             <dl>
                                 <dt>
-                                     Acesse sua conta
+                                    Acesse sua conta
                                 </dt>
                                 <dd>
                                     <span>Não tem uma conta?</span>
@@ -26,24 +80,40 @@ class Page2 extends React.Component {
 
                             <div className={styles.form_group}>
                                 <label for="email">Email</label>
-                                <input type="text" id="email"/>
+                                <input type="text" className={styles.input} id="email"/>
                             </div>
                             <div className={styles.form_group}>
                                 <label for="pass">Senha</label>
-                                <span>Esqueceu a senha?</span>
+                                <span><a href="#">Esqueceu a senha?</a></span>
                                 <div className={styles.input_wrap}>
-                                  <input type="password" id="pass"/>
-                                  <span></span>
+                                <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
+                                    <FilledInput
+                                        id="filled-adornment-password"
+                                        type={values.showPassword ? 'text' : 'password'}
+                                        value={values.password}
+                                        onChange={handleChange('password')}
+                                        endAdornment={
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                            edge="end"
+                                            >
+                                            {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                            </IconButton>
+                                        </InputAdornment>
+                                        }
+                                    />
+                                    </FormControl>
                                 </div>
                             </div>
-                            <Button />
+                            <Button/>
                         </form>
                     </div> 
                 </div>
                 <Footer />       
             </div>
-        )
-    }
+        </LoginStyle>
+    )
 }
-
-export default Page2;

@@ -19,7 +19,7 @@ class Page1 extends React.Component {
                                 </dt>
                                 <dd>
                                     <span>Não tem uma conta?</span>
-                                    <span>h-se Aqui</span>
+                                    <span><a href="#">h-se Aqui</a></span>
                                 </dd>
                             </dl>
 

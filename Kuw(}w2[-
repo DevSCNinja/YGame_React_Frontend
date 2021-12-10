@@ -1,0 +1,223 @@
+[33mcommit d5a980459bcde19a19650ce8ffcef86f0c36bb90[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Fri Dec 10 03:03:41 2021 +0900
+
+    create new page7
+
+[33mcommit 20ef5b4231f3125b6b3631be625643a4ce71ad2d[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Wed Dec 8 22:20:04 2021 +0900
+
+    create new page6
+
+[33mcommit 11ceb80346b978c4c67ac75c80433de39963e50d[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Tue Dec 7 02:15:45 2021 +0900
+
+    home update ver12_7
+    
+    home page update
+
+[33mcommit 1a3a2237f760d6426a71688233a701a107da9635[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Tue Dec 7 01:11:32 2021 +0900
+
+    page5  updated
+    
+    page5  updated
+
+[33mcommit 9e31a003e8ef0017045958198d8779ead53ead3f[m
+Merge: cf7aabf 9b363e1
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sun Dec 5 23:38:00 2021 -0700
+
+    Merge pull request #11 from globalhunter727/dev12_4
+    
+    make new page(1~4 page) in page1
+
+[33mcommit 9b363e1d31aad848deb72b31fdaec0bac0fb856c[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Mon Dec 6 15:36:53 2021 +0900
+
+    make new page(1~4 page) in page1
+
+[33mcommit cf7aabf3e9017615fc8da77bfb70ca58fef5c784[m
+Merge: 01a5e88 eb087d6
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 14:35:08 2021 -0700
+
+    Merge pull request #10 from globalhunter727/dev12_4
+    
+    insert page5 page
+
+[33mcommit eb087d66d243843d7edcc64dd43dd2e0a87ae090[m
+Merge: af04b21 01a5e88
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sun Dec 5 06:34:06 2021 +0900
+
+    merge home amnd page5
+
+[33mcommit af04b211a507944be14b5c42440ac40dd25887ab[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sun Dec 5 06:00:57 2021 +0900
+
+    insert page5 page
+    
+    make and insert page5 to website
+
+[33mcommit 01a5e888ae167afdc9cdf67c48c1bc5a4788fceb[m
+Merge: c557ebc 103f608
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 12:18:04 2021 -0700
+
+    Merge pull request #9 from globalhunter727/dev-k
+    
+    home update
+
+[33mcommit 103f608ecfbade5fe823dcd5cbf5c7fe6d029f9b[m
+Author: KSAN <ksan0120@gmail.com>
+Date:   Sun Dec 5 05:17:23 2021 +1000
+
+    home update
+    
+    home logged and cart page
+
+[33mcommit c557ebc8dacfa7d59a634a3001dfe1046f7eb332[m
+Merge: b901d0a ae7b406
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 07:47:06 2021 -0700
+
+    Merge pull request #8 from globalhunter727/dev12_4
+    
+    update  incon lists
+
+[33mcommit ae7b406a9e9b8f7726b7ada01957b44fc884b604[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 23:46:43 2021 +0900
+
+    update  incon lists
+    
+    update icon lists of footer in home page
+
+[33mcommit b901d0a014ae34237d88e074d5db4880bb8479a3[m
+Merge: c27c607 47c971a
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 06:46:40 2021 -0700
+
+    Merge pull request #7 from globalhunter727/dev-k
+    
+    Home menu update
+
+[33mcommit 47c971ae6c725ae1867063e95e95698ba7f09fe8[m
+Author: KSAN <ksan0120@gmail.com>
+Date:   Sat Dec 4 23:45:10 2021 +1000
+
+    Home menu update
+
+[33mcommit c27c60711d7442371d6e6bd03243c9d9be9df0a5[m
+Merge: 94a46e3 4013949
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 03:51:43 2021 -0500
+
+    Merge pull request #6 from globalhunter727/develop2
+    
+    merge notfound  and home and login page
+
+[33mcommit 40139490794a9ca34f7f23cecc056ca0c69d416c[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 17:51:41 2021 +0900
+
+    merge notfound  and home and login page
+
+[33mcommit 08d5bb3d79a39d23d2e05124bf128da70abad58f[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 16:48:51 2021 +0900
+
+    login modal update
+
+[33mcommit 94a46e3efeb0b52d63c6b72e5ce3d2058f1c82c3[m
+Merge: 4ba7549 08d5bb3
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 02:48:47 2021 -0500
+
+    Merge pull request #5 from globalhunter727/develop2
+    
+    login modal update
+
+[33mcommit 4ba7549d02b4fb3332cfcfa076c28f62232708ea[m
+Merge: 34b9839 adc928f
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Fri Dec 3 14:45:34 2021 -0500
+
+    Merge pull request #4 from globalhunter727/develop1
+    
+    change fontawesome
+
+[33mcommit adc928f957eaf9eb544d040f8200f8d9bf787c4a[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 04:44:27 2021 +0900
+
+    change fontawesome
+
+[33mcommit 34b9839f782fb46a7a58531aa0a5776ddfb5e580[m
+Merge: a3288ff 3ce2ff3
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Fri Dec 3 14:28:11 2021 -0500
+
+    Merge pull request #3 from globalhunter727/develop1
+    
+    home and login update
+
+[33mcommit 3ce2ff39616c4982522e0b0c03e9d00cac4e55d2[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 04:27:27 2021 +0900
+
+    home and login update
+    
+    home and login update
+
+[33mcommit a3288ff804f6d2a5c71eaa9e687ac3546125a45c[m
+Merge: bfaa788 c7abe93
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Fri Dec 3 13:50:57 2021 -0500
+
+    Merge pull request #2 from globalhunter727/develop
+    
+    update login
+
+[33mcommit c7abe93a249a530fdd65bdc6676de824216854f2[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 03:50:25 2021 +0900
+
+    update login
+    
+    update login
+
+[33mcommit bfaa78814c914795e5f77c41bd8b30474fe15efa[m
+Merge: fefd7d9 9d7cc10
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Fri Dec 3 11:09:39 2021 -0500
+
+    Merge pull request #1 from globalhunter727/dev_1
+    
+    update_1203
+
+[33mcommit 9d7cc10b390e0f04529493ba3eab18e127e4b5eb[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Sat Dec 4 02:04:58 2021 +1000
+
+    update_1203
+    
+    update login page and home
+
+[33mcommit fefd7d967f057fb126c28db879cf3e776e3de30e[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Thu Dec 2 23:28:11 2021 +0900
+
+    init repo
+
+[33mcommit 9236d5a758a9b758e19ec2d07a6ff8d6fdcbdb50[m
+Author: Global Hunter <86528375+globalhunter727@users.noreply.github.com>
+Date:   Thu Dec 2 23:12:00 2021 +0900
+
+    Initial commit
