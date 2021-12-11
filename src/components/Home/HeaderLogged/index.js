@@ -1,6 +1,4 @@
 import React from "react";
-import $ from 'jquery'; 
-
 import Signup from "../Signup";
 import Menu1 from "../Menu1";
 import Menu2 from "../Menu2";
@@ -145,7 +143,7 @@ class Header extends React.Component {
                             <p>Minha Conta</p>
                         </div>
                         <div className={Styles.usercart}>
-                            <a ><img src={getImg('home/icons/cart.png')} alt="User" /></a>
+                            <a onClick={this.props.handleShowCart}><img src={getImg('home/icons/cart.png')} alt="User" /></a>
                             <span className={Styles.productcount}>1</span>
                         </div>
                         {this.state.showSignin && <Signup />}

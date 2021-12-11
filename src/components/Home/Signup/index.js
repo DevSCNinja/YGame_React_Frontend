@@ -31,25 +31,24 @@ class Signin extends React.Component {
                 <div className="container text-center">
                     <img className="big" src={getImg('home/icons/key.png')} alt=""/>
                     <div>
-                        <p>Minhas</p>
-                        <p>Chaves</p>
+                        <a href="/mypage/keys">Minhas Chaves</a>
                     </div>
                 </div>
 
                 <div className="semi-container">
                     <div className="semi-half">
                         <img className="small" src={getImg('home/icons/note.png')} alt=""/>
-                        <p>Pedidos</p>
+                        <a href="/mypage/request">Pedidos</a>
                     </div>
                     <div className="semi-half">
-                        <img className="small" src={getImg('home/icons/db.png')} alt=""/>
-                        <p>Dados</p>
+                        <img className="small" src={getImg('home/icons/db.png')} alt=""/>                
+                        <a href="/mypage/data">Dados</a>
                     </div>
                 </div>
 
                 <div className="container">
                     <img className="small" src={getImg('home/icons/heart.png')} alt=""/>
-                    <p>Lista de Desejos</p>
+                    <a href="/mypage/wishlist">Lista de Desejos</a>
                 </div>
 
                 <Button buttontext="Sair" background="#F15A24"/>

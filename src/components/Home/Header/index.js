@@ -1,6 +1,4 @@
 import React from "react";
-import $ from 'jquery'; 
-
 import Signin from "../Signin";
 import Menu1 from "../Menu1";
 import Menu2 from "../Menu2";
@@ -138,7 +136,7 @@ class Header extends React.Component {
                     </div>
                     <div className={Styles.userinfo}>
                         <a  className={Styles.userimage} onClick={this.toogleSignin}>
-                            <img src={getImg('home/users/lima.png')} alt="LIMA" />
+                             <img src={getImg('home/icons/user-default.png')} alt=""/>
                         </a>
                         
                         <div className={Styles.username}>

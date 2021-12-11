@@ -17,15 +17,26 @@ import Styles from './../Home/Home.module.scss';
 class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+
+        this.state = {
+            showCart: false
+        };
+    }
+
+    handleShowCart = () => {
+        this.setState({ showCart: true });
+    }
+
+    handleHideCart = () => {
+        this.setState({ showCart: false });
     }
 
     render() {
         return (
             <div className={Styles.home}>
-                <Cart />
+                {this.state.showCart &&  <Cart />}
                 <div className={Styles.container}>
-                    <HeaderLogged />
+                    <HeaderLogged handleShowCart={this.handleShowCart}/>
                     <div className={Styles.cardcontent}>
                         <div className={`${Styles.slide}`}>
                             {/* <AliceCarousel autoPlay autoPlayInterval="3000"> */}
