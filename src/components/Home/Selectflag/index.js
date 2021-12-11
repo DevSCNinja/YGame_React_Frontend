@@ -16,7 +16,7 @@ class Selectflag extends React.Component {
     render() {
         return (
             <div className={Styles.panel}>
-                <Dropdown options={['Real Brasileiro (R$)', 'US dollar($)', 'Euro (euro)']} value={'Real Brasileiro (R$)'} placeholder="Select an option" className={Styles.dropdown} controlClassName={Styles.control} menuClassName={Styles.menu} arrowClassName={Styles.arrow}/>
+                <Dropdown options={['Real Brasileiro (R$)']} onChange={this._onSelect} value={'Real Brasileiro (R$)'} placeholder="Select an option" className={Styles.dropdown} controlClassName={Styles.control} menuClassName={Styles.menu} arrowClassName={Styles.arrow}/>
             </div>
         )
     }

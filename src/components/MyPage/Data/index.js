@@ -12,70 +12,60 @@ import Input from "@material-ui/core/Input";
 import { getImg } from "../../../utils/Helper";
 import Button1 from '../Button1';
 
-const MydataPageStyle = styled.div`
-    .MuiInputBase-root {
-        background: #01191E;
-        border-radius: 10px;
-    
-    }
-
-    .MuiInputBase-root  input{
-        padding: 0;
-        color: #fff;
-    }
-
-    .MuiInputBase-root  {
-        svg {
-            path {
-                font-size: 20px !important;
-                color: #0D3840;
-            }
-        }
-    }
-
-    .MuiIconButton-root {
-        font-size: 2rem;
-    }
-
-    .MuiInput-underline:before {
-        border: none;
-        border-radius: 10px;
-    }
-
-    .row {
-        margin-bottom: 20px;
-    }
-    
-}`
-
 const Data = () => {
     const [values, setValues] = React.useState({
       password: "",
       password_confirm: "",
       showPassword: false,
-      confirmPass: '',
-      confirmShowPass: false,
     });
     
     const handleClickShowPassword = () => {
       setValues({ ...values, showPassword: !values.showPassword });
-    };
-
-    const handleClickConfirmShowPassword = () => {
-        setValues({
-            ...values,
-            confirmShowPass: !values.confirmShowPass,
-        });
     };
     
     const handleMouseDownPassword = (event) => {
       event.preventDefault();
     };
     
-    
-    const handleChange = (prop) => (event) => {
+    const handlePasswordChange = (prop) => (event) => {
       setValues({ ...values, [prop]: event.target.value });
     };
+
+    const MydataPageStyle = styled.div`
+        .MuiInputBase-root {
+            background: #01191E;
+            border-radius: 10px;
+        
+        }
+
+        .MuiInputBase-root  input{
+            padding: 0;
+            color: #fff;
+        }
+
+        .MuiInputBase-root  {
+            svg {
+                path {
+                    font-size: 20px !important;
+                    color: #0D3840;
+                }
+            }
+        }
+
+        .MuiIconButton-root {
+            font-size: 2rem;
+        }
+
+        .MuiInput-underline:before {
+            border: none;
+            border-radius: 10px;
+        }
+
+        .row {
+            margin-bottom: 20px;
+        }
+        
+    }`
     
     return (
       <MydataPageStyle>
@@ -104,7 +94,7 @@ const Data = () => {
                                         <label>Senha</label>
                                     </div>
                                     <Input type={values.showPassword ? "text" : "password"}
-                                        onChange={handleChange("password")}
+                                        onChange={handlePasswordChange("password")}
                                         value={values.password}
                                         endAdornment={
                                         <InputAdornment position="end">
@@ -131,22 +121,20 @@ const Data = () => {
                                     <div className={Styles.label_group}>
                                         <label>Confirmação de Senha</label>
                                     </div>
-                                    <Input type={values.confirmShowPass ? "text" : "password"}
-                                        onChange={handleChange("confirmPass")}
-                                        value={values.confirmPass}
+                                    <Input type={values.showPassword ? "text" : "password"}
+                                        onChange={handlePasswordChange("password")}
+                                        value={values.password_confirm}
                                         endAdornment={
-                                            <InputAdornment position="end">
+                                        <InputAdornment position="end">
                                             <IconButton
-                                            aria-label="toggle password visibility"
-                                            onClick={handleClickConfirmShowPassword}
+                                            onClick={handleClickShowPassword}
                                             onMouseDown={handleMouseDownPassword}
-                                            edge="end"
                                             >
-                                            {values.confirmShowPass ? <VisibilityOff /> : <Visibility />}
+                                            {values.showPassword_confirm ? <Visibility /> : <VisibilityOff />}
                                             </IconButton>
                                         </InputAdornment>
                                         }
-                                    />
+                                    />      
                                 </div>
                             </div>
                         </div>

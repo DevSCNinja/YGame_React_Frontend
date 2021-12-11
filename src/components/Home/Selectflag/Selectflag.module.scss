@@ -1,14 +1,14 @@
 .panel {
     width: 100%;
-}
 
-.dropdown {
-    width: 100%;
-    border: none;
-    // padding: 12px;
-    background: #01191E;
-    border-radius: 4px;
-    font-size: 15px;    
+    select {
+        width: 100%;
+        border: none;
+        padding: 12px;
+        background: #01191E;
+        border-radius: 4px;
+        font-size: 15px;
+    }
 }
 
 .control {

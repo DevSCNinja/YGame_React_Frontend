@@ -12,7 +12,6 @@ class Keys extends React.Component {
         super(props);
 
         this.state = {
-            purchase: false,
             actModalOpen: false,
             modalName: ""
         }
@@ -26,10 +25,6 @@ class Keys extends React.Component {
         this.setState ({ actModalOpen: false });
     }
 
-    doPurchase = () => {
-        this.setState({ purchase : true });
-    }
-
     render() {
         const options = [];
 
@@ -41,7 +36,7 @@ class Keys extends React.Component {
                 <div className={Styles.product_list}>
                     <div className={Styles.product_item}>
                         <img src={getImg('mypage/1.png')} alt=""/>
-                        <Button buttontext="Resgatar" background={this.state.purchase ? '#DB2B2F' : '#01191E'} onClick={() => this.activationModalOpen(this.state.purchase ? 'activated' : 'activation')}/>
+                        <Button buttontext="Resgatar" background="#01191E" onClick={() => this.activationModalOpen('activation')}/>
                     </div>
                     <div className={Styles.product_item}>
                         <img src={getImg('mypage/2.png')} alt=""/>
@@ -76,7 +71,7 @@ class Keys extends React.Component {
                         <Button buttontext="Resgatar" background="#DB2B2F" onClick={() => this.activationModalOpen('activated')}/>
                     </div>
                 </div>
-                {this.state.actModalOpen && <Activationmodal purchase={this.state.purchase} doPurchase={this.doPurchase} modalName={this.state.modalName} actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
+                {this.state.actModalOpen && <Activationmodal modalName={this.state.modalName} actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
             </div>
         )
     }
