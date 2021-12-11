@@ -20,10 +20,9 @@ class Signin extends React.Component {
                     <p>Usuário não logado</p>
                 </div>
 
-                <Button buttontext="Fazer Login" background="#F15A24"/>
-                <Button buttontext="Cadastrar-se" background="#01191E"/>
-            </div>
-            
+                <a href="/login"><Button buttontext="Fazer Login" background="#01191E"/></a>
+                <a href="/register"><Button buttontext="Cadastrar-se" background="#01191E"/></a>
+            </div>       
         )
     }
 }

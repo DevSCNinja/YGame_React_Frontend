@@ -3,10 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Interest from './pages/Interest';
 import HomeLogged from './pages/HomeLogged';
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
-import Page3 from './pages/Page3';
+import Product from './pages/Product';
+import Search from './pages/Search';
+
+import MyPage from './pages/MyPage';
 
 import NotFound1 from './pages/NotFound1';
 import NotFound2 from './pages/NotFound2';
@@ -14,35 +18,26 @@ import NotFound3 from './pages/NotFound3';
 import NotFound4 from './pages/NotFound4';
 import NotFound5 from './pages/NotFound5';
 
-import LoginPage1 from './pages/Login/Page1';
-import LoginPage2 from './pages/Login/Page2';
-import LoginPage3 from './pages/Login/Page3';
-import LoginPage4 from './pages/Login/Page4';
-import LoginPage5 from './pages/Login/Page5';
-import LoginPage6 from './pages/Login/Page6';
-
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route component={Home} path="/home" />
+        <Route component={Register} path="/register" />
+        <Route component={Interest} path="/tastes" />
+        
         <Route component={HomeLogged} path="/home_logged" />
-        <Route component={Page1} path="/page5" />
-        <Route component={Page2} path="/page6" />
-        <Route component={Page3} path="/page7" />
+        <Route component={Product} path="/product" />
+        <Route component={Search} path="/search" />
+        <Route component={MyPage} path="/mypage" />
 
         <Route component={NotFound2} path="/page1" />
         <Route component={NotFound3} path="/page2" />
         <Route component={NotFound4} path="/page3" />
         <Route component={NotFound5} path="/page4" />
 
-        <Route component={LoginPage1} path="/login/page1" />
-        <Route component={LoginPage2} path="/login/page2" />
-        <Route component={LoginPage3} path="/login/page3" />
-        <Route component={LoginPage4} path="/login/page4" />
-        <Route component={LoginPage5} path="/login/page5" />
-        <Route component={LoginPage6} path="/login/page6" />
+        <Route component={Login} path="/login" />
 
         <Route component={NotFound1} path="/" />
         

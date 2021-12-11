@@ -2,9 +2,9 @@ import React from "react";
 
 import Button from "./../Button";
 import Item from "./Item";
-
 import { getImg } from "../../../utils/Helper";
 import Styles from './Cart.module.scss';
+import { animations } from 'react-animation';
 
 class Cart extends React.Component {
     constructor(props) {
@@ -16,9 +16,12 @@ class Cart extends React.Component {
     }
 
     render() {
+        const animationStyle = {
+            animation: animations.bounceIn
+        }
 
         return (
-            <div className={Styles.container}>
+            <div className={Styles.container} style={animationStyle}>
                 <h5>
                     Carrinho de Compras
                 </h5>

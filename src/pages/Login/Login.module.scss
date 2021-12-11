@@ -138,7 +138,14 @@
 
                 span {
                     line-height: 30px;
+                    font-family: Poppins;
                     font-size: 17px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 26px;
+                    letter-spacing: 0em;
+                    text-align: left;
+
                 }
             }
         }
@@ -189,7 +196,7 @@ span.first_title {
 .interest {
     display: block;
     margin: 0 auto;
-    padding: 20px;
+    padding: 25px;
     width: 580px;
     background-color: #01191E;
     border-radius: 10px;
@@ -206,20 +213,31 @@ span.first_title {
         margin-top: 26px;
 
         .row {
-            margin: 0 -4.82px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 -2.5px;
+            width: 100%;;
             margin-bottom: 11px;
     
             span {
                 cursor: pointer;
-                margin: 0 4.82px;
+                margin: 5px;
+
+                // margin: 0 4.82px;
                 padding: 1px 6px;
                 border: 1px solid #fff;
-                border-radius: 30px;                
+                border-radius: 30px;  
+                
+                i {
+                    width: 15px;
+                }
             }
 
             .active {
                 background: #0D3840;
                 border: none;
+                border: 1px solid transparent;
             }
         }
     }
@@ -243,4 +261,66 @@ span.first_title {
     // body {
     //     height: 900px;
     // }
+}
+
+.modal {
+    position: absolute;
+    top: 106px;
+    overflow-y: auto;
+    position: relative;
+    margin: 0 auto;
+    padding: 25px;
+    width: 586px;
+    min-width: 586px;
+    background-color: #01191E;
+    border-radius: 10px;
+    border: none !important;
+    
+    button.modal_close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        i {
+            display: block;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 30px;
+        }
+    }
+
+    .modal_outer {
+       
+        text-align: center;
+        
+
+        .modal_title {
+            margin: 0px 25px 25px 25px;
+            font-family: Poppins;
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+
+        .modal_content {
+            padding: 10px;
+            background: #01060A;
+            border-radius: 10px;
+            min-height: 687px;
+            // overflow: scroll;
+            text-align: left;
+
+            p {
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+        }
+    }
+
 }
