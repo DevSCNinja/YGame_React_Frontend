@@ -7,15 +7,40 @@ import { WithOthers } from "../../components/Login/WithOthers";
 import { getImg } from "../../utils/Helper";
 import { animations } from 'react-animation';
 import { Button } from "../../components/Login/Button";
-
-import IconButton from '@mui/material/IconButton';
-import FilledInput from '@mui/material/FilledInput';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import styled from 'styled-components';
 import styles from './Login.module.scss';
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
+
+const LoginStyle = styled.div`
+        .MuiFormControl-root {
+            margin: 0;
+            width: 100%;
+            background-color: #0D3840;
+            border-radius: 5px;
+        }
+
+        .MuiInputBase-input-MuiFilledInput-input  {
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .MuiSvgIcon-root {
+           path {
+                color: #111 !important;
+           }
+        }
+    }`;
 
 export default function Login() {
     const [values, setValues] = useState({
@@ -25,6 +50,7 @@ export default function Login() {
     });
     
     const handleChange = (prop) => (event) => {
+        console.log(event);
         setValues({ ...values, [prop]: event.target.value });
     };
 
@@ -50,26 +76,6 @@ export default function Login() {
     const animationStyle = {
         animation: animations.bounceIn
     }
-
-    const LoginStyle = styled.div`
-        .css-r47a1p-MuiFormControl-root {
-            margin: 0;
-            width: 100%;
-            background-color: #0D3840;
-            border-radius: 5px;
-        }
-
-        .css-1gctnaj-MuiInputBase-input-MuiFilledInput-input  {
-            margin-top: 0;
-            padding: 0;
-        }
-
-        .css-i4bv87-MuiSvgIcon-root {
-           path {
-                color: #111 !important;
-           }
-        }
-    }`;
 
     return (
         <LoginStyle>
