@@ -9,7 +9,6 @@ import Interest from './pages/Interest';
 import HomeLogged from './pages/HomeLogged';
 import Product from './pages/Product';
 import Search from './pages/Search';
-import PaymentCheckout from './pages/PaymentCheckout';
 
 import MyPage from './pages/MyPage';
 
@@ -29,10 +28,9 @@ function App() {
         <Route component={Interest} path="/tastes" />
         
         <Route component={HomeLogged} path="/home_logged" />
-        <Route component={MyPage} path="/mypage" />
         <Route component={Product} path="/product" />
         <Route component={Search} path="/search" />
-        <Route component={PaymentCheckout} path="/payment_checkout" />
+        <Route component={MyPage} path="/mypage" />
 
         <Route component={NotFound2} path="/page1" />
         <Route component={NotFound3} path="/page2" />
