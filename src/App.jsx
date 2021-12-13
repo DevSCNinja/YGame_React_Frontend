@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -9,7 +9,7 @@ import Interest from './pages/Interest';
 import HomeLogged from './pages/HomeLogged';
 import Product from './pages/Product';
 import Search from './pages/Search';
-import PaymentCheckout from './pages/PaymentCheckout';
+import Checkout from './pages/Checkout';
 
 import MyPage from './pages/MyPage';
 
@@ -32,7 +32,7 @@ function App() {
         <Route component={MyPage} path="/mypage" />
         <Route component={Product} path="/product" />
         <Route component={Search} path="/search" />
-        <Route component={PaymentCheckout} path="/payment_checkout" />
+        <Route component={Checkout} path="/checkout" />
 
         <Route component={NotFound2} path="/page1" />
         <Route component={NotFound3} path="/page2" />

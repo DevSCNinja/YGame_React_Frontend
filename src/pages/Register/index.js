@@ -1,10 +1,9 @@
-import React, {useState, useEffect } from "react";
+import React, {useState } from "react";
 
 import { Button } from "../../components/Login/Button";
 import { Logo } from "../../components/Login/Logo";
 import { Footer } from "../../components/Login/Footer";
 import styles from '../Login/Login.module.scss';
-import { getImg } from "../../utils/Helper";
 import { WithOthers } from "../../components/Login/WithOthers";
 import { animations } from 'react-animation'
 import IconButton from '@mui/material/IconButton';
@@ -86,23 +85,23 @@ export default function Register() {
     };
 
 
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-    };
+    // const style = {
+    //     position: 'absolute',
+    //     top: '50%',
+    //     left: '50%',
+    //     transform: 'translate(-50%, -50%)',
+    //     width: 400,
+    //     bgcolor: 'background.paper',
+    //     border: '2px solid #000',
+    //     boxShadow: 24,
+    //     p: 4,
+    // };
 
     return (
         <RegisterStyle>
             <div className={styles.loginwrap}>
                 <Logo />
-                <div className={styles.logincontent} style={{animation: animations.bounceIn}}>
+                <div className={styles.logincontent} style={animationStyle}>
                     <div className={styles.loginformwrap} style={values.inputStatus ? { width: "586px"} : {}}>
                         <form name="login_form" id="login_form" method="POST" action="">
                             <dl>
@@ -111,7 +110,7 @@ export default function Register() {
                                 </dt>
                                 <dd>
                                     <span>Já tem uma conta?</span>
-                                    <span><a onClick={handleClick}>Entre Aqui</a></span>
+                                    <span><a href="javascript:;"onClick={handleClick}>Entre Aqui</a></span>
                                 </dd>
                             </dl>
                             {!values.inputStatus && <WithOthers />}

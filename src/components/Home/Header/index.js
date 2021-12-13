@@ -7,6 +7,7 @@ import { getImg } from "../../../utils/Helper";
 import Styles from './../Header/Header.module.scss';
 import Hamburger from 'hamburger-react';
 import styled from 'styled-components';
+import { slide as BurgerMenu } from 'react-burger-menu'
 
 const HeaderStyle = styled.div`
     .hamburger-react {
@@ -162,7 +163,7 @@ class Header extends React.Component {
                             </div>
                         </div>
                         <div className={Styles.userinfo}>
-                            <a  className={Styles.userimage} onClick={this.toogleSignin}>
+                            <a  href="javascript:;" className={Styles.userimage} onClick={this.toogleSignin}>
                                 <img src={getImg('home/icons/user-default.png')} alt=""/>
                             </a>
                             

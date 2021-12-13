@@ -2,12 +2,11 @@ import React from "react";
 
 import HeaderLogged from "../../components/Home/HeaderLogged";
 import Footer from "../../components/Home/Footer";
-
 import { getImg } from "../../utils/Helper";
 import Styles from './PaymentCheckout.module.scss';
 import styled from "styled-components";
-import Sort from "../../components/MyPage/Sort";
-import Dropdown from 'react-dropdown';
+// import Sort from "../../components/MyPage/Sort";
+// import Dropdown from 'react-dropdown';
 
 export default function PaymentCheckout(props) {
   const options = [];
@@ -65,10 +64,13 @@ export default function PaymentCheckout(props) {
             <div className={Styles.payment_checkout_container}>
             <div className={Styles.payment_checkout_wrap}>
                 <div className={Styles.title}>CHECKOUT</div>
-                <div clasName={Styles.menu_list}>
-                    <div className={Styles.menu_item}>
+                <div clasName={Styles.step_list}>
+                    <div className={Styles.step_item}>      
+                        <div className={Styles.arrow}></div>
+                        <div className={Styles.icon_wrap}>
+                            <img src={getImg('payment_checkout/user_active.png')} alt=""/>
+                        </div>
                         
-                    Carrinho
                     </div>
                 </div>   
             </div>

@@ -6,7 +6,6 @@ import { getImg } from "../../utils/Helper";
 import Styles from './Product.module.scss';
 
 function Product() {
-    const [count ,setCount] = useState(0);
     const [pageno, setPageNo] = useState(0) ;
 
     const selectPage = (no) => {
@@ -50,11 +49,11 @@ function Product() {
                     <div className={Styles.explain_wrap}>
                         <dl>
                             <dt>
-                                <span className={pageno == 0 ? Styles.active : ''} onClick={() => selectPage(0)}>Detalhes</span>
-                                <span className={pageno == 1 ?  Styles.active : ''} onClick={() => selectPage(1)}>Como Resgatar</span>
+                                <span className={pageno === 0 ? Styles.active : ''} onClick={() => selectPage(0)}>Detalhes</span>
+                                <span className={pageno === 1 ?  Styles.active : ''} onClick={() => selectPage(1)}>Como Resgatar</span>
                             </dt>
                             <dd>
-                                {pageno == 0 && <div>
+                                {pageno === 0 && <div>
                                     <p>Os cartões-presente da PlayStation Store são uma alternativa simples e rápida para
                                     recarregar sua conta PSN com crédito sem um cartão de crédito!
                                     </p>
@@ -62,7 +61,7 @@ function Product() {
                                     <p>Compre e resgate em alguns minutos – após concluir a compra você receberá um e-mailcom seu código!</p>
                                     <p>Use o crédito PSN para compre ofertas exclusivas na PSN Store!</p>
                                 </div>} 
-                                {pageno == 1 && <div>
+                                {pageno === 1 && <div>
                                     <p>Para usar seu código PlayStation Network, siga as instruções abaixo:</p>
                                     <div className={Styles.explain_detail_wrap}>
                                         <p>- Vá para <a href="http://www.SonyEntertainmentNetwork.com">http://www.SonyEntertainmentNetwork.com</a></p>
