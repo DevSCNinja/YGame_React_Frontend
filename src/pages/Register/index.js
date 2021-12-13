@@ -1,10 +1,9 @@
-import React, {useState, useEffect } from "react";
+import React, {useState } from "react";
 
 import { Button } from "../../components/Login/Button";
 import { Logo } from "../../components/Login/Logo";
 import { Footer } from "../../components/Login/Footer";
 import styles from '../Login/Login.module.scss';
-import { getImg } from "../../utils/Helper";
 import { WithOthers } from "../../components/Login/WithOthers";
 import { animations } from 'react-animation'
 import IconButton from '@mui/material/IconButton';
@@ -15,6 +14,27 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import styled from 'styled-components';
 import Modal from '@mui/material/Modal';
+
+const RegisterStyle = styled.div`
+    .MuiFormControl-root {
+        margin: 0;
+        width: 100%;
+        background-color: #0D3840;
+        border-radius: 5px;
+    }
+
+    .MuiInputBase-input-MuiFilledInput-input  {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .MuiSvgIcon-root {
+    path {
+            color: #111 !important;
+    }
+    }
+}`;
+
 
 export default function Register() {
     const [values, setValues] = useState({
@@ -64,43 +84,23 @@ export default function Register() {
         animation: animations.bounceIn
     }
 
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-    };
-
-    const RegisterStyle = styled.div`
-        .css-r47a1p-MuiFormControl-root {
-            margin: 0;
-            width: 100%;
-            background-color: #0D3840;
-            border-radius: 5px;
-        }
-
-        .css-1gctnaj-MuiInputBase-input-MuiFilledInput-input  {
-            margin-top: 0;
-            padding: 0;
-        }
-
-        .css-i4bv87-MuiSvgIcon-root {
-        path {
-                color: #111 !important;
-        }
-        }
-    }`;
+    // const style = {
+    //     position: 'absolute',
+    //     top: '50%',
+    //     left: '50%',
+    //     transform: 'translate(-50%, -50%)',
+    //     width: 400,
+    //     bgcolor: 'background.paper',
+    //     border: '2px solid #000',
+    //     boxShadow: 24,
+    //     p: 4,
+    // };
 
     return (
         <RegisterStyle>
             <div className={styles.loginwrap}>
                 <Logo />
-                <div className={styles.logincontent}>
+                <div className={styles.logincontent} style={animationStyle}>
                     <div className={styles.loginformwrap} style={values.inputStatus ? { width: "586px"} : {}}>
                         <form name="login_form" id="login_form" method="POST" action="">
                             <dl>
@@ -109,7 +109,7 @@ export default function Register() {
                                 </dt>
                                 <dd>
                                     <span>Já tem uma conta?</span>
-                                    <span><a onClick={handleClick}>Entre Aqui</a></span>
+                                    <span><a href="javascript:;"onClick={handleClick}>Entre Aqui</a></span>
                                 </dd>
                             </dl>
                             {!values.inputStatus && <WithOthers />}

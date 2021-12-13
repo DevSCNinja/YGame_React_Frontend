@@ -98,8 +98,8 @@ class Footer extends React.Component {
                                 <a className={Styles.icon_instagram}><i className="fa fa-instagram"></i></a>
                             </div>
                             <div>
-                                <a className={Styles.icon_youtube}><i className="fa fa-youtube"></i></a>
-                                <a className={Styles.icon_pinterest}><i className="fa fa-pinterest"></i></a>
+                                <a className={Styles.icon_youtube}><i className="fa fa-youtube-play"></i></a>
+                                <a className={Styles.icon_linkdin}><i className="fa fa-linkedin"></i></a>
                                 <a className={Styles.icon_pinterest}><i className="fa fa-pinterest"></i></a>
                             </div>
                         </div>

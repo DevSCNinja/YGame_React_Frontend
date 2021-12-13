@@ -2,6 +2,7 @@ import React from "react";
 import $ from 'jquery'; 
 import Styles from './Menu.scss';
 
+
 class Menu1 extends React.Component {
     constructor(props) {
         super(props);
@@ -21,7 +22,7 @@ class Menu1 extends React.Component {
 
     render() {
         let menuClass = Styles.first;
-        let activeClass = Styles.active
+        let activeClass = Styles.active;
 
         return (
             <div className="first">

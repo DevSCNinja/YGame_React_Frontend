@@ -25,11 +25,11 @@ class MyPage extends React.Component {
 
     componentDidMount() {
         const path = window.location.pathname;
-        if(path == '/mypage/wishlist')
+        if(path === '/mypage/wishlist')
             this.setState({ activeLink: 1 });
-        else if(path == '/mypage/request')
+        else if(path === '/mypage/request')
             this.setState({ activeLink: 2 });
-        else if(path == '/mypage/data')    
+        else if(path === '/mypage/data')    
             this.setState({ activeLink: 3 });
 
     }
@@ -52,10 +52,10 @@ class MyPage extends React.Component {
                 <div className={Styles.container}>
                     <HeaderLogged />
                     <Categorymenu handleShow={this.showModal} activeLink={this.state.activeLink} handleClick={this.handleClick}/>
-                    { this.state.activeLink == 0 &&  <Keys/> }
-                    { this.state.activeLink == 1 &&  <Wishlist /> }
-                    { this.state.activeLink == 2 &&  <Request /> }
-                    { this.state.activeLink == 3 &&  <Data /> }
+                    { this.state.activeLink === 0 &&  <Keys/> }
+                    { this.state.activeLink === 1 &&  <Wishlist /> }
+                    { this.state.activeLink === 2 &&  <Request /> }
+                    { this.state.activeLink === 3 &&  <Data /> }
 
                     <Avatarmodal show={this.state.show} handleClose={this.hideModal}/>
                 </div>

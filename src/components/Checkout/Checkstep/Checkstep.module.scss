@@ -1,0 +1,126 @@
+.checkout_menu_wrap {
+    position: relative;
+    margin: 45px 0px 0px 0px;
+
+    .caption {
+        margin-bottom: 45px;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+}
+
+.progressbar {
+    width: 60%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+.progressbar .active {
+    color: #000000
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+
+}
+
+.progressbar li:before {
+    content: '';
+    width: 75px;
+    height: 75px;
+    line-height: 24px;
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    background: #01191E;
+    border-radius: 50%;
+    margin: 0 auto 1px auto;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.progressbar li:first-child:after {
+    content: '';
+    width: 50%;
+    height: 5px;
+    background: #01191E;
+    position: absolute;
+    left: 0;
+    top: 37px;
+    border-radius: 10px;
+    z-index: -1
+}
+
+.progressbar li:last-child:after {
+    content: '';
+    width: 150%;
+    height: 5px;
+    background: #01191E;
+    position: absolute;
+    left: -50%;
+    top: 37px;
+    border-radius: 10px;
+    z-index: -1
+}
+
+.progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: #01191E;
+    position: absolute;
+    left: -50%;
+    top: 37px;
+    z-index: -1
+}
+
+.progressbar li.active:before,
+.progressbar li.active:after {
+    background: #F15A24
+}
+
+.stepImg {
+    position: relative;
+    top: -85px;
+    left: 0;
+    cursor: pointer;
+}
+
+.stepImg_1 {
+    position: relative;
+    top: -90px;
+    left: 0;
+}
+
+.stepImg_2 {
+    position: relative;
+    top: -65px;
+    left: -22px;
+}
+
+.stepImg_3 {
+    position: relative;
+    top: -64px;
+    left: -48px;
+}
+
+.stepImg_4 {
+    position: relative;
+    top: -65px;
+    left: -46px;
+}

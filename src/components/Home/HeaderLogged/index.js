@@ -7,7 +7,7 @@ import { getImg } from "../../../utils/Helper";
 import Styles from './../Header/Header.module.scss';
 import styled from 'styled-components';
 import Hamburger from 'hamburger-react';
-import { fallDown as HamburgerMenu } from 'react-burger-menu';
+// import { fallDown as HamburgerMenu } from 'react-burger-menu';
 
 const HeaderStyle = styled.div`
     .hamburger-react {
