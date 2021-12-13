@@ -1,6 +1,11 @@
 import React from "react";
 import $ from 'jquery'; 
 
+import Button from "./../Button";
+
+import { getImg } from "../../../utils/Helper";
+import Styles from './Menu.scss';
+
 class Menu3 extends React.Component {
     constructor(props) {
         super(props);

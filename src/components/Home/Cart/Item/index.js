@@ -1,5 +1,8 @@
 import React from "react";
+import $ from 'jquery'; 
 // import InputNumber from 'rc-input-number';
+
+import Button from "./../../Button";
 
 import { getImg } from "../../../../utils/Helper";
 import Styles from './Item.module.scss';

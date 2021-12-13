@@ -1,6 +1,8 @@
 import React from "react";
 
 import Button from "./../Button";
+
+import { getImg } from "../../../utils/Helper";
 import Styles from './Cardtitle.module.scss';
 
 class Cardtitle extends React.Component {

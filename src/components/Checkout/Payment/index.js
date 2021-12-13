@@ -114,7 +114,7 @@ class Payment extends React.Component {
 								<div className={Styles.col4}>
 									<div className={Styles.form_group} >
 										<div className={Styles.label_group}>
-											<label></label>
+											<label>CVV</label>
 										</div>
 									</div>
 								</div>

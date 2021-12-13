@@ -48,14 +48,14 @@ class Footer extends React.Component {
                             {
                                 this.state.showNaCurPanel && 
                                 <div className={Styles.panel}>
-                                    <a onClick={this.toogleNaCurPanel}><span class="fa fa-times" aria-hidden="true"></span></a>
+                                    <a onClick={this.toogleNaCurPanel}><span className="fa fa-times" aria-hidden="true"></span></a>
                                     <h5>Selecione suas preferências</h5>
                                     <h6>Troque sua região ou moeda</h6>
                                     <p>Região</p>
                                         <ReactFlagsSelect 
                                             className={Styles.flagselect}
-                                            countries={["BR"]}
-                                            customLabels={{"BR": "Brasil (Português)"}} 
+                                            countries={["BR", "US", "ES"]}
+                                            customLabels={{"BR": "Brasil (Português)", "US": "USA(inglês)", "ES": "Spain(espanhol)"}} 
                                             selected="BR"
                                             selectButtonClassName={Styles.flagselectbutton}
                                             selectedSize={16}

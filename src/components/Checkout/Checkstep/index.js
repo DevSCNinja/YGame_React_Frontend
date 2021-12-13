@@ -29,7 +29,7 @@ class Checkstep extends React.Component {
 						{this.state.steps.map((item, idx) => (
 							<>
 								<li className={(idx <= this.props.activeLink ? Styles.active : '')} onClick={() => this.props.handleClick(idx)}>
-									<center>{item.name}</center>
+									<center><strong>{item.name}</strong></center>
 									{this.props.activeLink >= idx && <img className={Styles.stepImg} src={getImg('checkout/step' + item.icon + '.png')} alt="" />}
 									{this.props.activeLink < idx && <img className={Styles.stepImg} src={getImg('checkout/step_h' + item.icon + '.png')} alt="" />}
 								</li>
