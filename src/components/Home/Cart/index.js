@@ -4,24 +4,22 @@ import Button from "./../Button";
 import Item from "./Item";
 import { getImg } from "../../../utils/Helper";
 import Styles from './Cart.module.scss';
-import { animations } from 'react-animation';
+import { fallDown as HamburgerMenu } from 'react-burger-menu'
 
 class Cart extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-
+            isOpen : false
         };
     }
 
     render() {
-        const animationStyle = {
-            animation: animations.bounceIn
-        }
 
         return (
-            <div className={Styles.container} style={animationStyle}>
+            <HamburgerMenu right> 
+            <div className={Styles.container + " menu-item"}>
                 <h5>
                     Carrinho de Compras
                 </h5>
@@ -41,7 +39,8 @@ class Cart extends React.Component {
                     <Button buttontext="Finalizar Compra" background="#F15A24"/>
                 </div>
                 
-            </div>   
+            </div>
+            </HamburgerMenu>   
         )
     }
 }

@@ -43,7 +43,7 @@
     color: #ffffff;
     background: #01191E;
     border-radius: 50%;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 1px auto;
     padding: 2px;
     cursor: pointer;
 }
@@ -64,17 +64,17 @@
     left: -22px;
 }
 
-.progressbar li:first-child:after {
-    content: '';
-    width: 51px;
-    height: 5px;
-    background: #01191E;
-    position: absolute;
-    left: -7px;
-    top: 37px;
-    border-radius: 10px;
-    z-index: -1
-}
+// .progressbar li:first-child:after {
+//     content: '';
+//     width: 51px;
+//     height: 5px;
+//     background: #01191E;
+//     position: absolute;
+//     left: -7px;
+//     top: 37px;
+//     border-radius: 10px;
+//     z-index: -1
+// }
 
 .progressbar li:nth-child(2):after {
     content: '';
@@ -128,7 +128,7 @@
 
 .stepImg {
     position: relative;
-    top: -90px;
+    top: -86px;
     left: 0;
     cursor: pointer;
 }
