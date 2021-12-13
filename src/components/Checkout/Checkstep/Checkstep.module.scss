@@ -27,16 +27,10 @@
 
 .progressbar li {
     list-style-type: none;
+    font-size: 12px;
     width: 25%;
     float: left;
-    position: relative;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0em;
-
+    position: relative
 }
 
 .progressbar li:before {
@@ -49,30 +43,68 @@
     color: #ffffff;
     background: #01191E;
     border-radius: 50%;
-    margin: 0 auto 1px auto;
+    margin: 0 auto 10px auto;
     padding: 2px;
     cursor: pointer;
 }
 
+.progressbar li:first-child {
+    left: 7px;
+}
+
+.progressbar li:nth-child(2) {
+    left: -18px;
+}
+
+.progressbar li:nth-child(3) {
+    left: -20px;
+}
+
+.progressbar li:last-child {
+    left: -22px;
+}
+
 .progressbar li:first-child:after {
     content: '';
-    width: 50%;
+    width: 51px;
     height: 5px;
     background: #01191E;
     position: absolute;
-    left: 0;
+    left: -7px;
     top: 37px;
     border-radius: 10px;
     z-index: -1
 }
 
-.progressbar li:last-child:after {
+.progressbar li:nth-child(2):after {
     content: '';
-    width: 150%;
+    width: 63px;
     height: 5px;
     background: #01191E;
     position: absolute;
-    left: -50%;
+    left: -19px;
+    top: 37px;
+    z-index: -1
+}
+
+.progressbar li:nth-child(3):after {
+    content: '';
+    width: 84px;
+    height: 5px;
+    background: #01191E;
+    position: absolute;
+    left: -41px;
+    top: 37px;
+    z-index: -1
+}
+
+.progressbar li:last-child:after {
+    content: '';
+    width: 213px;
+    height: 5px;
+    background: #01191E;
+    position: absolute;
+    left: -41px;
     top: 37px;
     border-radius: 10px;
     z-index: -1
@@ -96,7 +128,7 @@
 
 .stepImg {
     position: relative;
-    top: -85px;
+    top: -90px;
     left: 0;
     cursor: pointer;
 }

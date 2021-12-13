@@ -131,17 +131,17 @@ export default function Activationmodal(props) {
             </div>
             <div class={ModalStyle.activation_wrap}>
               <p>Código de Ativação</p>
-              {props.modalName == "activated" && <Input className={ModalStyle.purchase_form}
+              {(props.modalName == "activated" || props.purchase) && <Input className={ModalStyle.purchase_form}
               fullWidth sx={{ m: 1 }} 
               style={{background: "#01060A", color: "#fff"}}
               id="standard-adornment-amount"
               defaultValue={purchaseNum}
               endAdornment={<InputAdornment position="end" ><img src={getImg('mypage/Copiar.png')} alt=""/></InputAdornment>}
           />}
-              {props.modalName == "activation" && <button onClick={handleClickOpen}> Revelar Código de Ativação <img src={getImg('mypage/wishlist/icon7.png')} alt="" /></button>}
+              {(props.modalName == "activation" && !props.purchase) && <button onClick={handleClickOpen}> Revelar Código de Ativação <img src={getImg('mypage/wishlist/icon7.png')} alt="" /></button>}
             </div>
         </div>
-        <Activationconfirmmodal confirmOpen={confirmOpen} handleClose={handleClose}/>
+        <Activationconfirmmodal purchase={props.purchase} doPurchase={props.doPurchase} confirmOpen={confirmOpen} handleClose={handleClose}/>
       </BootstrapDialog>
     </div>
   );

@@ -14,6 +14,7 @@ class Keys extends React.Component {
         this.state = {
             actModalOpen: false,
             modalName: "",
+            purchase: false,
             items : [
                 {no : 1, image : '1.png', isPurchase: false},
                 {no : 2, image : '2.png', isPurchase: true},
@@ -29,11 +30,6 @@ class Keys extends React.Component {
     }
 
     activationModalOpen = (param) => {
-        window.scrollTo({
-            bottom: 200,
-            behavior: 'smooth' // for smoothly scrolling
-       });
-       
         this.setState( { actModalOpen: true, modalName: param });
     }
 
@@ -44,7 +40,6 @@ class Keys extends React.Component {
     doPurchase = () => {
         this.setState({ purchase : true });
     }
-
 
     render() {
         const options = [];
@@ -64,7 +59,7 @@ class Keys extends React.Component {
                         ))
                     }
                 </div>
-                {this.state.actModalOpen && <Activationmodal modalName={this.state.modalName} actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
+                {this.state.actModalOpen && <Activationmodal purchase={this.state.purchase} doPurchase={this.doPurchase} modalName={this.state.modalName} actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
             </div>
         )
     }

@@ -17,6 +17,26 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import styled from 'styled-components';
 import styles from './Login.module.scss';
 
+const LoginStyle = styled.div`
+    .MuiFormControl-root {
+        margin: 0;
+        width: 100%;
+        background-color: #0D3840;
+        border-radius: 5px;
+    }
+
+    .MuiInputBase-input-MuiFilledInput-input  {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .MuiSvgIcon-root {
+        path {
+            color: #111 !important;
+        }
+    }
+}`;
+
 export default function Login() {
     const [values, setValues] = useState({
         password: '',
@@ -50,26 +70,6 @@ export default function Login() {
     const animationStyle = {
         animation: animations.bounceIn
     }
-
-    const LoginStyle = styled.div`
-        .css-r47a1p-MuiFormControl-root {
-            margin: 0;
-            width: 100%;
-            background-color: #0D3840;
-            border-radius: 5px;
-        }
-
-        .css-1gctnaj-MuiInputBase-input-MuiFilledInput-input  {
-            margin-top: 0;
-            padding: 0;
-        }
-
-        .css-i4bv87-MuiSvgIcon-root {
-           path {
-                color: #111 !important;
-           }
-        }
-    }`;
 
     return (
         <LoginStyle>
