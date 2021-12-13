@@ -12,7 +12,6 @@ class Keys extends React.Component {
         super(props);
 
         this.state = {
-            purchase: false,
             actModalOpen: false,
             modalName: "",
             items : [
@@ -65,7 +64,7 @@ class Keys extends React.Component {
                         ))
                     }
                 </div>
-                {this.state.actModalOpen && <Activationmodal purchase={this.state.purchase} doPurchase={this.doPurchase} modalName={this.state.modalName} actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
+                {this.state.actModalOpen && <Activationmodal modalName={this.state.modalName} actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
             </div>
         )
     }

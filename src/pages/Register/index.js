@@ -35,9 +35,6 @@ const RegisterStyle = styled.div`
     }
 }`;
 
-const animationStyle = {
-    animation: animations.bounceIn
-}
 
 export default function Register() {
     const [values, setValues] = useState({
@@ -77,13 +74,15 @@ export default function Register() {
     }
 
     const handleClickConfirmShowPassword = () => {
-      
         setValues({
             ...values,
             confirmShowPass: !values.confirmShowPass,
         });
     };
 
+    const animationStyle = {
+        animation: animations.bounceIn
+    }
 
     // const style = {
     //     position: 'absolute',
@@ -139,7 +138,7 @@ export default function Register() {
                                     <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
                                     <FilledInput
                                         id="filled-adornment-password"
-                                        type={values.showPassword ? 'text' : 'password'}
+                                        type={values.confirm ? 'text' : 'password'}
                                         value={values.password}
                                         onChange={handleChange('password')}
                                         endAdornment={
@@ -173,7 +172,7 @@ export default function Register() {
                                         id="filled-adornment-password1"
                                         type={values.confirmShowPass ? 'text' : 'password'}
                                         value={values.confirmPass}
-                                        onChange={handleChange('confirmPass')}
+                                        onChange={handleChange('password')}
                                         endAdornment={
                                         <InputAdornment position="end">
                                             <IconButton

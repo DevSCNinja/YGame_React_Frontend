@@ -27,7 +27,7 @@ class Home extends React.Component {
                     <div className={Styles.cardcontent}>
                         <div className={`${Styles.slide}`}>
                             {/* <AliceCarousel autoPlay autoPlayInterval="3000"> */}
-                            <AliceCarousel animationType="fadeout">
+                            <AliceCarousel>
                                 <div className={Styles.slideitem}>
                                     <img src={getImg('home/slides/slide-01.png')} alt="SlideImage"/>
                                     <div className={Styles.slidetext}>
