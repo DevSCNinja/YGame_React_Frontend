@@ -27,7 +27,7 @@ class Menu1 extends React.Component {
             <div className="first">
                 <ul>
                     {this.props.items.map((item) => 
-                        item.isParent ? <li className="menu1-item" key={item.text} onMouseOver={this.props.onMouseOver.bind(this, item.isParent)}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li> : <li className="menu1-item" key={item.text} onMouseOver={this.props.onMouseOver.bind(this, item.isParent)}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li>
+                        item.isParent ? <li className="menu1-item menu-item" key={item.text} onMouseOver={this.props.onMouseOver.bind(this, item.isParent)}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li> : <li className="menu1-item" key={item.text} onMouseOver={this.props.onMouseOver.bind(this, item.isParent)}><a>{item.text} {item.isParent ? <i></i> : ''}</a></li>
                     )}
                 </ul>
             </div>   
