@@ -7,6 +7,20 @@
     z-index: 999;
     padding: 60px 50px 120px 50px;
 
+    .modal_close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+       
+        img {
+           width: 20px;
+           height: 20px;
+        }
+     }
+
+
     h5 {
         font-size: 26px;
         font-weight: bold;
@@ -48,6 +62,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+
+    p {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 39px;
+        letter-spacing: 0em;
+        text-align: left;
+        font-size: 26px;
+    }
+
+    p:last-child {
+        font-weight: 700;
+        
+    }
 }
 
 .buttoncontent {
@@ -55,7 +85,16 @@
     margin-top: 8px;
     text-align: center;
     button {
+        padding: 6px 20px;
         width: 100%;
+        font-family: Poppins;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0em;
+        text-align: center;
+
     }
 }
 

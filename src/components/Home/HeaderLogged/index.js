@@ -168,6 +168,7 @@ class Header extends React.Component {
                                 <p>Minha Conta</p>
                             </div>
                             <div className={Styles.usercart}>
+                                {/* onClick={this.props.handleShowCart} */}
                                 <a onClick={this.props.handleShowCart}><img src={getImg('home/icons/cart.png')} alt="User" /></a>
                                 <span className={Styles.productcount}>1</span>
                             </div>
