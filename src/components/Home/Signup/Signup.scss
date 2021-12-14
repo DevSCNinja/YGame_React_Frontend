@@ -88,11 +88,13 @@
     .semi-half {
         width: 48%;
         display: flex;
+        justify-content: center;
         align-items: center;
         background: #01191E;
         border-radius: 4px;
         padding: 6px 8px;
         img.small {
+            margin-right: 5px;
             width: 18px;
             height: auto;
         }

@@ -14,6 +14,10 @@ import { getImg } from "../../utils/Helper";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Styles from './../Home/Home.module.scss';
 
+const styles = {
+    
+};
+
 class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -24,7 +28,7 @@ class Home extends React.Component {
     }
 
     handleShowCart = () => {
-        this.setState({ showCart: true });
+        this.setState({ showCart: !this.state.showCart });
     }
 
     handleHideCart = () => {
@@ -34,9 +38,9 @@ class Home extends React.Component {
     render() {
         return (
             <div className={Styles.home}>
-                {this.state.showCart &&  <Cart />}
+                <Cart isOpen={this.state.showCart} handleShowCart={this.handleShowCart} handleHideCart={this.handleHideCart}/>
                 <div className={Styles.container}>
-                    <HeaderLogged handleShowCart={this.handleShowCart}/>
+                    <HeaderLogged handleShowCart={this.handleShowCart} />
                     <div className={Styles.cardcontent}>
                         <div className={`${Styles.slide}`}>
                             {/* <AliceCarousel autoPlay autoPlayInterval="3000"> */}

@@ -37,10 +37,12 @@
 }
 
 .loginwrap {
-    display: block;
-    padding-top: 89px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 1080px;
+    height: 100%;
+    flex-wrap: wrap;
     color: white;
     margin: 0;
     box-sizing: border-box;
@@ -58,7 +60,7 @@
 }
 
 .logincontent {
-    min-height: 780px;
+    min-height: 720px;
 
     .loginformwrap {
         display: block;
