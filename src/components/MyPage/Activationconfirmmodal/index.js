@@ -82,7 +82,7 @@ export default function Activationconfirmmodal(props) {
             </dd>
           </dl>
           <div className={confirmStyle.btn_group}>
-          <button className={confirmStyle.submit} onClick={props.doPurchase}>Sim, abrir meu código</button>
+          <button className={confirmStyle.submit} onClick={props.doPurchaseClose}>Sim, abrir meu código</button>
             <button className={confirmStyle.cancel} onClick={props.handleClose} >Não, pensarei mais sobre</button>
           </div>
           <div className={confirmStyle.footer_part}>

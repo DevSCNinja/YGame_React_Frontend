@@ -2,22 +2,109 @@
 @import '../../../pages/product';
 
 .payment_wrap {
-    width: 1012px;
-    border-radius: 15px;
-    background-color: #0D3840;
-    padding: 20px;
+	width: 840px;
+	border-radius: 25px;
+	background-color: #01191E;
+	padding: 20px;
 	margin: 0 auto;
-	
-	.payment_first_container {
-		width: 54%;
-		margin-right: 43px;
-		padding: 0 12px;
-	}
-	.payment_second_container {
-		width: 40%;
-		padding: 0 12px;
-	}
 }
+
+.payment_title {
+	font-family: Poppins;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 57px;
+	letter-spacing: 0em;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.payment_content_head {
+	font-family: Poppins;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.payment_content_body {
+	font-family: Poppins;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 48px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.payment_content_head .payment_no, .payment_content_head .payment_type {
+	font-size: 22px;
+}
+
+.payment_content_body .payment_no, .payment_content_body .payment_type {
+	font-size: 32px;
+}
+.payment_no, .payment_type {
+	display: inline-block;
+}
+
+.payment_no {
+	width: 172px;
+}
+
+.payment_process_title {
+	width: 100%;
+	font-family: Poppins;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #F9A000;
+	margin-bottom: 12px;
+}
+
+.payment_0process_title {
+	width: 100%;
+	font-family: Poppins;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #DB2B2F;
+	margin-bottom: 12px;
+}
+
+.payment_progress {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 33px;
+}
+
+.payment_btn {
+	width: 100%;
+	padding: 10px 0;
+	font-family: Poppins;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 39px;
+	letter-spacing: 0em;
+	text-align: center;
+	border-radius: 15px;
+	background: #34A853;
+	border: none;
+}
+
+
+
+
+
 
 .form_group {
 	display: flex;

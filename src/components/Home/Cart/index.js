@@ -4,7 +4,7 @@ import Button from "./../Button";
 import Item from "./Item";
 import { getImg } from "../../../utils/Helper";
 import Styles from './Cart.module.scss';
-import { fallDown as HamburgerMenu } from 'react-burger-menu'
+import { slide as HamburgerMenu } from 'react-burger-menu'
 
 var styles = {
     bmBurgerButton: {

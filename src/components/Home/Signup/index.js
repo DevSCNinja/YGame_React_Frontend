@@ -48,7 +48,7 @@ class Signin extends React.Component {
 
                 <div className="container">
                     <img className="small" src={getImg('home/icons/heart.png')} alt=""/>
-                    <a href="/mypage/wishlist">Lista de Desejos</a>
+                    <a href="/mypage/wishlist"> Lista de Desejos</a>
                 </div>
 
                 <Button buttontext="Sair" background="#F15A24"/>

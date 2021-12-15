@@ -53,50 +53,50 @@
 }
 
 .progressbar li:nth-child(2) {
-    left: -18px;
+    left: 4px;
 }
 
 .progressbar li:nth-child(3) {
-    left: -20px;
+    left: 0px;
 }
 
 .progressbar li:last-child {
-    left: -22px;
+    left: -8px;
 }
 
-// .progressbar li:first-child:after {
+.progressbar li:first-child:after {
+    content: '';
+    width: 51px;
+    height: 5px;
+    background: #01191E;
+    position: absolute;
+    left: -7px;
+    top: 37px;
+    border-radius: 10px;
+    z-index: -1
+}
+
+// .progressbar li:nth-child(2):after {
 //     content: '';
-//     width: 51px;
+//     width: 63px;
 //     height: 5px;
 //     background: #01191E;
 //     position: absolute;
-//     left: -7px;
+//     left: -19px;
 //     top: 37px;
-//     border-radius: 10px;
 //     z-index: -1
 // }
 
-.progressbar li:nth-child(2):after {
-    content: '';
-    width: 63px;
-    height: 5px;
-    background: #01191E;
-    position: absolute;
-    left: -19px;
-    top: 37px;
-    z-index: -1
-}
-
-.progressbar li:nth-child(3):after {
-    content: '';
-    width: 84px;
-    height: 5px;
-    background: #01191E;
-    position: absolute;
-    left: -41px;
-    top: 37px;
-    z-index: -1
-}
+// .progressbar li:nth-child(3):after {
+//     content: '';
+//     width: 84px;
+//     height: 5px;
+//     background: #01191E;
+//     position: absolute;
+//     left: -41px;
+//     top: 37px;
+//     z-index: -1
+// }
 
 .progressbar li:last-child:after {
     content: '';
@@ -112,11 +112,11 @@
 
 .progressbar li:after {
     content: '';
-    width: 100%;
+    width: 82px;
     height: 5px;
     background: #01191E;
     position: absolute;
-    left: -50%;
+    left: -39px;
     top: 37px;
     z-index: -1
 }

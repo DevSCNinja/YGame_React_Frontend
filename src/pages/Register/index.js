@@ -17,6 +17,11 @@ import styled from 'styled-components';
 import Modal from '@mui/material/Modal';
 
 const RegisterStyle = styled.div`
+
+    .MuiBackdrop-root-MuiModal-backdrop {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+    }
+
     .MuiFormControl-root {
         margin: 0;
         width: 100%;
@@ -49,7 +54,6 @@ export default function Register() {
         confirmPass: '',
         confirmShowPass: false,
     });
-
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);

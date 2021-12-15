@@ -27,9 +27,11 @@ $overlay_status: false;
             margin-left: 68px;
             width: 182px;
             height: 182px;
+            border-radius: 182px;
             margin-bottom: -91px;
 
             :hover {
+                // background-color: red;
                 $overlay_status: true; 
             }
 
@@ -47,7 +49,7 @@ $overlay_status: false;
                 position: absolute;
                 top: 0;
                 left: 0;
-                display: if($overlay_status, flex, none) ; 
+             
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -56,6 +58,7 @@ $overlay_status: false;
                 border-radius: 50%;
                 background-color: #000;
                 opacity: 0.7;
+                cursor: pointer;
 
                 img {
                     width: 35px;
