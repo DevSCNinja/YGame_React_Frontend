@@ -92,9 +92,9 @@ export default function Activationmodal(props) {
     setConfirmOpen(false);
   };
 
-  const doPurchaseClose = () => {
+  const doPurchaseClose = (no) => {
     setConfirmOpen(false);
-    props.doPurchase();
+    props.doPurchase(no + 1);
   }
 
 
@@ -117,13 +117,13 @@ export default function Activationmodal(props) {
               <dl>
                 <dt>Plataforma</dt>
                 <dd>
-                  <img src={getImg('mypage/wishlist/icon5.png')} alt="" />
-                  <img src={getImg('mypage/wishlist/icon2.png')} alt="" />
+                  <img src={getImg('mypage/Group.png')} alt="" />
+                  <img src={getImg('mypage/fa-solid_mobile-alt.png')} alt="" />
                 </dd>
               </dl>
               <dl>
                 <dt>Região</dt>
-                <dd><img src={getImg('mypage/wishlist/icon1.png')} alt="" /></dd>
+                <dd><img src={getImg('mypage/Países.png')} alt="" /></dd>
               </dl>
               <dl>
                 <dt>Nº Pedido</dt>
@@ -136,22 +136,24 @@ export default function Activationmodal(props) {
             </div>
             <div class={ModalStyle.activation_wrap}>
               <p>Código de Ativação</p>
-              {(props.modalName == "activated" || props.purchase) && <Input className={ModalStyle.purchase_form}
+              {props.items[props.activeItem].isPurchase && <Input className={ModalStyle.purchase_form}
               fullWidth sx={{ m: 1 }} 
               style={{background: "#01060A", color: "#fff"}}
               id="standard-adornment-amount"
               defaultValue={purchaseNum}
               endAdornment={<InputAdornment position="end" ><img src={getImg('mypage/Copiar.png')} alt=""/></InputAdornment>}
           />}
-              {(props.modalName == "activation" && !props.purchase) && <button onClick={handleClickOpen}> Revelar Código de Ativação <img src={getImg('mypage/wishlist/icon7.png')} alt="" /></button>}
+              {!props.items[props.activeItem].isPurchase && <button onClick={handleClickOpen}> Revelar Código de Ativação <img src={getImg('mypage/wishlist/icon7.png')} alt="" /></button>}
             </div>
         </div>
         <Activationconfirmmodal 
-        purchase={props.purchase} 
+        purchase={props.items[props.activeItem].isPurchase} 
         doPurchase={props.doPurchase}
         doPurchaseClose={doPurchaseClose} 
         confirmOpen={confirmOpen}
-         handleClose={handleClose}/>
+         handleClose={handleClose}
+         activeItem={props.activeItem}
+         />
       </BootstrapDialog>
     </div>
   );
