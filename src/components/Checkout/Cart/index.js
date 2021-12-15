@@ -12,8 +12,75 @@ import Visibility from "@material-ui/icons/Visibility";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import Input from "@material-ui/core/Input";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { getImg } from "../../../utils/Helper";
+
+const CatalogStyle = styled.div`
+	svg {
+		font-size:45px;
+	}
+	.MuiAccordionSummary-content {
+		margin: 20px 0;
+	}
+
+	.MuiAccordionSummary-content.Mui-expanded {
+		margin-bottom:0px;
+	}
+	.MuiTypography-root {
+			font-family: Poppins;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 27px;
+			letter-spacing: 0em;
+			text-align: left;
+
+	}
+	textarea {
+		margin-top:20px;
+		height: 200px;
+		width: 628px;
+		left: 20px;
+		top: 262px;
+		border-radius: 5px;
+		background: #0D3840;
+		font-family: Poppins;
+	
+		font-style: normal;
+		line-height: 21px;
+		letter-spacing: 0em;
+		text-align: left;
+		padding-top:12px;
+		padding-left:16px;
+		border:none;
+		outline:none;
+	}
+	.MuiPaper-root {
+		background-color :transparent;
+		// padding:0px;
+		.MuiButtonBase-root{
+			padding :0px; 
+			.MuiTypography-root {
+				font-family: Poppins;
+				font-size: 32px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 48px;
+				letter-spacing: 0em;
+				text-align: left;
+			}
+		}
+		.MuiAccordionDetails-root {
+					padding :0 0 20px 0px;
+		}
+	}
+
+}`;
 
 class Cart extends React.Component {
 	constructor(props) {
@@ -21,8 +88,15 @@ class Cart extends React.Component {
 		this.state = {
 			count1: 1,
 			count2: 1,
-			count3: 1
+			count3: 1,
+			type: 0
 		};
+	}
+
+	setType = (num) => {
+		this.setState({
+			type: num
+		})
 	}
 
 	increament1 = () => {
@@ -90,57 +164,11 @@ class Cart extends React.Component {
 			count3: 0
 		})
 	}
+
 	render() {
 		// const [open, setOpen] = useState(false);
 		const options = [];
 
-		const CatalogStyle = styled.div`
-        .filter_list{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin:20px 0px;
-
-            .filter_item {
-                // margin: 10px 0;
-                .Dropdown-root {
-                    // width: 238px;
-                    border-radius: 25px;
-    
-                    .Dropdown-control {
-                        display:flex;
-                        // padding: 9px 28px;
-                        background: transparent;
-                        border: none;
-                        border-radius: 25px;
-                        width : 604px;
-                        padding : 0;
-                        .Dropdown-placeholder {
-                            font-size : 32px;
-                            width : 100%;
-                        }
-                        .Dropdown-arrow-wrapper {
-                            margin-left: 6px;
-                            align-self: center;
-            
-                            i {
-                                font-size: 45px;
-                            }
-                        }
-                    }
-
-                    .Dropdown-menu {
-                        border-radius: 4px;
-                    }
-        
-                    .Dropdown-placeholder  {
-                        width: 100%;
-                        font-size: 22px;
-                    }
-                }
-            }
-        }
-         }`;
 
 		return (
 			< CatalogStyle>
@@ -199,15 +227,17 @@ class Cart extends React.Component {
 							</div>
 							<div className={Styles.config_panel_right}>
 								<div className={Styles.right_panel_content}>
-									<div className={Styles.right_panel_content_label}>
-										<div className={Styles.right_panel_content_label_first}></div>
+									<div className={Styles.right_panel_content_label} onClick={() => this.setType(0)}>
+										{this.state.type == 0 && <div className={Styles.right_panel_content_label_first_active}></div>}
+										{this.state.type != 0 && <div className={Styles.right_panel_content_label_first}></div>}
 										<div className={Styles.right_panel_content_label_second}>
 											<p>Pix</p>
 											<img src={getImg('checkout/Payment Methods.png')} />
 										</div>
 									</div>
-									<div className={Styles.right_panel_content_label}>
-										<div className={Styles.right_panel_content_label_first}></div>
+									<div className={Styles.right_panel_content_label} onClick={() => this.setType(1)}>
+										{this.state.type == 1 && <div className={Styles.right_panel_content_label_first_active}></div>}
+										{this.state.type != 1 && <div className={Styles.right_panel_content_label_first}></div>}
 										<div className={Styles.right_panel_content_label_second}>
 											<p>Cartão de Crédito</p>
 											<div className={Styles.image_group}>
@@ -218,36 +248,42 @@ class Cart extends React.Component {
 											</div>
 										</div>
 									</div>
-									<div className={Styles.right_panel_content_label}>
-										<div className={Styles.right_panel_content_label_first}></div>
+									<div className={Styles.right_panel_content_label} onClick={() => this.setType(2)}>
+										{this.state.type == 2 && <div className={Styles.right_panel_content_label_first_active}></div>}
+										{this.state.type != 2 && <div className={Styles.right_panel_content_label_first}></div>}
 										<div className={Styles.right_panel_content_label_second}>
 											<p>Boleto Express</p>
 											<img src={getImg('checkout/list5.png')} />
 										</div>
 									</div>
-									<div className={Styles.right_panel_content_label}>
-										<div className={Styles.right_panel_content_label_first}></div>
+									<div className={Styles.right_panel_content_label} onClick={() => this.setType(3)}>
+										{this.state.type == 3 && <div className={Styles.right_panel_content_label_first_active}></div>}
+										{this.state.type != 3 && <div className={Styles.right_panel_content_label_first}></div>}
+
 										<div className={Styles.right_panel_content_label_second}>
 											<p>Depósito Express</p>
 											<img src={getImg('checkout/list6.png')} />
 										</div>
 									</div>
-									<div className={Styles.right_panel_content_label}>
-										<div className={Styles.right_panel_content_label_first}></div>
+									<div className={Styles.right_panel_content_label} onClick={() => this.setType(4)}>
+										{this.state.type == 4 && <div className={Styles.right_panel_content_label_first_active}></div>}
+										{this.state.type != 4 && <div className={Styles.right_panel_content_label_first}></div>}
 										<div className={Styles.right_panel_content_label_second}>
 											<p>PayPal</p>
 											<img src={getImg('checkout/picture7.png')} />
 										</div>
 									</div>
-									<div className={Styles.right_panel_content_label}>
-										<div className={Styles.right_panel_content_label_first}></div>
+									<div className={Styles.right_panel_content_label} onClick={() => this.setType(5)}>
+										{this.state.type == 5 && <div className={Styles.right_panel_content_label_first_active}></div>}
+										{this.state.type != 5 && <div className={Styles.right_panel_content_label_first}></div>}
 										<div className={Styles.right_panel_content_label_second}>
 											<p>PicPay</p>
 											<img src={getImg('checkout/picture8.png')} />
 										</div>
 									</div>
-									<div className={Styles.right_panel_content_label}>
-										<div className={Styles.right_panel_content_label_first}></div>
+									<div className={Styles.right_panel_content_label} onClick={() => this.setType(6)}>
+										{this.state.type == 6 && <div className={Styles.right_panel_content_label_first_active}></div>}
+										{this.state.type != 6 && <div className={Styles.right_panel_content_label_first}></div>}
 										<div className={Styles.right_panel_content_label_second}>
 											<p>Ame</p>
 											<img src={getImg('checkout/picture9.png')} />
@@ -257,12 +293,26 @@ class Cart extends React.Component {
 							</div>
 						</div>
 						<div className={Styles.config_panel} style={{ marginTop: '20px' }}>
-							<div className={Styles.config_panel_left} style={{ marginTop: '-69px' }}>
-								<div className="filter_list">
-									<div className="filter_item">
-										<Dropdown arrowClosed={<i className="fa fa-angle-down" />} arrowOpen={<i className="fa fa-angle-up" />} options={options} value={'Esta compra é um presente?'} />
-									</div>
-								</div>
+							<div className={Styles.config_panel_left} style={{ marginTop: '-69px', paddingRight: '20px' }}>
+								<Accordion className={Styles.my_accordion}>
+									<AccordionSummary
+										expandIcon={<ExpandMoreIcon />}
+										aria-controls="panel1a-content"
+										id="panel1a-header"
+									>
+										<Typography>Esta compra é um presente?</Typography>
+									</AccordionSummary>
+									<AccordionDetails>
+										<Typography>
+											Nós da YiYi Games te ajudamos a entregar o presente da melhor
+											forma possível. Basta apenas inserir o Email do presenteado abaixo
+											e ele receberá no email o código com uma mensagem especial
+											escrita por você!
+											<input className={Styles.accordion_input} placeholder="Insira aqui o email do presenteado"></input>
+											<textarea placeholder="Insira aqui sua mensagem"></textarea>
+										</Typography>
+									</AccordionDetails>
+								</Accordion>
 							</div>
 							<div className={Styles.config_panel_right}>
 								<div className={Styles.right_panel_content}>
@@ -280,13 +330,13 @@ class Cart extends React.Component {
 									<div className={Styles.right_panel_content_label2}>
 										<div className={Styles.form_group} >
 											<div className={Styles.content_button}>
-												<input type="text" name="email" id="email" />
+												<input type="text" name="email" id="email" value="YIYI2022" />
 												<button type="button" className={Styles.btn1}>Aplicar</button>
 											</div>
 										</div>
 									</div>
 									<div className={Styles.label_group2} style={{ textAlign: 'right' }}>
-										<label style={{ fontSize: "12px", color: '#34A853' }}>Tem um cupom de desconto?</label>
+										<label style={{ fontSize: "12px", color: '#34A853' }}>Cupom aplicado com sucesso!</label>
 									</div>
 									<button type="button" onClick={() => this.props.submitClick(this.props.pagenum)} className={Styles.btn2}>Finalizar Compra</button>
 								</div>

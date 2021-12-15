@@ -16,30 +16,49 @@ class Keys extends React.Component {
             modalName: "",
             purchase: false,
             items : [
-                {no : 1, image : '1.png', isPurchase: false},
-                {no : 2, image : '2.png', isPurchase: true},
-                {no : 3, image : '3.png', isPurchase: true},
-                {no : 4, image : '4.png', isPurchase: true},
-                {no : 5, image : '5.png', isPurchase: true},
-                {no : 6, image : '6.png', isPurchase: true},
-                {no : 7, image : '7.png', isPurchase: true},
-                {no : 8, image : '8.png', isPurchase: true},
-                {no : 9, image : '9.png', isPurchase: true}, 
-            ]
+                {no : 1, image : '1.png', isPurchase: true},
+                {no : 2, image : '2.png', isPurchase: false},
+                {no : 3, image : '3.png', isPurchase: false},
+                {no : 4, image : '4.png', isPurchase: false},
+                {no : 5, image : '5.png', isPurchase: false},
+                {no : 6, image : '6.png', isPurchase: false},
+                {no : 7, image : '7.png', isPurchase: false},
+                {no : 8, image : '8.png', isPurchase: false},
+                {no : 9, image : '9.png', isPurchase: false}, 
+            ],
+            activeItem: 0
         }
     }
 
-    activationModalOpen = (param) => {
-        this.setState( { actModalOpen: true, modalName: param });
+    activationModalOpen = (activeItem) => {
+        this.setState( { 
+            actModalOpen: true,
+             activeItem : activeItem - 1
+        });
+
     }
 
     activationModalClose = () => {
         this.setState ({ actModalOpen: false });
     }
 
-    doPurchase = () => {
-        this.setState({ purchase : true });
-    }
+    doPurchase = no => {
+        const updatedItems = (no) => this.state.items.map(item => {
+            if (item.no ===  no) {
+                return {
+                    ...item,
+                    isPurchase: true
+                };
+            } else {
+            return item;
+            }
+        });
+
+        this.setState({
+            items: updatedItems(no)
+        });
+       
+    };
     
     render() {
         const options = [];
@@ -49,17 +68,18 @@ class Keys extends React.Component {
                 <div style={{ display: "flex", justifyContent: "flex-end"}}>
                     <Sort options={options}/>
                 </div>
+
                 <div className={Styles.product_list}>
                     {
                         this.state.items.map((item, idx) => (
                             <div className={Styles.product_item}>
                                 <img src={getImg('mypage/' + item.image)} alt=""/>
-                                <Button className={"btn" + idx} buttontext="Resgatar" background={item.isPurchase ? '#DB2B2F' : '#01191E'} onClick={() => this.activationModalOpen(item.isPurchase ? 'activated' : 'activation')}/>
+                                <Button className={"btn" + idx} buttontext={item.isPurchase ? 'ja Resgatado' : 'Resgatar'}background={item.isPurchase ? '#01191E' : '#DB2B2F'} onClick={() => this.activationModalOpen(item.no)}/>
                             </div>
                         ))
                     }
                 </div>
-                {this.state.actModalOpen && <Activationmodal purchase={this.state.purchase} doPurchase={this.doPurchase} modalName={this.state.modalName} actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
+                {this.state.actModalOpen && <Activationmodal items= {this.state.items} activeItem= {this.state.activeItem} purchase={this.state.purchase} doPurchase={this.doPurchase}  actModalOpen={this.state.actModalOpen} activationModalClose={this.activationModalClose}/>}    
             </div>
         )
     }

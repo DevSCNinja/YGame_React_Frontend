@@ -1,4 +1,18 @@
 @import '../../../assets/style/base';
+.accordion_input {
+    height: 46px;
+    width: 628px;
+    left: 20px;
+    top: 196px;
+    border-radius: 5px;
+    background: #0D3840;
+    border-radius: 5px;
+    border:none;
+    margin-top:20px;
+    padding-left:13px;
+    outline:none;
+
+}
 .mydata_page_wrap {
    padding-bottom: 10px;
    
@@ -38,7 +52,7 @@
             display: flex;
             
             .config_panel_left {
-                margin: 0 10px;
+                margin-right:10px;
                 padding: 0px 29px 0px 20px;      
                 max-width: 880px;
                 background-color: #01191E;
@@ -84,6 +98,7 @@
                     .left_panel_content_p2 {
                         font-size :22px
                     }
+                    
                 }
             }
             .config_panel_right {
@@ -93,6 +108,7 @@
                 background-color: #01191E;
                 border-radius: 15px;
                 width:324px;
+                height:100%;
 
                 .right_panel_content {
                     // display: flex;
@@ -127,6 +143,7 @@
                         padding: 6px;
                         border-radius: 5px;
                         margin : 18px 0px;
+                        cursor: pointer;
                     }
                     .right_panel_content_label2 {
                         display: flex;
@@ -145,8 +162,14 @@
                         border-radius: 100%;
                         margin : 10px;
                     }
-                    .right_panel_content_label_second {
-
+                    .right_panel_content_label_first_active {
+                        align-self: center;
+                        background-color: #fff;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        margin : 10px;
+                        border: 3px solid #F15A24;
                     }
                     .image_group img {
                         padding-right:5px;
@@ -242,3 +265,10 @@
         }    
     }
 }
+
+
+// .my_accordion {
+//     background-color: transparent;
+//     // padding:0;
+// }
+
