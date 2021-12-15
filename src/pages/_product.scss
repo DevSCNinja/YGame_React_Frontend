@@ -41,10 +41,29 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         margin:  0 -10px;
+        max-height: 590px;
+        overflow-y: scroll;
+
+        scrollbar-color: red;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: unset;
+            border-radius: 100px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            border-radius: 100px;
+            background-color: #031114;
+        }
 
         .product_recommend_item {
             margin: 10px;
-            max-width: 238px;
+            max-width: 235px;
             background-color: #01191E;
             border-radius: 15px;
 

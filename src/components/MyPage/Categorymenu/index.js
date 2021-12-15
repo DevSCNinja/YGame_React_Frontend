@@ -14,7 +14,17 @@ class Categorymenu extends React.Component {
                 { icon: 3, text: "Meus Pedidos",  className: Styles.category_item },
                 { icon: 4, text: "Meus Dados",  className: Styles.category_item },
             ],
+
+            overlayOpen: false
         };
+    }
+
+    showOverlay = () =>  {
+        this.setState({ overlayOpen : true });
+    }
+
+    hideOverlay = () => {
+        this.setState({ overlayOpen : false });
     }
 
     render() {
@@ -25,9 +35,9 @@ class Categorymenu extends React.Component {
                 </div>
                 
                 <div className={Styles.avatar_wrap}>
-                    <div className={Styles.avatar_img_wrap} onClick={this.props.handleShow}>
+                    <div className={Styles.avatar_img_wrap}  onMouseEnter={this.showOverlay} onClick={this.props.handleShow}>
                         <img class={Styles.avatar_img} src={getImg('mypage/avatar.png')} alt=""/>
-                        <div className={Styles.overlay}>
+                        <div className={Styles.overlay} onMouseOut={this.hideOverlay}  style={this.state.overlayOpen ? {display : "flex"} : {display : "none"}}>
                             <img src={getImg('mypage/icon5.png')} alt="camera icon" />
                             Alterar Imagem
                         </div>

@@ -92,6 +92,11 @@ export default function Activationmodal(props) {
     setConfirmOpen(false);
   };
 
+  const doPurchaseClose = () => {
+    setConfirmOpen(false);
+    props.doPurchase();
+  }
+
 
   return (
     <div>
@@ -141,7 +146,12 @@ export default function Activationmodal(props) {
               {(props.modalName == "activation" && !props.purchase) && <button onClick={handleClickOpen}> Revelar Código de Ativação <img src={getImg('mypage/wishlist/icon7.png')} alt="" /></button>}
             </div>
         </div>
-        <Activationconfirmmodal purchase={props.purchase} doPurchase={props.doPurchase} confirmOpen={confirmOpen} handleClose={handleClose}/>
+        <Activationconfirmmodal 
+        purchase={props.purchase} 
+        doPurchase={props.doPurchase}
+        doPurchaseClose={doPurchaseClose} 
+        confirmOpen={confirmOpen}
+         handleClose={handleClose}/>
       </BootstrapDialog>
     </div>
   );

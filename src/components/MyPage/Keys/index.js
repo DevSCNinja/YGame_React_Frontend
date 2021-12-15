@@ -40,7 +40,7 @@ class Keys extends React.Component {
     doPurchase = () => {
         this.setState({ purchase : true });
     }
-
+    
     render() {
         const options = [];
 

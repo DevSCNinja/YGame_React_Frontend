@@ -54,7 +54,7 @@ export default function Search(props) {
                     }
                 }
             }
-        }
+        }   
     }`;
 
   return (
@@ -137,6 +137,202 @@ export default function Search(props) {
                                 <img src={getImg('product/icon2.png')} alt=""/>
                             </div>
                             <button>R$ 199,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
+                        </div>
+                    </div>
+
+                    <div className={Styles.product_recommend_item}>
+                        <div className={Styles.img_wrap}>
+                            <img src={getImg('product/product_small4.png')} alt=""/>
+                        </div>
+                        <div className={Styles.product_title}>
+                            PS Plus 12 meses - Gift Car...
+                        </div>
+                        <div style={{padding: "15px"}}>
+                            <div className={Styles.icon_group}>
+                                <img src={getImg('product/icon1.png')} alt=""/>
+                                <img src={getImg('product/icon2.png')} alt=""/>
+                            </div>
+                            <button>R$ 85,90</button>
                         </div>
                     </div>
                     <div className={Styles.product_recommend_item}>

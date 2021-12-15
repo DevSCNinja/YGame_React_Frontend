@@ -3,10 +3,10 @@ import React from "react";
 import HeaderLogged from "../../components/Home/HeaderLogged";
 import Footer from "../../components/Home/Footer";
 import Checkstep from "../../components/Checkout/Checkstep";
-import Cart from "../../components/Checkout/Payment";
+import Cart from "../../components/Checkout/Cart";
 import Login from "../../components/Checkout/Payment";
 import Payment from "../../components/Checkout/Payment";
-import Finalization from "../../components/Checkout/Payment";
+import Finalization from "../../components/Checkout/Finalization";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Styles from './Checkout.module.scss';
 
@@ -15,6 +15,7 @@ class Checkout extends React.Component {
         super(props);
         this.state = {
             activeLink: 0,
+            stateModal: false
         };
 
     }
@@ -30,12 +31,21 @@ class Checkout extends React.Component {
     }
 
     handleClick = (pageno) => {
-        this.setState({ activeLink: pageno });
+        if (pageno == 1) {
+            this.setState({ activeLink: pageno, stateModal: true });
+        } else {
+            this.setState({ activeLink: pageno });
+        }
     }
 
     submitClick = (pageno) => {
         pageno++;
-        this.setState({ activeLink: pageno });
+        this.setState({ activeLink: pageno, stateModal: true });
+    }
+
+    closeModal = (pageno) => {
+        pageno--;
+        this.setState({ activeLink: pageno, stateModal: false });
     }
 
     render() {
@@ -44,12 +54,10 @@ class Checkout extends React.Component {
                 <div className={Styles.container}>
                     <HeaderLogged />
                     <Checkstep activeLink={this.state.activeLink} handleClick={this.handleClick} />
-                    {this.state.activeLink == 0 && <Cart pagenum={0} submitClick={this.submitClick} />}
-                    {this.state.activeLink == 1 && <Login pagenum={1} submitClick={this.submitClick} />}
+                    {this.state.activeLink == 0 && <Cart pagenum={0} stateModal={this.state.stateModal} closeModal={this.closeModal} submitClick={this.submitClick} />}
+                    {this.state.activeLink == 1 && <Cart pagenum={1} stateModal={this.state.stateModal} closeModal={this.closeModal} submitClick={this.submitClick} />}
                     {this.state.activeLink == 2 && <Payment pagenum={2} submitClick={this.submitClick} />}
                     {this.state.activeLink == 3 && <Finalization />}
-
-                    {/* <Avatarmodal show={this.state.show} handleClose={this.hideModal} /> */}
                 </div>
                 <Footer />
             </div>
