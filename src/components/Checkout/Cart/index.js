@@ -21,13 +21,13 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { getImg } from "../../../utils/Helper";
 
 const CatalogStyle = styled.div`
-	svg {
-		font-size:45px;
-	}
 	.MuiAccordionSummary-content {
 		margin: 20px 0;
 	}
 
+	svg {
+		font-size:45px;
+	}
 	.MuiAccordionSummary-content.Mui-expanded {
 		margin-bottom:0px;
 	}
@@ -50,8 +50,9 @@ const CatalogStyle = styled.div`
 		border-radius: 5px;
 		background: #0D3840;
 		font-family: Poppins;
-	
+		font-size: 14px;
 		font-style: normal;
+		font-weight: 700;
 		line-height: 21px;
 		letter-spacing: 0em;
 		text-align: left;
@@ -60,12 +61,12 @@ const CatalogStyle = styled.div`
 		border:none;
 		outline:none;
 	}
-	.MuiPaper-root {
+	.MuiAccordion-root {
 		background-color :transparent;
 		// padding:0px;
-		.MuiButtonBase-root{
+		.MuiAccordionSummary-root {
 			padding :0px; 
-			.MuiTypography-root {
+			.css-ahj2mt-MuiTypography-root {
 				font-family: Poppins;
 				font-size: 32px;
 				font-style: normal;
@@ -79,7 +80,7 @@ const CatalogStyle = styled.div`
 					padding :0 0 20px 0px;
 		}
 	}
-
+  
 }`;
 
 class Cart extends React.Component {
@@ -293,7 +294,7 @@ class Cart extends React.Component {
 							</div>
 						</div>
 						<div className={Styles.config_panel} style={{ marginTop: '20px' }}>
-							<div className={Styles.config_panel_left} style={{ marginTop: '-69px', paddingRight: '20px' }}>
+							<div className={Styles.config_panel_left} style={{ marginTop: '-69px', paddingRight: '20px', width: '658px' }}>
 								<Accordion className={Styles.my_accordion}>
 									<AccordionSummary
 										expandIcon={<ExpandMoreIcon />}
@@ -330,7 +331,7 @@ class Cart extends React.Component {
 									<div className={Styles.right_panel_content_label2}>
 										<div className={Styles.form_group} >
 											<div className={Styles.content_button}>
-												<input type="text" name="email" id="email" value="YIYI2022" />
+												<input type="text" name="email" id="email" defaultValue="YIYI2022" />
 												<button type="button" className={Styles.btn1}>Aplicar</button>
 											</div>
 										</div>
