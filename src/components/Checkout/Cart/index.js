@@ -22,66 +22,66 @@ import { getImg } from "../../../utils/Helper";
 
 const CatalogStyle = styled.div`
 	.MuiAccordionSummary-content {
-		margin: 20px 0;
-	}
+			margin: 20px 0;
+		}
 
-	svg {
-		font-size:45px;
-	}
-	.MuiAccordionSummary-content.Mui-expanded {
-		margin-bottom:0px;
-	}
-	.MuiTypography-root {
-			font-family: Poppins;
-			font-size: 18px;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 27px;
-			letter-spacing: 0em;
-			text-align: left;
-
-	}
-	textarea {
-		margin-top:20px;
-		height: 200px;
-		width: 628px;
-		left: 20px;
-		top: 262px;
-		border-radius: 5px;
-		background: #0D3840;
-		font-family: Poppins;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 21px;
-		letter-spacing: 0em;
-		text-align: left;
-		padding-top:12px;
-		padding-left:16px;
-		border:none;
-		outline:none;
-	}
-	.MuiAccordion-root {
-		background-color :transparent;
-		// padding:0px;
-		.MuiAccordionSummary-root {
-			padding :0px; 
-			.css-ahj2mt-MuiTypography-root {
+		svg {
+			font-size:45px;
+		}
+		.MuiAccordionSummary-content.Mui-expanded {
+			margin-bottom:0px;
+		}
+		.MuiTypography-root {
 				font-family: Poppins;
-				font-size: 32px;
+				font-size: 18px;
 				font-style: normal;
-				font-weight: 600;
-				line-height: 48px;
+				font-weight: 500;
+				line-height: 27px;
 				letter-spacing: 0em;
 				text-align: left;
+
+		}
+		textarea {
+			margin-top:20px;
+			height: 200px;
+			width: 628px;
+			left: 20px;
+			top: 262px;
+			border-radius: 5px;
+			background: #0D3840;
+			font-family: Poppins;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 21px;
+			letter-spacing: 0em;
+			text-align: left;
+			padding-top:12px;
+			padding-left:16px;
+			border:none;
+			outline:none;
+		}
+		.MuiAccordion-root {
+			background-color :transparent;
+			// padding:0px;
+			.MuiAccordionSummary-root {
+				padding :0px; 
+				.css-ahj2mt-MuiTypography-root {
+					font-family: Poppins;
+					font-size: 32px;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 48px;
+					letter-spacing: 0em;
+					text-align: left;
+				}
+			}
+			.MuiAccordionDetails-root {
+						padding :0 0 20px 0px;
 			}
 		}
-		.MuiAccordionDetails-root {
-					padding :0 0 20px 0px;
-		}
-	}
-  
-}`;
+
+	}`;
 
 class Cart extends React.Component {
 	constructor(props) {
@@ -90,7 +90,11 @@ class Cart extends React.Component {
 			count1: 1,
 			count2: 1,
 			count3: 1,
-			type: 0
+			couponState: 0,
+			type: 0,
+			inputvalue: '',
+			clickcount: 0,
+			clickstate: false
 		};
 	}
 
@@ -134,6 +138,12 @@ class Cart extends React.Component {
 		})
 	}
 
+	setInputValue = (value) => {
+		this.setState({
+			inputvalue: value
+		})
+	}
+
 	decrease1 = () => {
 		this.setState({
 			count1: this.state.count1 - 1
@@ -147,6 +157,30 @@ class Cart extends React.Component {
 	decrease3 = () => {
 		this.setState({
 			count3: this.state.count3 - 1
+		})
+	}
+
+	clickcountadd = () => {
+		if (this.state.inputvalue == "YIYI2022") {
+
+			this.setState({
+				couponState: 2,
+			})
+		} else if (this.state.inputvalue == "") {
+			this.setState({
+				couponState: 0,
+			})
+		} else {
+			this.setState({
+				couponState: 1,
+			})
+		}
+
+	}
+
+	clickFalse = () => {
+		this.setState({
+			clickstate: false
 		})
 	}
 
@@ -317,27 +351,38 @@ class Cart extends React.Component {
 							</div>
 							<div className={Styles.config_panel_right}>
 								<div className={Styles.right_panel_content}>
-									<div className={Styles.right_panel_content_header} style={{ marginTop: '20px' }}>
-										<p>Desconto</p>
-										<p>R$ 29,99</p>
-									</div>
-									<div className={Styles.right_panel_content_header} >
-										<p>Total</p>
-										<p>R$ 200,00</p>
-									</div>
+									{this.state.couponState == 2 &&
+										<>
+											<div className={Styles.right_panel_content_header} style={{ marginTop: '20px' }}>
+												<p>Desconto</p>
+												<p>R$ 29,99</p>
+											</div>
+											<div className={Styles.right_panel_content_header} >
+												<p>Total</p>
+												<p>R$ 200,00</p>
+											</div>
+										</>}
+									{this.state.couponState != 2 &&
+										<div style={{ marginTop: '20px' }} className={Styles.right_panel_content_header} >
+											<p>Total</p>
+											<p>R$ 200,00</p>
+										</div>
+									}
 									<div className={Styles.label_group1}>
 										<label style={{ fontSize: "14px" }}>Tem um cupom de desconto?</label>
 									</div>
 									<div className={Styles.right_panel_content_label2}>
 										<div className={Styles.form_group} >
 											<div className={Styles.content_button}>
-												<input type="text" name="email" id="email" defaultValue="YIYI2022" />
-												<button type="button" className={Styles.btn1}>Aplicar</button>
+												<input type="text" name="email" id="email" value={this.state.inputvalue} onChange={(e) => this.setInputValue(e.target.value)} defaultValue="YIYI2022" />
+												<button onClick={() => this.clickcountadd()} type="button" className={Styles.btn1}>Aplicar</button>
 											</div>
 										</div>
 									</div>
 									<div className={Styles.label_group2} style={{ textAlign: 'right' }}>
-										<label style={{ fontSize: "12px", color: '#34A853' }}>Cupom aplicado com sucesso!</label>
+										{this.state.couponState == 2 && <label style={{ fontSize: "12px", color: '#34A853' }}>Cupom aplicado com sucesso!</label>}
+										{this.state.couponState == 1 && <label style={{ fontSize: "12px", color: '#DB2B2F' }}>Cupom inválido :(</label>}
+										{this.state.couponState == 0 && <></>}
 									</div>
 									<button type="button" onClick={() => this.props.submitClick(this.props.pagenum)} className={Styles.btn2}>Finalizar Compra</button>
 								</div>
@@ -346,7 +391,7 @@ class Cart extends React.Component {
 					</div>
 				</div>
 				{this.props.stateModal && <Loginmodal submitClick={this.props.submitClick} pagenum={this.props.pagenum} actModalOpen={this.props.stateModal} closeModal={this.props.closeModal} />}
-			</CatalogStyle>
+			</CatalogStyle >
 		);
 	}
 };
