@@ -16,30 +16,32 @@ class Keys extends React.Component {
             modalName: "",
             purchase: false,
             items : [
-                {no : 1, image : '1.png', isPurchase: true},
-                {no : 2, image : '2.png', isPurchase: false},
-                {no : 3, image : '3.png', isPurchase: false},
-                {no : 4, image : '4.png', isPurchase: false},
-                {no : 5, image : '5.png', isPurchase: false},
-                {no : 6, image : '6.png', isPurchase: false},
-                {no : 7, image : '7.png', isPurchase: false},
-                {no : 8, image : '8.png', isPurchase: false},
-                {no : 9, image : '9.png', isPurchase: false}, 
+                {no : 1, image : '1.png', isPurchase: false},
+                {no : 2, image : '2.png', isPurchase: true},
+                {no : 3, image : '3.png', isPurchase: true},
+                {no : 4, image : '4.png', isPurchase: true},
+                {no : 5, image : '5.png', isPurchase: true},
+                {no : 6, image : '6.png', isPurchase: true},
+                {no : 7, image : '7.png', isPurchase: true},
+                {no : 8, image : '8.png', isPurchase: true},
+                {no : 9, image : '9.png', isPurchase: true}, 
             ],
-            activeItem: 0
+            activeItem: 0,
+            buttonText: 'Resgatar'
         }
     }
 
     activationModalOpen = (activeItem) => {
         this.setState( { 
             actModalOpen: true,
-             activeItem : activeItem - 1
+             activeItem : activeItem - 1,
+             buttonText: 'resgatando '
         });
 
     }
 
     activationModalClose = () => {
-        this.setState ({ actModalOpen: false });
+        this.setState ({ actModalOpen: false, buttonText : 'resgata' });
     }
 
     doPurchase = no => {
@@ -74,7 +76,7 @@ class Keys extends React.Component {
                         this.state.items.map((item, idx) => (
                             <div className={Styles.product_item}>
                                 <img src={getImg('mypage/' + item.image)} alt=""/>
-                                <Button className={"btn" + idx} buttontext={item.isPurchase ? 'ja Resgatado' : 'Resgatar'}background={item.isPurchase ? '#01191E' : '#DB2B2F'} onClick={() => this.activationModalOpen(item.no)}/>
+                                <Button className={"btn" + idx} buttontext={item.isPurchase ? 'ja Resgatado' : this.state.buttonText} background={item.isPurchase ? '#DB2B2F' : '#01191E'} onClick={() => this.activationModalOpen(item.no)}/>
                             </div>
                         ))
                     }
