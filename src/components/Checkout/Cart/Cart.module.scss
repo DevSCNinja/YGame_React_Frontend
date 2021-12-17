@@ -1,274 +1,37 @@
 @import '../../../assets/style/base';
-.accordion_input {
-    height: 46px;
-    width: 628px;
-    left: 20px;
-    top: 196px;
-    border-radius: 5px;
-    background: #0D3840;
-    border-radius: 5px;
-    border:none;
-    margin-top:20px;
-    padding-left:13px;
-    outline:none;
 
-}
 .mydata_page_wrap {
    padding-bottom: 10px;
-   
-   .config_group {
-      margin: 0 auto;
-      margin-bottom: 63px;     
-      width: 1012px;
-
-        dl {
-            margin-bottom: 12px;
-            
-            dt {
-                font-family: Poppins;
-                font-size: 23px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 35px;
-                letter-spacing: 0em;
-                text-align: left;
-            }
-    
-            dd {
-                font-family: Poppins;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0em;
-                text-align: left;
-            
-            }
-        }
-        .config_header p {
-            font-size : 16px;
-        }
-        .config_panel {
-            display: flex;
-            
-            .config_panel_left {
-                margin-right:10px;
-                padding: 0px 29px 0px 20px;      
-                max-width: 880px;
-                background-color: #01191E;
-                border-radius: 15px;
-                width: 668px;
-                height : 100%;
-
-                .left_panel_content {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding : 20px 0;
-                    border-bottom : 1px #0D3840 solid;
-                
-                    .left_panel_content_p1 {
-                        // padding: 0 0px 0px 16px;
-                        max-width:246px;
-                        width : 48%;
-                        font-size: 16px;
-                        line-height: 24px;
-                        font-weight: 500;
-                    }
-                    .left_panel_content_div1 {
-                        margin-top : 20px;
-                        width:15%;
-                    }
-                    .left_panel_content_div1 input {
-                        text-align:center;
-                        outline : none;
-                        border:none;
-                    }
-                    .left_panel_content_button {
-                        width: 30px;
-                        height: 27px;
-                        background-color: #0D3840;
-                        margin: 0 5px;
-                        border-radius: 8px;
-                    }
-                    .left_panel_content_sub, .left_panel_content_add {
-                        background : none;
-                        border : none;
-                    }
-                    .left_panel_content_p2 {
-                        font-size :22px
-                    }
-                    
-                }
-            }
-            .config_panel_right {
-                margin: 0 10px;
-                padding: 0 20px;      
-                max-width: 880px;
-                background-color: #01191E;
-                border-radius: 15px;
-                width:324px;
-                height:100%;
-
-                .right_panel_content {
-                    // display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    // padding : 20px;
-                    
-                    .left_panel_content_p1 {
-                        padding: 0 40px 0px 20px;
-                        font-size: 16px;
-                        line-height: 24px;
-                        font-weight: 500;
-                    }
-                    .left_panel_content_button {
-                        width: 30px;
-                        height: 27px;
-                        background-color: #0D3840;
-                        margin: 0 5px;
-                        border-radius: 8px;
-                    }
-                    .left_panel_content_sub, .left_panel_content_add {
-                        background : none;
-                        border : none;
-                    }
-                    .left_panel_content_p2 {
-                        margin-left:52px;
-                    }
-                    .right_panel_content_label {
-                        display: flex;
-                        background-color: #0D3840;
-                        width: 100%;
-                        padding: 6px;
-                        border-radius: 5px;
-                        margin : 18px 0px;
-                        cursor: pointer;
-                    }
-                    .right_panel_content_label2 {
-                        display: flex;
-                        background-color: #0D3840;
-                        width: 100%;
-                        padding:10px;
-                        border-radius: 5px;
-                        margin : 0px;
-                        height:46px;
-                    }
-                    .right_panel_content_label_first {
-                        align-self: center;
-                        background-color: #01191E;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 100%;
-                        margin : 10px;
-                    }
-                    .right_panel_content_label_first_active {
-                        align-self: center;
-                        background-color: #fff;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 100%;
-                        margin : 10px;
-                        border: 3px solid #F15A24;
-                    }
-                    .image_group img {
-                        padding-right:5px;
-                    }
-
-                    .right_panel_content_header {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                    .right_panel_content_header p {
-                        font-size: 22px;
-                    }
-                    .form_group {
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: column;
-            
-                        .label_group {
-                        display:  flex;
-                        justify-content: space-between;
-                        width: 100%;
-                        
-                        :first-child {
-                            font-family: Poppins;
-                            font-size: 11px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 21px;
-                            letter-spacing: 0em;
-                            text-align: right;
-                        }
-            
-                        :nth-child(2) {
-                            font-family: Poppins;
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 21px;
-                            letter-spacing: 0em;
-                            text-align: right;
-                            color: #F15A24;
-                        }
-                        }
-            
-                        input {
-                        background: transparent;
-                        height: 46px;
-                        border-radius: 10px;
-                        border: none;
-                        width:70%;
-                        outline:none;
-                        padding:0 5px;
-                        }
-                    }
-                    .content_button {
-                        display: flex;
-                        width:100%
-                    }
-                    .content_button {
-                        outline : none;
-                    }
-                    .content_button button {
-                        border : none;
-                    }
-                    button.btn1 {
-                        width: 80px;
-                        left: 1356px;
-                        top: 1167px;
-                        background: #F15A24;
-                        border-radius: 5px;
-                        align-self: center;
-                        border:none;
-                        height:26px;
-                        font-size:14px;
-                        font-size:14px;
-                    }
-                    button.btn2 {
-                        width: 283px;
-                        font-size :22px;
-                        background: #F15A24;
-                        border-radius: 5px;
-                        align-self: center;
-                        border:none;
-                        height:46px;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                    }
-                    .label_group1 {
-                        margin-top:20px;
-                    }
-                }
-            }
-        }    
-    }
+}      
+.config_group {
+    margin: 0 auto;
+    margin-bottom: 63px;     
+    width: 1012px;
+}
+.config_header {
+    display: flex;
+}
+.config_header p {
+    font-size : 16px;
+}
+.config_panel1 {
+    display: flex;
+}
+.config_panel2 {
+    display: flex;
+    margin-top:20px;
+}    
+.header_p1{
+    margin-left:31px
+}
+.header_p2{
+    margin-left: 330px;
+}
+.header_p3{
+    margin-left:70px;
+}
+.header_p4{
+    margin-left:105px;
 }
 
-
-// .my_accordion {
-//     background-color: transparent;
-//     // padding:0;
-// }
 

@@ -7,11 +7,8 @@ import Button from "../../components/Home/Button";
 import Cardtitle from "../../components/Home/Cardtitle";
 import Card from "../../components/Home/Card";
 import Product from "../../components/Home/Product";
-
 import Cart from "../../components/Home/Cart";
-
 import { getImg } from "../../utils/Helper";
-
 import "react-alice-carousel/lib/alice-carousel.css";
 import Styles from './Home.module.scss';
 

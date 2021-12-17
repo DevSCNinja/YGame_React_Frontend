@@ -1,0 +1,75 @@
+.config_panel_right {
+  margin: 0 10px;
+  padding: 0 20px;      
+  max-width: 880px;
+  background-color: #01191E;
+  border-radius: 15px;
+  width:324px;
+  height:100%;
+}
+.right_panel_content {
+  // display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // padding : 20px;
+}
+.right_panel_content_header {
+    display: flex;
+    justify-content: space-between;
+}
+.right_panel_content_header p {
+    font-size: 22px;
+}
+.label_group1 {
+  margin-top:20px;
+}
+.right_panel_content_label2 {
+    display: flex;
+    background-color: #0D3840;
+    width: 100%;
+    padding:10px;
+    border-radius: 5px;
+    margin : 0px;
+    height:46px;
+}
+.form_group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.content_button {
+    display: flex;
+    width:100%
+}
+button.btn1 {
+    width: 80px;
+    left: 1356px;
+    top: 1167px;
+    background: #F15A24;
+    border-radius: 5px;
+    align-self: center;
+    border:none;
+    height:26px;
+    font-size:14px;
+    font-size:14px;
+}
+button.btn2 {
+    width: 283px;
+    font-size :22px;
+    background: #F15A24;
+    border-radius: 5px;
+    align-self: center;
+    border:none;
+    height:46px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content_input {
+  background: transparent;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  width:70%;
+  outline:none;
+  padding:0 5px;
+}
