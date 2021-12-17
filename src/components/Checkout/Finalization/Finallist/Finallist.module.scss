@@ -1,0 +1,51 @@
+.config_panel_left {
+  margin: 0 10px;
+  padding: 0px 29px 0px 20px;      
+  // max-width: 880px;
+  background-color: #01191E;
+  border-radius: 15px;
+  width: 1012px;
+  height : 100%;
+}
+.left_panel_content {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  padding : 20px 0;
+  border-bottom : 1px #0D3840 solid;
+  &:last-child{
+    border: none;
+  }
+}
+.left_panel_content_p1 {
+    // padding: 0 0px 0px 16px;
+    max-width:250px;
+    width : 48%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+.left_panel_content_number {
+  margin-left: 118px;
+}
+.left_panel_content_p2 {
+    font-size :22px;
+    margin-left:77px;
+    width:120px;
+}
+.left_panel_content_button {
+  width: 218px;
+  height: 60px;
+  left: 1228px;
+  top: 808px;
+  background: #34A853;
+  border-radius: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  margin-left:56px;
+  border:none;
+}

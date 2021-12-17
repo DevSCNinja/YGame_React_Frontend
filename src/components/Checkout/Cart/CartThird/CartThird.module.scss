@@ -1,0 +1,65 @@
+.config_panel_left {
+  margin-right:10px;
+  padding: 0px 29px 0px 20px;      
+  max-width: 880px;
+  background-color: #01191E;
+  border-radius: 15px;
+  width: 668px;
+  // height : 100%;
+}
+
+.accordion_input {
+    height: 46px;
+    width: 100%;
+    left: 20px;
+    top: 196px;
+    border-radius: 5px;
+    background: #0D3840;
+    border-radius: 5px;
+    border:none;
+    margin-top:20px;
+    padding-left:13px;
+    outline:none;
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+
+    }
+
+}
+
+textarea.accordion_textarea {
+    margin-top:20px;
+    height: 200px;
+    width: 100%;
+    left: 20px;
+    top: 262px;
+    border-radius: 5px;
+    background: #0D3840;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top:12px;
+    padding-left:16px;
+    border:none;
+    outline:none;
+    resize: none;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+
+    }
+}

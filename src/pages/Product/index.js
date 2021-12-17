@@ -4,10 +4,20 @@ import HeaderLogged from "../../components/Home/HeaderLogged";
 import Footer from "../../components/Home/Footer";
 import { getImg } from "../../utils/Helper";
 import Styles from './Product.module.scss';
+import ProductItem from "../../components/ProductItem";
 
 function Product() {
-    const [count ,setCount] = useState(0);
-    const [pageno, setPageNo] = useState(0) ;
+
+    const [count, setCount] = useState(0);
+    const [pageno, setPageNo] = useState(0);
+    const myItems = [
+        { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' },
+        { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' },
+        { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' },
+        { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' }
+    ];
+
+
 
     const selectPage = (no) => {
         setPageNo(no)
@@ -17,14 +27,15 @@ function Product() {
         <div className={Styles.product_page}>
             <div className={Styles.container}>
                 <HeaderLogged />
+
                 <div className={Styles.product_detail_container}>
                     <div className={Styles.product_detail_wrap}>
                         <div className={Styles.product_title}>Playstation Plus 12 meses - Assinatura Digital</div>
-                        <img src={getImg('product/product_large.png')} alt=""/>
+                        <img src={getImg('product/product_large.png')} alt="" />
                         <div className={Styles.product_detail_content}>
                             <div className={Styles.icon_group}>
-                                <img src={getImg('product/icon1.png')} alt=""/>
-                                <img src={getImg('product/icon2.png')} alt=""/>
+                                <img src={getImg('product/icon1.png')} alt="" />
+                                <img src={getImg('product/icon2.png')} alt="" />
                             </div>
                             <div className={Styles.time_wrap}>
                                 <button>-5%</button>
@@ -34,7 +45,7 @@ function Product() {
                                 </div>
                             </div>
                             <div className={Styles.product_price}>
-                                    R$ 47,50
+                                R$ 47,50
                             </div>
                             <button className={Styles.btn_purchase}>Comprar</button>
                             <div className={Styles.btn_group}>
@@ -51,17 +62,17 @@ function Product() {
                         <dl>
                             <dt>
                                 <span className={pageno == 0 ? Styles.active : ''} onClick={() => selectPage(0)}>Detalhes</span>
-                                <span className={pageno == 1 ?  Styles.active : ''} onClick={() => selectPage(1)}>Como Resgatar</span>
+                                <span className={pageno == 1 ? Styles.active : ''} onClick={() => selectPage(1)}>Como Resgatar</span>
                             </dt>
                             <dd>
                                 {pageno == 0 && <div>
                                     <p>Os cartões-presente da PlayStation Store são uma alternativa simples e rápida para
-                                    recarregar sua conta PSN com crédito sem um cartão de crédito!
+                                        recarregar sua conta PSN com crédito sem um cartão de crédito!
                                     </p>
                                     <p>Sempre o presente perfeito – O crédito PSN pode ser comprado e doado sem uma contaPSN.</p>
                                     <p>Compre e resgate em alguns minutos – após concluir a compra você receberá um e-mailcom seu código!</p>
                                     <p>Use o crédito PSN para compre ofertas exclusivas na PSN Store!</p>
-                                </div>} 
+                                </div>}
                                 {pageno == 1 && <div>
                                     <p>Para usar seu código PlayStation Network, siga as instruções abaixo:</p>
                                     <div className={Styles.explain_detail_wrap}>
@@ -72,7 +83,7 @@ function Product() {
                                         <p>- Se o código estiver correto, verá uma descrição do produto ou serviço associado ao código</p>
                                         <p>- Clique em “Utilizar” para adicionar o produto ou fundos a sua conta</p>
                                     </div>
-                                </div>} 
+                                </div>}
                             </dd>
                         </dl>
                     </div>
@@ -81,66 +92,9 @@ function Product() {
                             Produtos recomendados
                         </div>
                         <div className={Styles.product_recommend_list}>
-                            <div className={Styles.product_recommend_item}>
-                                <div className={Styles.img_wrap}>
-                                    <img src={getImg('product/product_small1.png')} alt=""/>
-                                </div>
-                                <div className={Styles.product_title}>
-                                    Playstation R$ 60 - Gift Ca...
-                                </div>
-                                <div style={{padding: "15px"}}>
-                                    <div className={Styles.icon_group}>
-                                        <img src={getImg('product/icon1.png')} alt=""/>
-                                        <img src={getImg('product/icon2.png')} alt=""/>
-                                    </div>
-                                    <button>R$ 60,00</button>
-                                </div>
-                            </div>
-                            <div className={Styles.product_recommend_item}>
-                                <div className={Styles.img_wrap}>
-                                    <img src={getImg('product/product_small2.png')} alt=""/>
-                                </div>
-                                <div className={Styles.product_title}>
-                                    Playstation R$ 60 - Gift Ca...
-                                </div>
-                                <div style={{padding: "15px"}}>
-                                    <div className={Styles.icon_group}>
-                                        <img src={getImg('product/icon1.png')} alt=""/>
-                                        <img src={getImg('product/icon2.png')} alt=""/>
-                                    </div>
-                                    <button>R$ 30,00</button>
-                                </div>
-                            </div>
-                            <div className={Styles.product_recommend_item}>
-                                <div className={Styles.img_wrap}>
-                                    <img src={getImg('product/product_small3.png')} alt=""/>
-                                </div>
-                                <div className={Styles.product_title}>
-                                    Playstation R$ 30 - Gift Ca...
-                                </div>
-                                <div style={{padding: "15px"}}>
-                                    <div className={Styles.icon_group}>
-                                        <img src={getImg('product/icon1.png')} alt=""/>
-                                        <img src={getImg('product/icon2.png')} alt=""/>
-                                    </div>
-                                    <button>R$ 199,90</button>
-                                </div>
-                            </div>
-                            <div className={Styles.product_recommend_item}>
-                                <div className={Styles.img_wrap}>
-                                    <img src={getImg('product/product_small4.png')} alt=""/>
-                                </div>
-                                <div className={Styles.product_title}>
-                                     PS Plus 12 meses - Gift Car...
-                                </div>
-                                <div style={{padding: "15px"}}>
-                                    <div className={Styles.icon_group}>
-                                        <img src={getImg('product/icon1.png')} alt=""/>
-                                        <img src={getImg('product/icon2.png')} alt=""/>
-                                    </div>
-                                    <button>R$ 85,90</button>
-                                </div>
-                            </div>
+                            {myItems.map((items) => (
+                                <ProductItem item={items} />
+                            ))}
                         </div>
                     </div>
                 </div>
