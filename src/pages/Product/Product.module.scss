@@ -53,7 +53,23 @@
                     justify-content: space-between;
                     width: 100%;
 
-                    button {
+                    // button {
+                    //     padding: 3px 20px;
+                    //     width: 126px;
+                    //     background-color: #F15A24;
+                    //     @extend %btn_common_style;   
+                    //     font-weight: 700;
+                    //     font-size: 15px;
+                    //     line-height: 23px;
+                    //     border-radius: 5px;
+                    //     cursor: none;
+                    // }
+
+                    // button:hover {
+                    //     opacity: none;
+                    // }
+
+                    .time_per {
                         padding: 3px 20px;
                         width: 126px;
                         background-color: #F15A24;
@@ -62,8 +78,8 @@
                         font-size: 15px;
                         line-height: 23px;
                         border-radius: 5px;
+                        justify-content: center;
                     }
-
                     &>div {
                         display: flex;
                         justify-content: space-between;

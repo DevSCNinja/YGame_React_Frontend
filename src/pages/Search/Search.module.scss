@@ -57,7 +57,11 @@
                   &:last-child {
                     color: #DB2B2F;
                     background: none;
-                    cursor: default;
+                    // cursor: default;
+                    cursor:pointer;
+                  }
+                  &:last-child:hover {
+                    opacity: 0.7;
                   }
 
                 }

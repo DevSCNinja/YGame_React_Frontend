@@ -4,6 +4,7 @@ import Button from "./../Button";
 
 import { getImg } from "../../../utils/Helper";
 import Styles from './Signin.module.scss';
+import { Link } from 'react-router-dom';
 
 class Signin extends React.Component {
     constructor(props) {
@@ -14,15 +15,14 @@ class Signin extends React.Component {
 
     render() {
         return (
-            <div className={Styles.signin}>
+            <div className={Styles.signin} onBlur={() => this.props.handleHide()} onFocus={() => console.log('focus')}>
                 <div className={Styles.userinfo}>
-                    <img src={getImg('home/icons/user-default.png')} alt=""/>
+                    <img src={getImg('home/icons/user-default.png')} alt="" />
                     <p>Usuário não logado</p>
                 </div>
-
-                <a href="/login"><Button buttontext="Fazer Login" background="#01191E"/></a>
-                <a href="/register"><Button buttontext="Cadastrar-se" background="#01191E"/></a>
-            </div>       
+                <Link to='/login'><Button buttontext="Fazer Login" background="#01191E" /></Link>
+                <Link to='/register'><Button buttontext="Cadastrar-se" background="#01191E" /></Link>
+            </div >
         )
     }
 }

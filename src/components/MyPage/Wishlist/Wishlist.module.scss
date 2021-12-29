@@ -48,8 +48,24 @@
                 display: flex;
                 align-self: center;
                 
-                button {
-                    margin-right: 20px;
+                // button {
+                //     margin-right: 20px;
+                // }
+                .group_button {
+                    background-color: rgb(52, 168, 83);
+                    width: 66px;
+                    margin-right:20px;
+                    border-radius: 5px;
+                    border: none;
+                    color: white;
+                    border: none;
+                    padding: 2px;
+                    font-family: Poppins;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 500;
+                    letter-spacing: 0em;
+                    text-align: center;
                 }
             }
         }

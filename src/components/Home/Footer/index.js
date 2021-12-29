@@ -22,6 +22,12 @@ class Footer extends React.Component {
         });
     }
 
+    hideNaCurPanel = () => {
+        this.setState({
+            showNaCurPanel: false
+        })
+    }
+
     render() {
         return (
             <div className={Styles.footerpanel}>
@@ -30,41 +36,41 @@ class Footer extends React.Component {
                         <div className={Styles.paycard}>
                             <p>Métodos de Pagamento:</p>
                             <div>
-                                <img src={getImg('home/icons/pay.png')} alt=""/>
-                                <img src={getImg('home/icons/pay-dots.png')} alt=""/>
-                                <img src={getImg('home/icons/pay-dot.png')} alt=""/>
-                                <img src={getImg('home/icons/pay-visa.png')} alt=""/>
-                                <img src={getImg('home/icons/pay-vertical.png')} alt=""/>
-                                <img src={getImg('home/icons/pay-apple.png')} alt=""/>
-                                <img src={getImg('home/icons/pay-google.png')} alt=""/>
+                                <img src={getImg('home/icons/pay.png')} alt="" />
+                                <img src={getImg('home/icons/pay-dots.png')} alt="" />
+                                <img src={getImg('home/icons/pay-dot.png')} alt="" />
+                                <img src={getImg('home/icons/pay-visa.png')} alt="" />
+                                <img src={getImg('home/icons/pay-vertical.png')} alt="" />
+                                <img src={getImg('home/icons/pay-apple.png')} alt="" />
+                                <img src={getImg('home/icons/pay-google.png')} alt="" />
                             </div>
                         </div>
                         <div className={Styles.paycountry}>
                             <a onClick={this.toogleNaCurPanel}>
-                                <img src={getImg('home/flags/brasil.png')} alt=""/>
+                                <img src={getImg('home/flags/brasil.png')} alt="" />
                                 <p>Brasil (Português) / BRL (R$) </p>
                                 <i></i>
                             </a>
                             {
-                                this.state.showNaCurPanel && 
-                                <div className={Styles.panel}>
+                                this.state.showNaCurPanel &&
+                                <div className={Styles.panel} onBlur={this.hideNaCurPanel} onClick={() => console.log('123')}>
                                     <a onClick={this.toogleNaCurPanel}><span className="fa fa-times" aria-hidden="true"></span></a>
                                     <h5>Selecione suas preferências</h5>
                                     <h6>Troque sua região ou moeda</h6>
                                     <p>Região</p>
-                                        <ReactFlagsSelect 
-                                            className={Styles.flagselect}
-                                            countries={["BR", "US", "ES"]}
-                                            customLabels={{"BR": "Brasil (Português)", "US": "USA(inglês)", "ES": "Spain(espanhol)"}} 
-                                            selected="BR"
-                                            selectButtonClassName={Styles.flagselectbutton}
-                                            selectedSize={16}
-                                            optionsSize={16}
-                                        />
+                                    <ReactFlagsSelect
+                                        className={Styles.flagselect}
+                                        countries={["BR", "US", "ES"]}
+                                        customLabels={{ "BR": "Brasil (Português)", "US": "USA(inglês)", "ES": "Spain(espanhol)" }}
+                                        selected="BR"
+                                        selectButtonClassName={Styles.flagselectbutton}
+                                        selectedSize={16}
+                                        optionsSize={16}
+                                    />
                                     <p>Moeda</p>
-                                    <Selectflag options={[{text: "Real Brasileiro (R$)"}]}/>
-                                    
-                                    <Button buttontext="Realizar Troca" background="#F15A24"/>
+                                    <Selectflag options={[{ text: "Real Brasileiro (R$)" }]} />
+
+                                    <Button buttontext="Realizar Troca" background="#F15A24" />
                                 </div>
                             }
                         </div>
@@ -113,7 +119,7 @@ class Footer extends React.Component {
                             <p>CNPJ: 42.636.806/0001-10</p>
                         </div>
                         <div className={Styles.logo}>
-                            <img src={getImg('home/lg-logo.png')} alt="Logo"/>
+                            <img src={getImg('home/lg-logo.png')} alt="Logo" />
                         </div>
                     </div>
                     <div className={Styles.copyright}>

@@ -1,33 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
-import HeaderLogged from "../../components/Home/HeaderLogged";
+import Header from "../../components/Home/Header";
 import Footer from "../../components/Home/Footer";
 import { getImg } from "../../utils/Helper";
 import Styles from './Product.module.scss';
 import ProductItem from "../../components/ProductItem";
+import Cart from "../../components/Home/Cart";
+import { useDetectOutsideClick } from "../../hook/useCustomHook";
+
 
 function Product() {
-
+    const containRef = useRef(null);
+    const [isActive, setIsActive] = useDetectOutsideClick(containRef, false);
     const [count, setCount] = useState(0);
     const [pageno, setPageNo] = useState(0);
+    const [showcart, setShowCart] = useState(false);
     const myItems = [
         { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' },
         { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' },
         { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' },
         { imgname: 'product_small1.png', name: 'Playstation R$ 60 - Gift Ca...', icon1: 'icon1.png', icon2: 'icon2.png', price: 'R$ 60,00' }
     ];
-
-
-
     const selectPage = (no) => {
         setPageNo(no)
     }
 
-    return (
-        <div className={Styles.product_page}>
-            <div className={Styles.container}>
-                <HeaderLogged />
 
+    const handleShowCart = () => {
+        setShowCart((showcart === true) ? false : true);
+    }
+
+    const handleHideCart = () => {
+        setShowCart(false);
+    }
+
+    return (
+        <div className={Styles.product_page} >
+            <Cart onClick={() => setIsActive(!isActive)} ref={containRef} isOpen={showcart} handleShowCart={() => handleShowCart()} handleHideCart={() => handleHideCart()} />
+            <div className={Styles.container}>
+                <Header handleShowCart={() => handleShowCart()} />
+                {/* <Header /> */}
                 <div className={Styles.product_detail_container}>
                     <div className={Styles.product_detail_wrap}>
                         <div className={Styles.product_title}>Playstation Plus 12 meses - Assinatura Digital</div>
@@ -38,7 +50,8 @@ function Product() {
                                 <img src={getImg('product/icon2.png')} alt="" />
                             </div>
                             <div className={Styles.time_wrap}>
-                                <button>-5%</button>
+                                {/* <button>-5%</button> */}
+                                <div className={Styles.time_per}>-5%</div>
                                 <div>
                                     <span>Acaba em:</span>
                                     <span>00D / 13:24:32</span>

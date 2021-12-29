@@ -10,7 +10,7 @@ import CartFourth from './CartFourth';
 
 
 
-class Cart extends React.Component {
+class Checkcart extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -44,4 +44,4 @@ class Cart extends React.Component {
 	}
 };
 
-export default Cart;
+export default Checkcart;

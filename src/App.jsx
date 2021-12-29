@@ -21,13 +21,15 @@ import NotFound5 from './pages/NotFound5';
 
 
 function App() {
+
+  if (localStorage.getItem('login') == null) localStorage.setItem('login', false);
   return (
     <Router>
       <Switch>
         <Route component={Home} path="/home" />
         <Route component={Register} path="/register" />
         <Route component={Interest} path="/tastes" />
-        
+
         <Route component={HomeLogged} path="/home_logged" />
         <Route component={MyPage} path="/mypage" />
         <Route component={Product} path="/product" />
@@ -42,7 +44,7 @@ function App() {
         <Route component={Login} path="/login" />
 
         <Route component={NotFound1} path="/" />
-        
+
       </Switch>
     </Router>
   )

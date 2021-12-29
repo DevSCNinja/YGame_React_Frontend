@@ -9,9 +9,8 @@ input:-internal-autofill-selected {
 }
 
 .footerbar {
-    position  : absolute;
-    bottom    : 30px;
-    margin-top: auto;
+    height    : 50px;
+    margin    : 150px auto;
     text-align: center;
 
     ul {
@@ -93,10 +92,26 @@ button.submit {
             text-align      : left;
             max-height      : 400px;
             overflow-y      : auto;
+            scrollbar-color : #d4aa70 #e4e4e4;
+            scrollbar-width : thin;
 
             p {
                 margin-bottom: 20px;
                 font-size    : 16px;
+            }
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: unset;
+                border-radius   : 100px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius   : 100px;
+                background-color: #01191E;
             }
         }
     }

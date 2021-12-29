@@ -1,8 +1,8 @@
 import React from "react";
 
-import styles from '../Login.module.scss';
+import styles from './Login.module.scss';
 
-export const Footer = (props) => {
+export const Footer1 = (props) => {
     const wWidth = window.innerWidth;
     const wHeight = window.innerHeight;
     return (

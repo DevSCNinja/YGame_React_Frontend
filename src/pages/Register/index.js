@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Button } from "../../components/Login/Button";
 import { Logo } from "../../components/Login/Logo";
-import { Footer } from "../../components/Login/Footer";
+import { Footer1 } from "../../components/Login/Footer1";
 import styles from '../Login/Login.module.scss';
 import { getImg } from "../../utils/Helper";
 import { WithOthers } from "../../components/Login/WithOthers";
@@ -17,6 +17,8 @@ import styled from 'styled-components';
 import Modal from '@mui/material/Modal';
 
 const RegisterStyle = styled.div`
+
+
     .MuiFormControl-root {
         margin: 0;
         width: 100%;
@@ -97,11 +99,14 @@ export default function Register() {
 		p: 4,
 	};
 
+	const wWidth = window.innerWidth;
+	const wHeight = window.innerHeight;
+
 	return (
 		<RegisterStyle>
-			<div className={styles.loginwrap}>
+			<div className={styles.loginwrap} style={{ height: wHeight + 'px' }}>
 				<Logo />
-				<div className={styles.logincontent} style={{ animation: animations.bounceIn }}>
+				<div className={styles.logincontent} style={{ animation: animations.bounceIn, position: 'relative' }}>
 					<div className={styles.loginformwrap} style={values.inputStatus ? { width: "586px" } : {}}>
 						<form name="login_form" id="login_form" method="POST" action="">
 							<dl>
@@ -114,7 +119,7 @@ export default function Register() {
 								</dd>
 							</dl>
 							{!values.inputStatus && <WithOthers />}
-							{values.inputStatus && <div>
+							{values.inputStatus && <div >
 								<div class="row">
 									<div class="col-md-6">
 										<div className={styles.form_group}>
@@ -230,7 +235,7 @@ export default function Register() {
 						</div>
 					</div>
 				</Modal>
-				<Footer />
+				<Footer1 />
 			</div>
 		</RegisterStyle>
 	)

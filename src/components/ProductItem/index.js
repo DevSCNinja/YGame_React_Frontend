@@ -2,6 +2,7 @@ import React from "react";
 
 import { getImg } from "../../utils/Helper";
 import Styles from './ProductItem.module.scss';
+import { Link } from 'react-router-dom';
 
 class ProductItem extends React.Component {
 
@@ -16,9 +17,12 @@ class ProductItem extends React.Component {
   render() {
     return (
       <div className={Styles.product_recommend_item}>
-        <div className={Styles.img_wrap}>
-          <img src={getImg('product/' + this.props.item.imgname)} alt="" />
-        </div>
+        <Link to='/product'>
+          <div className={Styles.img_wrap}>
+            <img src={getImg('product/' + this.props.item.imgname)} alt="" />
+          </div>
+        </Link>
+
         <div className={Styles.product_title}>
           {this.props.item.name}
         </div>

@@ -12,7 +12,7 @@ class Button1 extends React.Component {
 
     render() {
         return (
-            <button className={Styles.btn_style} style={{backgroundColor: this.props.background, width: this.props.width + 'px'}} >
+            <button className={Styles.btn_style} style={{ backgroundColor: this.props.background, width: this.props.width + 'px' }} >
                 {this.props.buttontext}
             </button>
         )
