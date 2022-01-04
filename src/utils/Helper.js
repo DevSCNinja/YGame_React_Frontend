@@ -1,4 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useLayoutEffect, useState, useEffect } from 'react'
+
+export const useWindowSize = () => {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+};
 
 export const getImg = (img) => {
     return require(`../assets/${img}`).default

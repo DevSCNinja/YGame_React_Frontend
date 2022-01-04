@@ -47,9 +47,7 @@ export default function Home(props) {
 	return (
 		<ImageStyle>
 			<div className={Styles.home}>
-				{localStorage.getItem('login') == 'true' &&
-					<Cart isOpen={showCart} handleShowCart={() => handleShowCart()} handleHideCart={() => handleHideCart()} />
-				}
+				<Cart isOpen={showCart} handleShowCart={() => handleShowCart()} handleHideCart={() => handleHideCart()} />
 				<div className={Styles.container}>
 					<Header handleShowCart={() => handleShowCart()} />
 					<div className={Styles.cardcontent}>

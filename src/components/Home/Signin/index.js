@@ -15,7 +15,7 @@ class Signin extends React.Component {
 
     render() {
         return (
-            <div className={Styles.signin} onBlur={() => this.props.handleHide()} onFocus={() => console.log('focus')}>
+            <div className={Styles.signin}>
                 <div className={Styles.userinfo}>
                     <img src={getImg('home/icons/user-default.png')} alt="" />
                     <p>Usuário não logado</p>

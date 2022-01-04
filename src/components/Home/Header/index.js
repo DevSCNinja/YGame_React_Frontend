@@ -38,6 +38,16 @@ const HeaderStyle = styled.div`
         }
     }
 
+		.sign-layout {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left:0;
+			background-color: transparent;
+			z-index: 998;
+		}
+
 }`;
 
 class Header extends React.Component {
@@ -164,8 +174,9 @@ class Header extends React.Component {
 								<a onClick={this.props.handleShowCart}><img src={getImg('home/icons/cart.png')} alt="User" /></a>
 								<span className={Styles.productcount}>1</span>
 							</div>
-							{this.state.showSignin && localStorage.getItem('login') === 'false' && <Signin handleHide={this.handleHide} />}
+							{this.state.showSignin && localStorage.getItem('login') === 'false' && <Signin />}
 							{this.state.showSignin && localStorage.getItem('login') === 'true' && <Signup handleHide={this.handleHide} />}
+							{this.state.showSignin && <div class="sign-layout" onClick={() => this.handleHide()}></div>}
 						</div>
 					</div>
 				</header>

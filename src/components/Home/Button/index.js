@@ -12,7 +12,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <button onClick={() => localStorage.setItem('login', false)} className={Styles.buttonstyle} style={{ backgroundColor: this.props.background }} >
+            <button className={Styles.buttonstyle} style={{ backgroundColor: this.props.background }} >
                 {this.props.buttontext}
             </button>
         )

@@ -73,6 +73,7 @@ class Footer extends React.Component {
                                     <Button buttontext="Realizar Troca" background="#F15A24" />
                                 </div>
                             }
+                            {this.state.showNaCurPanel && <div className={Styles.footlayout} onClick={() => this.hideNaCurPanel()}></div>}
                         </div>
                     </div>
                     <div className={Styles.support}>

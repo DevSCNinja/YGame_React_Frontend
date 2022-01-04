@@ -1,37 +1,48 @@
 @import '../../../assets/style/base';
 
 .footerpanel {
-    width: 100%;
+    width     : 100%;
     background: #01191E;
     border-top: solid #F15A24 5px;
     margin-top: 40px;
 }
 
+.footlayout {
+    width           : 100%;
+    height          : 100%;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    background-color: transparent;
+    z-index         : 998;
+}
+
 .container {
-    width: 1090px;
-    max-width: 1090px; 
-    margin: 0 auto;  
-    padding: 0 40px;
+    width    : 1090px;
+    max-width: 1090px;
+    margin   : 0 auto;
+    padding  : 0 40px;
 }
 
 .pay {
-    padding: 12px 0px;
-    display: flex;
-    align-items: center;
+    padding        : 12px 0px;
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-    border-bottom: solid #0D3840 2px;
+    border-bottom  : solid #0D3840 2px;
 }
 
 .paycard {
-    display: flex;
+    display    : flex;
     align-items: center;
-    p{
+
+    p {
         font-weight: 600;
-        font-size: 15px;
+        font-size  : 15px;
     }
 
     div {
-        display: flex;
+        display    : flex;
         align-items: center;
         margin-left: 10px;
 
@@ -43,59 +54,62 @@
 
 .paycountry {
     position: relative;
+
     a {
-        display: flex;
+        display        : flex;
         text-decoration: none;
-        align-items: center;
+        align-items    : center;
         justify-content: space-between;
-        background: #0D3840;
-        border-radius: 8px;
-        border: none;
-        padding: 5px;
+        background     : #0D3840;
+        border-radius  : 8px;
+        border         : none;
+        padding        : 5px;
 
         img {
             margin-right: 12px;
         }
 
         i {
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            display: inline-block;
-            padding: 3px;
-            margin-bottom: 4px;
-            margin-left: 12px;
-            transform: rotate(45deg);
+            border           : solid white;
+            border-width     : 0 2px 2px 0;
+            display          : inline-block;
+            padding          : 3px;
+            margin-bottom    : 4px;
+            margin-left      : 12px;
+            transform        : rotate(45deg);
             -webkit-transform: rotate(45deg);
         }
     }
 }
 
 .support {
-    width: 100%;
-    display: flex;
+    width          : 100%;
+    display        : flex;
     justify-content: space-between;
-    padding: 50px 0px;
-    border-bottom: solid #0D3840 2px;
+    padding        : 50px 0px;
+    border-bottom  : solid #0D3840 2px;
 }
 
 .supporttext {
-    width: 23%;
-    max-width: 25%;
+    width     : 23%;
+    max-width : 25%;
     text-align: left;
+
     h5 {
         font-weight: bold;
-        font-size: 23px;
+        font-size  : 23px;
     }
 
     p {
         font-size: 17px;
+
         a {
             text-decoration: none;
         }
     }
 
     div {
-        display: flex;
+        display    : flex;
         align-items: center;
 
         @include icon_list_style()
@@ -103,12 +117,12 @@
 }
 
 .contact {
-    display: flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-    border-bottom: solid #0D3840 2px;
-    padding: 50px 0px;
-    border-bottom: solid #0D3840 2px;
+    border-bottom  : solid #0D3840 2px;
+    padding        : 50px 0px;
+    border-bottom  : solid #0D3840 2px;
 }
 
 .contactus {
@@ -119,60 +133,61 @@
 
 .logo {
     img {
-        width: 411px;
+        width : 411px;
         height: auto;
     }
 }
 
 .copyright {
-    padding: 20px 0px;
+    padding   : 20px 0px;
     text-align: center;
-    color: #0D3840;
+    color     : #0D3840;
+
     span {
         color: #F15A24;
     }
 }
 
 .panel {
-    width: 280px;
-    min-width: 280px;
-    background: #0D3840;
+    width        : 280px;
+    min-width    : 280px;
+    background   : #0D3840;
     border-radius: 8px;
-    padding: 20px;
-    display: block;
-    position: absolute;
-    top: 54px;
-    right: 0;
-    text-align: center;
-    
+    padding      : 20px;
+    display      : block;
+    position     : absolute;
+    top          : 54px;
+    right        : 0;
+    text-align   : center;
+
     h5 {
         font-weight: bold;
-        font-size: 16px;
+        font-size  : 16px;
     }
 
     h6 {
-        font-size: 14px;
+        font-size  : 14px;
         font-weight: 400;
     }
 
     p {
         text-align: left;
-        font-size: 14px;
+        font-size : 14px;
         margin-top: 20px;
     }
 
     button {
-        width: 100%;
-        margin-top: 16px;
-        padding-top: 12px;
+        width         : 100%;
+        margin-top    : 16px;
+        padding-top   : 12px;
         padding-bottom: 12px;
     }
 
     a span {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-        opacity: 0.5;
+        position : absolute;
+        right    : 8px;
+        top      : 8px;
+        opacity  : 0.5;
         font-size: 20px;
     }
 
@@ -180,21 +195,19 @@
 }
 
 .panel::after {
-    right: auto;
-    position: absolute;
-    top: -14px;
-    left: 52px;
-    display: inline-block!important;
-    border-right: 10px solid transparent;
-    border-bottom: 14px solid #fff;
-    border-left: 10px solid transparent;
-    content: '';
+    right              : auto;
+    position           : absolute;
+    top                : -14px;
+    left               : 52px;
+    display            : inline-block !important;
+    border-right       : 10px solid transparent;
+    border-bottom      : 14px solid #fff;
+    border-left        : 10px solid transparent;
+    content            : '';
     border-bottom-color: #0D3840;
 }
 
-.cancel {
-    
-}
+.cancel {}
 
 .flagselect {
     button {
@@ -205,8 +218,9 @@
             margin: 0;
         }
     }
+
     ul * {
-        color: black; 
+        color: black;
     }
 }
 

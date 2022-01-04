@@ -1,19 +1,19 @@
 %btn_common_style {
-    background: none;
-    border: none;
-    font-family: Poppins;              
-    font-style: normal;
-    text-align: center;
+    background    : none;
+    border        : none;
+    font-family   : Poppins;
+    font-style    : normal;
+    text-align    : center;
     letter-spacing: 0em;
 }
 
 .product_recommend_list {
-    display: flex;
+    display        : flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    margin:  0 -10px;
-    max-height: 590px;
-    overflow-y: scroll;
+    flex-wrap      : wrap;
+    margin         : 0 -10px;
+    max-height     : 590px;
+    overflow-y     : scroll;
 
     scrollbar-color: red;
     scrollbar-width: thin;
@@ -24,56 +24,59 @@
 
     &::-webkit-scrollbar-track {
         background-color: unset;
-        border-radius: 100px;
+        border-radius   : 100px;
     }
-    
+
     &::-webkit-scrollbar-thumb {
-        border-radius: 100px;
+        border-radius   : 100px;
         background-color: #031114;
     }
 }
+
 .product_recommend_item {
-    margin: 10px;
-    max-width: 235px;
+    margin          : 10px;
+    max-width       : 238px;
     background-color: #01191E;
-    border-radius: 15px;
+    border-radius   : 15px;
 
     img {
-        width: 100%;
+        width : 100%;
         cursor: pointer;
     }
+
     img:hover {
         opacity: 0.7;
     }
 
     .product_title {
-        font-family: Poppins;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
+        font-family   : Poppins;
+        font-size     : 16px;
+        font-style    : normal;
+        font-weight   : 500;
+        line-height   : 24px;
         letter-spacing: 0em;
-        text-align: center;
+        text-align    : center;
 
     }
 
     .icon_group {
         img {
             margin-right: 5px;
-            width: 25px;;
+            width       : 25px;
+            ;
             height: 25px;
         }
     }
 
     button {
-        width: 100%;
+        width  : 100%;
         padding: 2px;
         @extend %btn_common_style;
-        font-family: Poppins;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 23px;
+        font-family     : Poppins;
+        font-size       : 15px;
+        font-weight     : 700;
+        line-height     : 23px;
         background-color: #0D3840;
-        border-radius: 5px;
+        border-radius   : 5px;
     }
 }

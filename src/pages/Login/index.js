@@ -4,7 +4,7 @@ import { Logo } from "../../components/Login/Logo";
 import { Footer } from "../../components/Login/Footer";
 import { WithOthers } from "../../components/Login/WithOthers";
 
-import { getImg } from "../../utils/Helper";
+import { getImg, useWindowSize } from "../../utils/Helper";
 import { animations } from 'react-animation';
 import { Button } from "../../components/Login/Button";
 
@@ -71,14 +71,13 @@ export default function Login() {
 	const animationStyle = {
 		animation: animations.bounceIn
 	}
-	const wWidth = window.innerWidth;
-	const wHeight = window.innerHeight;
+	const [width1, height1] = useWindowSize();
 
 	return (
 		<LoginStyle>
-			<div className={styles.loginwrap} style={{ height: wHeight + 'px' }}>
+			<div className={styles.loginwrap} style={{ height: height1 + 'px' }}>
 				<Logo />
-				<div className={styles.logincontent} style={{ top: (wHeight - 335) / 2 + 'px', left: (wWidth - 414) / 2 + 'px' }}>
+				<div className={styles.logincontent} style={{ top: (height1 - 335) / 2 + 'px', left: (width1 - 414) / 2 + 'px' }}>
 					<div className={styles.loginformwrap} style={{ animation: animations.bounceIn }}>
 						<form name="login_form" id="login_form" method="POST" action="">
 							<dl>

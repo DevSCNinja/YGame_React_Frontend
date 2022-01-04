@@ -4,7 +4,7 @@ import { Button } from "../../components/Login/Button";
 import { Logo } from "../../components/Login/Logo";
 import { Footer1 } from "../../components/Login/Footer1";
 import styles from '../Login/Login.module.scss';
-import { getImg } from "../../utils/Helper";
+import { getImg, useWindowSize } from "../../utils/Helper";
 import { WithOthers } from "../../components/Login/WithOthers";
 import { animations } from 'react-animation'
 import IconButton from '@mui/material/IconButton';
@@ -99,8 +99,7 @@ export default function Register() {
 		p: 4,
 	};
 
-	const wWidth = window.innerWidth;
-	const wHeight = window.innerHeight;
+	const [wWidth, wHeight] = useWindowSize();
 
 	return (
 		<RegisterStyle>
