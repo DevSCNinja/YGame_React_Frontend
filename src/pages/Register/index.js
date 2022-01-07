@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Button } from "../../components/Login/Button";
 import { Logo } from "../../components/Login/Logo";
 import { Footer1 } from "../../components/Login/Footer1";
 import styles from '../Login/Login.module.scss';
-import { getImg, useWindowSize } from "../../utils/Helper";
+import { useWindowSize } from "../../utils/Helper";
 import { WithOthers } from "../../components/Login/WithOthers";
 import { animations } from 'react-animation'
 import IconButton from '@mui/material/IconButton';
@@ -37,10 +37,6 @@ const RegisterStyle = styled.div`
     }
     }
 }`;
-
-const animationStyle = {
-	animation: animations.bounceIn
-}
 
 
 export default function Register() {
@@ -87,17 +83,17 @@ export default function Register() {
 		});
 	};
 
-	const style = {
-		position: 'absolute',
-		top: '50%',
-		left: '50%',
-		transform: 'translate(-50%, -50%)',
-		width: 400,
-		bgcolor: 'background.paper',
-		border: '2px solid #000',
-		boxShadow: 24,
-		p: 4,
-	};
+	// const style = {
+	// 	position: 'absolute',
+	// 	top: '50%',
+	// 	left: '50%',
+	// 	transform: 'translate(-50%, -50%)',
+	// 	width: 400,
+	// 	bgcolor: 'background.paper',
+	// 	border: '2px solid #000',
+	// 	boxShadow: 24,
+	// 	p: 4,
+	// };
 
 	const [wWidth, wHeight] = useWindowSize();
 

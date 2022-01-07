@@ -15,30 +15,32 @@ class Card extends React.Component {
 
 	render() {
 		return (
-			<div className={Styles.card}>
-				<div className={Styles.cardimage} style={{ backgroundImage: `url(${getImg(this.props.cardimage)})` }}>
-					<Link to='/product'><img src={getImg(this.props.cardimage)} alt="" />
+			<Link to='/product'>
+				<div className={Styles.card}>
+					<div className={Styles.cardimage} style={{ backgroundImage: `url(${getImg(this.props.cardimage)})` }}>
+						<img src={getImg(this.props.cardimage)} alt="" />
 						{
 							this.props.discount != 0 &&
 							<div className={Styles.discount}>
 								{this.props.discount}
 							</div>
-						}</Link>
-				</div>
-				<div className={Styles.carddescript}>
-					<p className={Styles.cardtitle}>
-						{this.props.title}
-					</p>
-					<div className={Styles.cardicon}>
-						{this.props.items.map((item) =>
-							<a key={item.icon}>
-								<img src={getImg(item.icon)} alt="" />
-							</a>
-						)}
+						}
 					</div>
-					<div className={Styles.pricebtn}><button>{this.props.price}</button></div>
+					<div className={Styles.carddescript}>
+						<p className={Styles.cardtitle}>
+							{this.props.title}
+						</p>
+						<div className={Styles.cardicon}>
+							{this.props.items.map((item) =>
+								<a key={item.icon} className="not_hover">
+									<img src={getImg(item.icon)} alt="" />
+								</a>
+							)}
+						</div>
+						<div className={Styles.pricebtn}><button className="not_hover">{this.props.price}</button></div>
+					</div>
 				</div>
-			</div>
+			</Link>
 		)
 	}
 }

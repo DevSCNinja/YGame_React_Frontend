@@ -21,18 +21,18 @@ class ProductItem extends React.Component {
           <div className={Styles.img_wrap}>
             <img src={getImg('product/' + this.props.item.imgname)} alt="" />
           </div>
-        </Link>
 
-        <div className={Styles.product_title}>
-          {this.props.item.name}
-        </div>
-        <div style={{ padding: "15px" }}>
-          <div className={Styles.icon_group}>
-            <img src={getImg('product/' + this.props.item.icon1)} alt="" />
-            <img src={getImg('product/' + this.props.item.icon2)} alt="" />
+          <div className={Styles.product_title}>
+            {this.props.item.name}
           </div>
-          <button>{this.props.item.price}</button>
-        </div>
+          <div style={{ padding: "15px" }}>
+            <div className={Styles.icon_group}>
+              <img src={getImg('product/' + this.props.item.icon1)} alt="" />
+              <img src={getImg('product/' + this.props.item.icon2)} alt="" />
+            </div>
+            <button>{this.props.item.price}</button>
+          </div>
+        </Link>
       </div>
     )
   }

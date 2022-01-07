@@ -4,6 +4,10 @@
     display         : flex;
     background-color: #01191E;
     border-radius   : 14px;
+
+    .productLink {
+        display: flex;
+    }
 }
 
 .productimage {
@@ -20,7 +24,7 @@
         width     : 152px;
         max-width : 152px;
         height    : auto;
-        opacity   : 0;
+        opacity   : 1;
     }
 }
 

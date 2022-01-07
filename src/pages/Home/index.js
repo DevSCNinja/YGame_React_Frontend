@@ -28,6 +28,14 @@ const ImageStyle = styled.div`
     .Product_productimage__1YT6P: hover {
         opacity : 0.7
     }
+
+		button:not(.not_hover):hover {
+				opacity: 0.8;
+		}
+
+		a:not(.not_hover):hover {
+				opacity: 0.8;
+		}
 }`;
 
 export default function Home(props) {

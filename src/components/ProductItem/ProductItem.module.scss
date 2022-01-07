@@ -44,9 +44,9 @@
         cursor: pointer;
     }
 
-    img:hover {
-        opacity: 0.7;
-    }
+    // img:hover {
+    //     opacity: 0.7;
+    // }
 
     .product_title {
         font-family   : Poppins;
@@ -79,4 +79,8 @@
         background-color: #0D3840;
         border-radius   : 5px;
     }
+}
+
+.product_recommend_item:hover {
+    opacity: 0.8;
 }
